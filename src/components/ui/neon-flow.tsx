@@ -30,56 +30,41 @@ export function TubesBackground({
     let mounted = true;
     let cleanup: (() => void) | undefined;
 
-    const initTubes = () => {
+    const initTubes = async () => {
       if (!canvasRef.current) return;
 
-      const script = document.createElement("script");
-      script.src = "https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js";
-      script.type = "module";
-      script.async = true;
-      
-      script.onload = () => {
-        if (!mounted || !canvasRef.current) return;
-        
-        try {
-          // @ts-ignore
-          const TubesCursor = window.TubesCursor;
-          if (!TubesCursor) {
-             console.error("TubesCursor not found on window");
-             return;
+      try {
+        // Dynamic import for ESM support
+        // @ts-ignore
+        const module = await import("https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js");
+        const TubesCursor = module.default || module.TubesCursor;
+
+        if (!mounted || !canvasRef.current || !TubesCursor) return;
+
+        const app = TubesCursor(canvasRef.current, {
+          tubes: {
+            colors: ["#f967fb", "#53bc28", "#6958d5"],
+            lights: {
+              intensity: 200,
+              colors: ["#83f36e", "#fe8a2e", "#ff008a", "#60aed5"]
+            }
           }
+        });
 
-          const app = TubesCursor(canvasRef.current, {
-            tubes: {
-              colors: ["#f967fb", "#53bc28", "#6958d5"],
-              lights: {
-                intensity: 200,
-                colors: ["#83f36e", "#fe8a2e", "#ff008a", "#60aed5"]
-              }
-            }
-          });
+        tubesRef.current = app;
+        setIsLoaded(true);
 
-          tubesRef.current = app;
-          setIsLoaded(true);
-
-          cleanup = () => {
-            if (app && typeof app.destroy === 'function') {
-              app.destroy();
-            }
-          };
-        } catch (err) {
-          console.error("Error initializing TubesCursor:", err);
-        }
-      };
-
-      document.body.appendChild(script);
-
-      return () => {
-        document.body.removeChild(script);
-      };
+        cleanup = () => {
+          if (app && typeof app.destroy === 'function') {
+            app.destroy();
+          }
+        };
+      } catch (err) {
+        console.error("Error initializing TubesCursor:", err);
+      }
     };
 
-    const scriptCleanup = initTubes();
+    initTubes();
 
     return () => {
       mounted = false;

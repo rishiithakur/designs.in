@@ -17,6 +17,7 @@ import {
 } from "swiper/modules"
 
 import { Badge } from "@/components/ui/badge"
+import { ShineBorder } from "@/components/ui/shine-border"
 
 interface CarouselProps {
   images: { src: string; alt: string; category?: string }[]
@@ -35,6 +36,8 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   title = "Curated Gallery",
   subtitle = "A glimpse into our high-performance architectural design and editorial excellence."
 }) => {
+  console.log("CardCarousel images:", images);
+
 
   return (
     <section className="py-24 relative overflow-hidden">
@@ -105,29 +108,34 @@ export const CardCarousel: React.FC<CarouselProps> = ({
           >
             {images.map((image, index) => (
               <SwiperSlide key={index}>
-                <div className="relative w-full h-full rounded-3xl overflow-hidden border border-[var(--acc-border)] group/slide shadow-2xl">
-                  <Image
-                    src={image.src}
-                    fill
-                    className="object-cover transition-transform duration-1000 group-hover/slide:scale-110"
-                    alt={image.alt}
-                    sizes="(max-width: 768px) 260px, 320px"
-                  />
-                  
-                  {/* Glass Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover/slide:opacity-80 transition-opacity duration-500" />
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover/slide:translate-y-0 transition-transform duration-500">
-                    {image.category && (
-                        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#38bdf8] mb-2 block">
-                            {image.category}
+                <div className="w-full h-full relative group/slide cursor-pointer">
+                  <ShineBorder
+                    color={["#38bdf8", "#818cf8", "#c084fc"]}
+                    borderRadius={24}
+                    borderWidth={2}
+                    duration={12}
+                    className="!bg-transparent p-0 w-full h-full"
+                  >
+                    <div className="w-full h-full relative overflow-hidden rounded-[24px]">
+                      <Image
+                        src={image.src}
+                        fill
+                        className="object-cover transition-transform duration-1000 group-hover/slide:scale-110"
+                        alt={image.alt}
+                        sizes="(max-width: 768px) 300px, 450px"
+                      />
+                      
+                      {/* Premium Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span className="text-[10px] font-bold text-[#38bdf8] uppercase tracking-[0.2em] mb-2 block">
+                          {image.category || "Featured Project"}
                         </span>
-                    )}
-                    <h4 className="text-xl font-bold text-white mb-2 leading-tight">
-                      {image.alt}
-                    </h4>
-                    <div className="w-8 h-[2px] bg-[#38bdf8] transform origin-left scale-x-0 group-hover/slide:scale-x-100 transition-transform duration-500 delay-100" />
-                  </div>
+                        <h3 className="text-lg font-bold text-white">
+                          {image.alt}
+                        </h3>
+                      </div>
+                    </div>
+                  </ShineBorder>
                 </div>
               </SwiperSlide>
             ))}

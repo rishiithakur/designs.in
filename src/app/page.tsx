@@ -293,10 +293,8 @@ export default function Home() {
               </div>
             </section>
 
-            <CardCarousel
-              title="Design Mastery"
-              subtitle="Explore our most prestigious projects, where architectural precision meets digital innovation."
-              images={galleryImages.length > 0 ? galleryImages : [
+            {(() => {
+              const displayImages = galleryImages.length > 0 ? galleryImages : [
                 {
                   src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200",
                   alt: "Elysian Residence",
@@ -322,8 +320,16 @@ export default function Home() {
                   alt: "Nova HQ",
                   category: "Modern Office",
                 },
-              ]}
-            />
+              ];
+              return (
+                <CardCarousel
+                  key={`carousel-${displayImages.length}-${galleryImages.length}`}
+                  title="Design Mastery"
+                  subtitle="Explore our most prestigious projects, where architectural precision meets digital innovation."
+                  images={displayImages}
+                />
+              );
+            })()}
             <ServicesPreview />
             <CTASection />
           </div>
