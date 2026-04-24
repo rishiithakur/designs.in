@@ -104,9 +104,9 @@ export default function Footer() {
             <p className="text-[var(--text2)] text-sm mb-6">
               Currently accepting new projects for Q3 2026. Let's build something extraordinary.
             </p>
-            <a href="mailto:hello@rishiidesigns.com" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:border-[#38bdf8]/50 hover:bg-[#38bdf8]/10 text-[var(--text)] text-sm font-bold transition-all group">
+            <a href="mailto:Rishu9882876884@gmail.com" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:border-[#38bdf8]/50 hover:bg-[#38bdf8]/10 text-[var(--text)] text-sm font-bold transition-all group">
               <Mail className="w-4 h-4 text-[#38bdf8]" />
-              hello@rishiidesigns.com
+              Rishu9882876884@gmail.com
               <ArrowUpRight className="w-4 h-4 ml-2 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
             </a>
           </div>

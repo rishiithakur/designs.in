@@ -36,7 +36,6 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   title = "Curated Gallery",
   subtitle = "A glimpse into our high-performance architectural design and editorial excellence."
 }) => {
-  console.log("CardCarousel images:", images);
 
 
   return (

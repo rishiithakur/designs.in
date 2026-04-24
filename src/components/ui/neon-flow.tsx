@@ -34,8 +34,9 @@ export function TubesBackground({
       if (!canvasRef.current) return;
 
       try {
-        // Dynamic import for ESM support
-        const module = await import("https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js");
+        // Dynamic import for ESM support (using new Function to bypass TS build check)
+        const importModule = new Function('url', 'return import(url)');
+        const module = await importModule("https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js");
         
         // Try to find the constructor in various possible export locations
         const TubesCursor = module.TubesCursor || module.default || (typeof module === 'function' ? module : null);
@@ -73,7 +74,6 @@ export function TubesBackground({
     return () => {
       mounted = false;
       if (cleanup) cleanup();
-      if (scriptCleanup) scriptCleanup();
     };
   }, []);
 
