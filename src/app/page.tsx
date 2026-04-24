@@ -78,18 +78,24 @@ export default function Home() {
       try {
         const { data, error } = await supabase
           .from("gallery")
-          .select("title, image_url")
+          .select("title, image_url, category")
           .order("id", { ascending: false })
-          .limit(8);
+          .limit(10);
         
         if (error) throw error;
         
         if (data && data.length > 0) {
-          setGalleryImages(data.map(item => ({
-            src: item.image_url,
-            alt: item.title || "Project Highlights",
-            category: "Rishii Designs"
-          })));
+          const validItems = data
+            .filter(item => item.image_url)
+            .map(item => ({
+              src: item.image_url,
+              alt: item.title || "Project Highlights",
+              category: item.category || "Rishii Designs"
+            }));
+          
+          if (validItems.length > 0) {
+            setGalleryImages(validItems);
+          }
         }
       } catch (err) {
         console.error("Home gallery fetch error:", err);

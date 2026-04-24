@@ -35,82 +35,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   title = "Curated Gallery",
   subtitle = "A glimpse into our high-performance architectural design and editorial excellence."
 }) => {
-  const css = `
-  .swiper {
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 80px;
-  }
-  
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 320px;
-    height: 450px;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .swiper-slide-active {
-    transform: scale(1.05);
-  }
 
-  @media (max-width: 768px) {
-    .swiper-slide {
-      width: 260px;
-      height: 380px;
-    }
-  }
-  
-  .swiper-pagination-bullet {
-    background: #38bdf8 !important;
-    width: 12px;
-    height: 4px;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .swiper-pagination-bullet-active {
-    width: 32px;
-    background: linear-gradient(to right, #38bdf8, #818cf8) !important;
-  }
-
-  .swiper-3d .swiper-slide-shadow-left,
-  .swiper-3d .swiper-slide-shadow-right {
-    background-image: none !important;
-  }
-
-  .nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--bg-nav);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--acc-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text);
-    cursor: pointer;
-    z-index: 20;
-    transition: all 0.3s ease;
-  }
-
-  .nav-btn:hover {
-    background: rgba(56, 189, 248, 0.2);
-    border-color: rgba(56, 189, 248, 0.5);
-    color: #38bdf8;
-  }
-
-  .nav-prev { left: 0; }
-  .nav-next { right: 0; }
-
-  @media (max-width: 1024px) {
-    .nav-btn { display: none; }
-  }
-  `
   return (
     <section className="py-24 relative overflow-hidden">
       
@@ -148,6 +73,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
           )}
 
           <Swiper
+            key={images.length}
             spaceBetween={30}
             autoplay={{
               delay: autoplayDelay,
