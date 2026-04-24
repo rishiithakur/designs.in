@@ -35,11 +35,15 @@ export function TubesBackground({
 
       try {
         // Dynamic import for ESM support
-        // @ts-ignore
         const module = await import("https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js");
-        const TubesCursor = module.default || module.TubesCursor;
+        
+        // Try to find the constructor in various possible export locations
+        const TubesCursor = module.TubesCursor || module.default || (typeof module === 'function' ? module : null);
 
-        if (!mounted || !canvasRef.current || !TubesCursor) return;
+        if (!mounted || !canvasRef.current || !TubesCursor) {
+            console.error("TubesCursor could not be loaded from module", module);
+            return;
+        }
 
         const app = TubesCursor(canvasRef.current, {
           tubes: {
@@ -85,7 +89,7 @@ export function TubesBackground({
 
   return (
     <div 
-      className={cn("relative w-full h-full min-h-[400px] overflow-hidden bg-background", className)}
+      className={cn("relative w-full h-full min-h-[400px] overflow-hidden bg-transparent", className)}
       onClick={handleClick}
     >
       <canvas 

@@ -97,7 +97,7 @@ function HeroGeometric({
     };
 
     return (
-        <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[var(--bg)]">
+        <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-transparent">
             <div className="absolute inset-0 bg-gradient-to-br from-sky-500/[0.05] via-transparent to-blue-500/[0.05] blur-3xl" />
 
             <div className="absolute inset-0 overflow-hidden">

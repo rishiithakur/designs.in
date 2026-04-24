@@ -115,7 +115,7 @@ export default function Home() {
 
         <TubesBackground className="min-h-screen !bg-transparent">
         <HeroGeometric
-          badge="Rishii Designs — Elite Studio"
+          badge="Rishii Designs"
           title1="Architecture for"
           title2="Digital Excellence"
         >
