@@ -5,7 +5,6 @@ import { CertificateCard } from "./ui/certificate-card";
 interface Certificate {
   name: string;
   issuer: string;
-  logo: string;
 }
 
 const certificates: Certificate[] = [

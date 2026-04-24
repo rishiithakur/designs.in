@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
@@ -90,7 +91,7 @@ export default function Home() {
             .map(item => ({
               src: item.image_url,
               alt: item.title || "Project Highlights",
-              category: item.category || "Rishii Designs"
+              category: "Rishii Designs"
             }));
           
           if (validItems.length > 0) {
