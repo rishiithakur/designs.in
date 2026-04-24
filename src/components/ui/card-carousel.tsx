@@ -103,7 +103,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                 : undefined
             }
             modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
-            className="card-swiper"
+            className="card-swiper min-h-[400px]"
           >
             {images.map((image, index) => (
               <SwiperSlide key={index}>
@@ -119,7 +119,9 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                       <Image
                         src={image.src}
                         fill
-                        className="object-cover transition-transform duration-1000 group-hover/slide:scale-110"
+                        unoptimized
+                        priority
+                        className="object-cover transition-transform duration-1000 group-hover/slide:scale-110 bg-slate-900"
                         alt={image.alt}
                         sizes="(max-width: 768px) 300px, 450px"
                       />

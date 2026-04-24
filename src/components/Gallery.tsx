@@ -6,7 +6,7 @@ import { supabase } from "@/lib/supabase";
 import { X, ExternalLink, ImageIcon, Loader2 } from "lucide-react";
 
 interface GalleryItem {
-  id: number;
+  id: string;
   title: string;
   image_url: string;
   category?: string;
@@ -38,8 +38,8 @@ export default function Gallery() {
     try {
       const { data, error } = await supabase
         .from("gallery")
-        .select("id, title, image_url, category")
-        .order("id", { ascending: false });
+        .select("id, title, image_url")
+        .order("created_at", { ascending: false });
 
       if (error) throw error;
       
@@ -51,9 +51,7 @@ export default function Gallery() {
     }
   };
 
-  const filteredItems = filter === "all" 
-    ? items 
-    : items.filter(item => item.category === filter);
+  const filteredItems = items;
 
   // Formatting items for the Marquee
   const sliderItems = items.filter(i => i.image_url);

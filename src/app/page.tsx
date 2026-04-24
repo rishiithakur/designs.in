@@ -78,8 +78,8 @@ export default function Home() {
       try {
         const { data, error } = await supabase
           .from("gallery")
-          .select("title, image_url, category")
-          .order("id", { ascending: false })
+          .select("title, image_url")
+          .order("created_at", { ascending: false })
           .limit(10);
         
         if (error) throw error;
@@ -109,11 +109,10 @@ export default function Home() {
       <IntroAnimation onComplete={() => setShowIntro(false)} />
 
       <main
-        className={`min-h-screen bg-[var(--bg)] text-[var(--text)] transition-opacity duration-1000 ${showIntro ? "opacity-0" : "opacity-100"}`}
+        className={`min-h-screen bg-transparent text-[var(--text)] transition-opacity duration-1000 ${showIntro ? "opacity-0" : "opacity-100"}`}
       >
+        <TubesBackground className="fixed inset-0 z-0 !bg-transparent opacity-80 pointer-events-none" />
         <Navbar />
-
-        <TubesBackground className="min-h-screen !bg-transparent">
         <HeroGeometric
           badge="Rishii Designs"
           title1="Architecture for"
@@ -224,6 +223,28 @@ export default function Home() {
                     >
                       <div className="aspect-video rounded-[40px] overflow-hidden bg-[var(--bg-card)] backdrop-blur-xl flex items-center justify-center p-12">
                         <div className="text-center">
+                          <div className="flex flex-col items-center mb-6">
+                            <motion.div 
+                              initial={{ scale: 0 }}
+                              whileInView={{ scale: 1 }}
+                              className="relative mb-4"
+                            >
+                              <div className="w-20 h-20 rounded-full border-2 border-[var(--acc)] p-1 bg-[var(--bg)] overflow-hidden">
+                                <img 
+                                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rishii" 
+                                  alt="Rishabh Thakur" 
+                                  className="w-full h-full object-cover"
+                                />
+                              </div>
+                              <div className="absolute -bottom-1 -right-1 bg-[var(--acc)] text-white p-1 rounded-full border-2 border-[var(--bg)]">
+                                <ShieldCheck className="w-4 h-4" />
+                              </div>
+                            </motion.div>
+                            <div className="flex items-center gap-2 px-3 py-1 bg-[var(--acc-dim)] border border-[var(--acc-border)] rounded-full mb-4">
+                              <div className="w-1.5 h-1.5 rounded-full bg-[var(--acc)] animate-pulse" />
+                              <span className="text-[10px] font-bold text-[var(--acc)] uppercase tracking-widest">Identity Verified</span>
+                            </div>
+                          </div>
                           <p className="text-[var(--text2)] italic text-2xl mb-8">
                             &quot;We don&apos;t just build websites; we
                             architect digital legacies for the most ambitious
@@ -333,7 +354,6 @@ export default function Home() {
             <ServicesPreview />
             <CTASection />
           </div>
-        </TubesBackground>
 
         <Footer />
       </main>

@@ -140,13 +140,23 @@ export const VoiceTestimonial: React.FC<ComponentProps> = ({ mode, testimonials 
                 />
               </div>
               <div className="flex items-center gap-4">
-                <div className="relative w-14 h-14 shrink-0 overflow-hidden rounded-full border-2 border-[#38bdf8]/30">
-                    <Image
-                    src={testimonial.image || 'https://via.placeholder.com/150'}
-                    alt={testimonial.name || 'User'}
-                    fill
-                    className="object-cover"
-                    />
+                <div className="relative w-14 h-14 shrink-0 overflow-hidden rounded-full border-2 border-[#38bdf8]/30 bg-[#38bdf8]/10 flex items-center justify-center">
+                    {testimonial.image ? (
+                        <Image
+                        src={testimonial.image}
+                        alt={testimonial.name || 'User'}
+                        fill
+                        className="object-cover"
+                        onError={(e) => {
+                            // Fallback to initials if image fails
+                            const target = e.target as HTMLElement;
+                            target.style.display = 'none';
+                        }}
+                        />
+                    ) : null}
+                    <span className="text-[#38bdf8] font-black text-xl select-none">
+                        {testimonial.name?.charAt(0)}
+                    </span>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[var(--text)] font-bold text-lg">{testimonial.name}</span>

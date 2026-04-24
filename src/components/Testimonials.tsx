@@ -83,7 +83,9 @@ export default function Testimonials() {
                   "{t.quote}"
                 </p>
                 <div className="flex items-center gap-4 border-t border-[#38bdf8]/10 pt-6">
-                  <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full border-2 border-[#38bdf8]/30" />
+                  <div className="w-12 h-12 rounded-full border-2 border-[#38bdf8]/30 flex items-center justify-center bg-[#38bdf8]/10 text-[#38bdf8] font-black text-xl">
+                    {t.name.charAt(0)}
+                  </div>
                   <div>
                     <h4 className="text-white font-bold">{t.name}</h4>
                     <p className="text-[#38bdf8] text-xs font-semibold uppercase tracking-wider">{t.role}</p>

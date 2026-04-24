@@ -41,13 +41,13 @@ export function ArgentLoopSlider() {
         const { data, error } = await supabase
           .from("gallery")
           .select("id, title, image_url")
-          .order("id", { ascending: false });
+          .order("created_at", { ascending: false });
 
         if (error) throw error;
 
         if (data && data.length > 0) {
           setProjectData(
-            data.map((item: { id: number; title: string; image_url: string }, i: number) => ({
+            data.map((item: { id: string; title: string; image_url: string }, i: number) => ({
               title: item.title || `Project ${i + 1}`,
               image: item.image_url,
               category: "Rishii Designs",

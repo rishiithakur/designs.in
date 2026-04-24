@@ -109,7 +109,7 @@ export default function TestimonialsPage() {
               founders we've partnered with to redefine their digital presence.
             </p>
           </div>
-          <VoiceTestimonial mode="dark" testimonials={testimonials} />
+          <VoiceTestimonial mode="dark" testimonials={testimonials.map(t => ({ ...t, image: undefined }))} />
         </div>
       </div>
       

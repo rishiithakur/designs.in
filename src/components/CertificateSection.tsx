@@ -12,37 +12,30 @@ const certificates: Certificate[] = [
   { 
     name: "Microsoft Office Specialist", 
     issuer: "Microsoft",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
   },
   { 
     name: "AI for Content Creation", 
     issuer: "Coursera",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-logo.svg",
   },
   { 
     name: "Google AI Essentials", 
     issuer: "Google",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
   },
   { 
     name: "AI Writing & Communication", 
     issuer: "Coursera",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-logo.svg",
   },
   { 
     name: "AI for Data Analytics", 
     issuer: "Coursera",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-logo.svg",
   },
   { 
     name: "Google AI: Research & Insights", 
     issuer: "Google",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
   },
   { 
     name: "AI & Brainstorming", 
     issuer: "Coursera",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-logo.svg",
   },
 ];
 
@@ -61,7 +54,6 @@ export default function CertificateSection() {
           <CertificateCard
             name={cert.name}
             issuer={cert.issuer}
-            logo={cert.logo}
             imageUrl="/assets/cert_bg.png"
             className="w-full"
           />

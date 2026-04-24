@@ -10,7 +10,7 @@ import TubesBackground from "@/components/ui/neon-flow";
 export default function GalleryPage() {
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
-      <TubesBackground className="fixed inset-0 z-0 opacity-20 pointer-events-none" />
+      <TubesBackground className="fixed inset-0 z-0 opacity-40" />
       <Navbar />
       
       <div className="relative pt-32 pb-12 px-8 text-center">

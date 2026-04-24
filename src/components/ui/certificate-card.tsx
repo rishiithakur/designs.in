@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { ShieldCheck, Award } from "lucide-react";
 
 interface CertificateCardProps {
   name: string;
   issuer: string;
-  logo: string;
   imageUrl: string;
   className?: string;
 }
@@ -15,7 +15,6 @@ interface CertificateCardProps {
 export function CertificateCard({
   name,
   issuer,
-  logo,
   imageUrl,
   className,
 }: CertificateCardProps) {
@@ -71,13 +70,27 @@ export function CertificateCard({
         <div className="relative z-10 p-8 h-full flex flex-col">
             {/* Top Bar */}
             <div className="flex justify-between items-start mb-auto">
-                <div className="p-3 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl group-hover:border-[#38bdf8]/30 transition-all">
-                    <img src={logo} alt={issuer} className="h-6 w-auto brightness-0 invert opacity-80" />
-                </div>
-                <div className="flex items-center gap-2 px-4 py-1.5 bg-[#38bdf8]/10 border border-[#38bdf8]/30 rounded-full backdrop-blur-md">
-                    <ShieldCheck className="w-3 h-3 text-[#38bdf8]" />
-                    <span className="text-[10px] font-black text-[#38bdf8] uppercase tracking-widest">Verified</span>
-                </div>
+                <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="p-4 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl group-hover:border-[#fbbf24]/30 transition-all flex items-center justify-center min-w-[120px]"
+                >
+                    <span className="text-xl font-black italic tracking-tighter bg-gradient-to-br from-[#fef3c7] via-[#fbbf24] to-[#d97706] bg-clip-text text-transparent uppercase">
+                        {issuer}
+                    </span>
+                </motion.div>
+                <motion.div 
+                    animate={{ 
+                        boxShadow: ["0 0 0px rgba(56,189,248,0)", "0 0 15px rgba(56,189,248,0.3)", "0 0 0px rgba(56,189,248,0)"] 
+                    }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="flex items-center gap-2 px-4 py-1.5 bg-[#38bdf8]/10 border border-[#38bdf8]/30 rounded-full backdrop-blur-md relative overflow-hidden group/verified"
+                >
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/verified:animate-shine transition-all" />
+                    <ShieldCheck className="w-3 h-3 text-[#38bdf8] animate-pulse" />
+                    <span className="text-[10px] font-black text-[#38bdf8] uppercase tracking-widest relative z-10">Verified</span>
+                </motion.div>
             </div>
 
             {/* Certificate Details */}
