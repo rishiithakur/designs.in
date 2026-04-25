@@ -77,15 +77,19 @@ export default function Home() {
   useEffect(() => {
     const fetchGallery = async () => {
       try {
+        console.log("Fetching gallery...");
         const { data, error } = await supabase
           .from("gallery")
           .select("title, image_url")
           .order("created_at", { ascending: false })
           .limit(10);
-        
-        if (error) throw error;
-        
-        if (data && data.length > 0) {
+
+        if (error) {
+          console.error("Supabase error:", error);
+          return;
+        }
+
+        if (data) {
           const validItems = data
             .filter(item => item.image_url)
             .map(item => ({
@@ -99,9 +103,10 @@ export default function Home() {
           }
         }
       } catch (err) {
-        console.error("Home gallery fetch error:", err);
+        console.error("Fetch error:", err);
       }
     };
+
     fetchGallery();
   }, []);
 

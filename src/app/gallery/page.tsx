@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { ArgentLoopSlider } from "@/components/ui/argent-loop-infinite-slider";
 import { motion } from "framer-motion";
 
-import TubesBackground from "@/components/ui/neon-flow";
+import { TubesBackground } from "@/components/ui/neon-flow";
 
 export default function GalleryPage() {
   return (

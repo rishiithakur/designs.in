@@ -116,14 +116,11 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                     className="!bg-transparent p-0 w-full h-full"
                   >
                     <div className="w-full h-full relative overflow-hidden rounded-[24px]">
-                      <Image
+                      <img
                         src={image.src}
-                        fill
-                        unoptimized
-                        priority
-                        className="object-cover transition-transform duration-1000 group-hover/slide:scale-110 bg-slate-900"
+                        className="w-full h-full object-cover transition-transform duration-1000 group-hover/slide:scale-110 bg-slate-900"
                         alt={image.alt}
-                        sizes="(max-width: 768px) 300px, 450px"
+                        loading="lazy"
                       />
                       
                       {/* Premium Overlay */}

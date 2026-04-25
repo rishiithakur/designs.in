@@ -41,7 +41,10 @@ const ShineBorder = ({
       </div>
 
       {/* Content Layer */}
-      <div className="relative rounded-xl h-full w-full bg-[var(--bg-card)] overflow-hidden">
+      <div className={cn(
+        "relative rounded-xl h-full w-full overflow-hidden",
+        className?.includes("!bg-transparent") ? "bg-transparent" : "bg-[var(--bg-card)]"
+      )}>
         {children}
       </div>
     </div>

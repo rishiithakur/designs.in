@@ -205,6 +205,11 @@
 
 /* Swiper Custom Styles */
 .swiper { width: 100%; min-height: 500px; padding-top: 40px; padding-bottom: 80px; }
+.card-swiper {
+  height: 450px !important;
+  width: 100%;
+}
+
 .swiper-slide { 
   background-position: center; 
   background-size: cover; 
