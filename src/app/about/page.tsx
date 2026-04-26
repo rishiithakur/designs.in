@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 import { ShineBorder } from "@/components/ui/shine-border";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import Link from "next/link";
-import { Award, BookOpen, GraduationCap, Globe, Cpu, Database, MapPin, Briefcase, ArrowRight, Github, Linkedin, Instagram } from "lucide-react";
+import { Award, BookOpen, GraduationCap, Globe, Cpu, Database, MapPin, Briefcase, ArrowRight } from "lucide-react";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 import GradientBarsBackground from "@/components/ui/gradient-bars-background";
 import CertificateSection from "@/components/CertificateSection";
@@ -61,7 +62,6 @@ export default function AboutPage() {
                 complex institutional requirements into elegant, high-performance
                 digital solutions.
               </p>
-              <div className="space-y-6">
               <div className="space-y-6">
                 <div className="flex gap-4 items-start">
                   <div className="w-12 h-12 rounded-full bg-[var(--acc-dim)] flex items-center justify-center shrink-0">
@@ -285,7 +285,7 @@ export default function AboutPage() {
               rel="me nofollow noopener"
               className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:bg-[var(--acc)] hover:text-[var(--bg)] transition-all group"
             >
-              <Linkedin className="w-6 h-6 text-[var(--acc)] group-hover:text-[var(--bg)]" />
+              <FaLinkedin className="w-6 h-6 text-[var(--acc)] group-hover:text-[var(--bg)]" />
               <span className="font-bold">Rishii Designs on LinkedIn</span>
             </a>
             <a
@@ -294,7 +294,7 @@ export default function AboutPage() {
               rel="me nofollow noopener"
               className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:bg-[var(--acc)] hover:text-[var(--bg)] transition-all group"
             >
-              <Github className="w-6 h-6 text-[var(--acc)] group-hover:text-[var(--bg)]" />
+              <FaGithub className="w-6 h-6 text-[var(--acc)] group-hover:text-[var(--bg)]" />
               <span className="font-bold">View GitHub Projects by Rishabh Thakur</span>
             </a>
             <a
@@ -303,7 +303,7 @@ export default function AboutPage() {
               rel="me nofollow noopener"
               className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:bg-[var(--acc)] hover:text-[var(--bg)] transition-all group"
             >
-              <Instagram className="w-6 h-6 text-[var(--acc)] group-hover:text-[var(--bg)]" />
+              <FaInstagram className="w-6 h-6 text-[var(--acc)] group-hover:text-[var(--bg)]" />
               <span className="font-bold">Instagram (Brand)</span>
             </a>
             <a
@@ -312,7 +312,7 @@ export default function AboutPage() {
               rel="me nofollow noopener"
               className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:bg-[var(--acc)] hover:text-[var(--bg)] transition-all group"
             >
-              <Instagram className="w-6 h-6 text-[var(--acc)] group-hover:text-[var(--bg)]" />
+              <FaInstagram className="w-6 h-6 text-[var(--acc)] group-hover:text-[var(--bg)]" />
               <span className="font-bold">Instagram (Personal)</span>
             </a>
           </div>

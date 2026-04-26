@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Globe, Camera, Briefcase, Mail, ArrowUpRight, Linkedin, Github, Instagram } from "lucide-react";
+import { Globe, Camera, Briefcase, Mail, ArrowUpRight } from "lucide-react";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export default function Footer() {
@@ -46,22 +47,22 @@ export default function Footer() {
             <div className="flex flex-wrap items-center gap-3">
               {[
                 { 
-                  icon: Linkedin, 
+                  icon: FaLinkedin, 
                   href: "https://www.linkedin.com/in/rishii-thakur", 
                   label: "Rishii Designs on LinkedIn" 
                 },
                 { 
-                  icon: Github, 
+                  icon: FaGithub, 
                   href: "https://github.com/rishiithakur", 
                   label: "View GitHub Projects by Rishabh Thakur" 
                 },
                 { 
-                  icon: Instagram, 
+                  icon: FaInstagram, 
                   href: "https://www.instagram.com/rishiidesigns.ai", 
                   label: "Instagram (Brand)" 
                 },
                 { 
-                  icon: Instagram, 
+                  icon: FaInstagram, 
                   href: "https://www.instagram.com/i.rishii.thakur", 
                   label: "Instagram (Personal)" 
                 },
