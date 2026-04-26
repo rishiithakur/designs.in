@@ -32,14 +32,14 @@ export default function VisitPage() {
         </h3>
 
         <h1 className="visit-anim text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-tight">
-          Enter The <br />
+          Visit <br />
           <span className="bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-transparent bg-clip-text">
-            Premium Experience
+            Rishii Designs.
           </span>
         </h1>
 
         <p className="visit-anim text-[#8bb8d4] text-lg md:text-xl max-w-xl mx-auto mb-12 leading-relaxed">
-          You are about to enter a digital space crafted with precision, passion, and cutting-edge performance.
+          Enter the digital studio of Rishabh Thakur for premium web design, logo design, and AI solutions serving global clients worldwide.
         </p>
 
         <div className="visit-anim flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -52,7 +52,7 @@ export default function VisitPage() {
           <a
             href="https://twitter.com/rishiidesigns"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 px-10 py-5 rounded-full border border-[#38bdf8]/30 text-[#bae6fd] bg-[#38bdf8]/5 hover:bg-[#38bdf8]/10 hover:border-[#38bdf8]/60 font-bold text-lg transition-all"
           >
             <Sparkles className="w-5 h-5" /> Follow on X

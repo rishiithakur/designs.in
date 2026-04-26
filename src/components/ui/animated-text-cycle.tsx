@@ -68,8 +68,7 @@ export default function AnimatedTextCycle({
       <div
         ref={measureRef}
         aria-hidden="true"
-        className="absolute opacity-0 pointer-events-none"
-        style={{ visibility: "hidden" }}
+        className="absolute opacity-0 pointer-events-none invisible"
       >
         {words.map((word, i) => (
           <span key={i} className={`font-bold ${className}`}>
@@ -93,12 +92,11 @@ export default function AnimatedTextCycle({
         <AnimatePresence mode="wait" initial={false}>
           <motion.span
             key={currentIndex}
-            className={`inline-block font-bold ${className}`}
+            className={`inline-block font-bold whitespace-nowrap ${className}`}
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
-            style={{ whiteSpace: "nowrap" }}
           >
             {words[currentIndex]}
           </motion.span>

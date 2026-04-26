@@ -197,7 +197,7 @@ export default function ServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-6xl md:text-8xl font-black tracking-tighter mb-8"
             >
-              SERVICES <span className="text-gradient">&amp; PRICING.</span>
+              WEB DESIGN, LOGO <span className="text-gradient">&amp; AI SOLUTIONS.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -205,8 +205,7 @@ export default function ServicesPage() {
               transition={{ delay: 0.1 }}
               className="text-[var(--text2)] text-xl max-w-2xl mx-auto"
             >
-              Premium quality at budget-friendly prices. From logo design to
-              full-stack websites — we've got you covered.
+              Explore web design, logo design, UI/UX, and AI solutions by Rishii Designs — available remotely for global clients worldwide.
             </motion.p>
           </div>
         </section>
@@ -226,44 +225,52 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center text-[var(--text3)] text-sm mt-12 max-w-lg mx-auto"
+            className="text-center mt-12"
           >
-            All prices are approximate and may vary based on complexity.
-            Discounts available for bulk or long-term projects.
-          </motion.p>
+            <Link 
+              href="/gallery"
+              className="inline-flex items-center gap-2 text-[var(--acc)] font-bold hover:underline"
+            >
+              View web design portfolio <Globe className="w-4 h-4" />
+            </Link>
+            <p className="text-[var(--text3)] text-sm mt-4 max-w-lg mx-auto">
+              All prices are approximate and may vary based on complexity.
+              Remote web design services available for global clients.
+            </p>
+          </motion.div>
         </section>
 
         {/* Process Section */}
         <section className="py-32 bg-[var(--bg2)] border-y border-[var(--acc-border)]">
           <div className="max-w-7xl mx-auto px-8">
             <h2 className="text-4xl font-black mb-20 text-center uppercase tracking-widest text-[var(--text)]">
-              Our <span className="text-gradient">Process</span>
+              Our Web Design <span className="text-gradient">Process</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
                   title: "Discovery",
-                  desc: "Understanding your goals and audience.",
+                  desc: "Understanding your goals and worldwide audience.",
                 },
                 {
                   step: "02",
                   title: "Strategy",
-                  desc: "Planning the architecture and roadmap.",
+                  desc: "Planning the architecture and global roadmap.",
                 },
                 {
                   step: "03",
                   title: "Design",
-                  desc: "Crafting the visual experience.",
+                  desc: "Crafting the visual experience for your brand.",
                 },
                 {
                   step: "04",
                   title: "Launch",
-                  desc: "Executing and optimizing for growth.",
+                  desc: "Executing and optimizing for global growth.",
                 },
               ].map((item, index) => (
                 <div
@@ -287,7 +294,7 @@ export default function ServicesPage() {
       </BeamsBackground>
 
       <LampContainer className="min-h-[80vh] md:min-h-screen">
-        <motion.h1
+        <motion.h2
           initial={{ opacity: 0.5, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
@@ -297,8 +304,8 @@ export default function ServicesPage() {
           }}
           className="mt-8 bg-gradient-to-br from-white via-[#bae6fd] to-[#38bdf8] py-4 bg-clip-text text-center text-5xl font-black tracking-tighter text-transparent md:text-8xl"
         >
-          ILLUMINATE <br /> YOUR VISION.
-        </motion.h1>
+          HIRE A FREELANCE <br /> WEB DESIGNER.
+        </motion.h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

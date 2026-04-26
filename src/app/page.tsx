@@ -124,8 +124,10 @@ export default function Home() {
           title1="Architecture for"
           title2="Digital Excellence"
         >
-          {/* AnimatedTextCycle */}
-          <div className="max-w-4xl mx-auto text-center mb-8 px-4">
+          <div className="max-w-4xl mx-auto text-center mb-6 px-4">
+            <p className="text-[var(--acc)] font-bold mb-4 tracking-wider uppercase text-sm">
+              Rishii Designs is a web design, logo design, and AI solutions agency founded by Rishabh Thakur, based in India and serving clients worldwide.
+            </p>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-[var(--text2)] relative">
               We build{" "}
               <AnimatedTextCycle
@@ -141,13 +143,13 @@ export default function Home() {
               href="/gallery"
               className="px-8 py-4 rounded-full bg-[var(--acc-dim)] border border-[var(--acc-border)] text-[var(--text)] font-bold transition-all hover:bg-[var(--acc-glow)]"
             >
-              View Projects
+              View web design portfolio
             </Link>
             <Link
               href="/contact"
               className="px-8 py-4 rounded-full bg-[var(--acc)] text-white font-bold transition-all hover:scale-105 hover:shadow-[0_0_30px_var(--acc-glow)]"
             >
-              Start a Project
+              Hire a freelance web designer
             </Link>
           </div>
         </HeroGeometric>
@@ -157,10 +159,10 @@ export default function Home() {
             <section className="py-24 px-8 max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-black text-[var(--text)] mb-6">
-                  Core <span className="text-gradient">Expertise.</span>
+                  Rishii Designs <span className="text-gradient">Web Design Services.</span>
                 </h2>
                 <p className="text-[var(--text2)] text-lg max-w-2xl mx-auto">
-                  From World Bank institutional systems to cutting-edge AI — here&apos;s what I bring to every project.
+                  From World Bank institutional systems to cutting-edge AI solutions — here&apos;s what I bring to every project as a freelance web designer.
                 </p>
               </div>
 
@@ -193,13 +195,13 @@ export default function Home() {
                   <div>
                     <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight text-[var(--text)]">
                       Institutional Precision. <br />
-                      <span className="text-gradient">Startup Speed.</span>
+                      <span className="text-gradient">Startup Speed Worldwide.</span>
                     </h2>
                     <p className="text-[var(--text2)] text-xl mb-12 leading-relaxed">
                       At Rishii Designs, we believe that high-end design should
                       never come at the cost of technical performance. Our
                       methodology combines the rigorous standards of global
-                      institutions with the agility of a boutique studio.
+                      institutions with the agility of a boutique studio serving global clients.
                     </p>
                     <div className="grid grid-cols-2 gap-8">
                       <div>
@@ -215,7 +217,7 @@ export default function Home() {
                           50+
                         </h4>
                         <p className="text-xs uppercase tracking-[0.2em] font-bold text-[var(--text)] opacity-40">
-                          Projects Delivered
+                          Global Projects Delivered
                         </p>
                       </div>
                     </div>
@@ -238,7 +240,7 @@ export default function Home() {
                               <div className="w-20 h-20 rounded-full border-2 border-[var(--acc)] p-1 bg-[var(--bg)] overflow-hidden">
                                 <img 
                                   src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rishii" 
-                                  alt="Rishabh Thakur" 
+                                  alt="Rishabh Thakur, founder and web designer at Rishii Designs" 
                                   className="w-full h-full object-cover"
                                 />
                               </div>
@@ -257,13 +259,67 @@ export default function Home() {
                             brands in the world.&quot;
                           </p>
                           <p className="text-[var(--text)] font-bold uppercase tracking-widest">
-                            — Rishabh Thakur
+                            — Rishabh Thakur, Founder of Rishii Designs
                           </p>
                         </div>
                       </div>
                     </ShineBorder>
                   </div>
                 </div>
+              </div>
+            </section>
+ 
+            {/* Cultural Philosophy Section */}
+            <section className="py-24 px-8 max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                <GlowCard 
+                  glowColor="purple" 
+                  className="lg:col-span-2 !p-10 flex flex-col justify-center"
+                >
+                  <div className="relative z-10 text-center lg:text-left">
+                    <p className="text-[var(--text)] text-2xl md:text-3xl font-black mb-6 leading-relaxed font-serif">
+                      कृष्णाय वासुदेवाय हरये परमात्मने।<br className="hidden md:block" />
+                      प्रणतः क्लेशनाशाय गोविन्दाय नमो नमः॥
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-[var(--text2)] leading-relaxed">
+                      <p className="italic border-l-2 border-[var(--acc)] pl-4">
+                        &quot;Salutations to Lord Krishna, the supreme soul, who removes the suffering of those who surrender. I bow again and again.&quot;
+                      </p>
+                      <p className="border-l-2 border-[var(--acc)] pl-4 font-hindi">
+                        &quot;वसुदेव के पुत्र भगवान श्री कृष्ण को प्रणाम है, जो शरण लेने वालों के सभी दुखों का नाश करते हैं। ऐसे गोविन्द को बार-बार नमन।&quot;
+                      </p>
+                    </div>
+                  </div>
+                </GlowCard>
+
+                <GlowCard 
+                  glowColor="orange" 
+                  className="!p-10 flex flex-col items-center justify-center text-center"
+                >
+                  <div className="relative z-10">
+                    <h3 className="text-[var(--text)] text-3xl font-black tracking-widest uppercase mb-4">
+                      Jai Shree Ram
+                    </h3>
+                    <p className="text-[var(--text3)] text-xs uppercase tracking-[0.3em] font-bold">
+                      Rooted in values.<br />Focused on excellence.
+                    </p>
+                  </div>
+                </GlowCard>
+              </div>
+              
+              <div className="mt-12 text-center relative z-10">
+                <p className="text-[var(--text2)] text-lg opacity-60 max-w-2xl mx-auto italic">
+                  &quot;At Rishii Designs, we believe in clarity, purpose, and building solutions that truly solve problems.&quot;
+                </p>
+              </div>
+            </section>
+
+            {/* SEO Paragraph Section */}
+            <section className="py-24 px-8 max-w-7xl mx-auto">
+              <div className="p-12 rounded-[40px] bg-[var(--bg2)] border border-[var(--acc-border)]">
+                <p className="text-[var(--text2)] text-lg leading-relaxed text-center italic">
+                  Rishii Designs is a premium web design and AI solutions studio founded by Rishabh Thakur, dedicated to crafting futuristic digital experiences for global clients worldwide. Our expertise spans across high-end web design services, custom logo design, and innovative AI solutions tailored for startups and institutional brands worldwide. As an India-based freelance web designer and full-stack developer, I combine institutional precision with startup speed to deliver conversion-optimized websites and branding that stand out in the digital landscape. Whether you need a modern portfolio, a full-stack e-commerce platform, or AI-powered automation, Rishii Designs provides remote services to clients across the globe, ensuring your online identity is both stunning and technically rigorous. We architect digital legacies that prioritize performance, accessibility, and high-fidelity aesthetics, helping brands achieve digital excellence through cutting-edge technology and human-centric design.
+                </p>
               </div>
             </section>
 
@@ -285,7 +341,7 @@ export default function Home() {
                       <h4 className="text-2xl font-black text-white mb-2 relative z-10 uppercase tracking-tighter">Google AI</h4>
                       <p className="text-[10px] font-bold text-[#fbbf24] tracking-[0.3em] uppercase mb-8 relative z-10">Essentials Certified</p>
                       <div className="w-full h-[1px] bg-white/10 mb-8" />
-                      <img src="/logorishii.svg" className="h-6 opacity-30 grayscale invert" alt="Rishii Designs" />
+                      <img src="/logorishii.svg" className="h-6 opacity-30 grayscale invert" alt="Rishii Designs Certification" />
                     </div>
                   </ShineBorder>
                 </div>
@@ -295,12 +351,12 @@ export default function Home() {
                     Premium Accreditation
                   </Badge>
                   <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter">
-                    Empowered by <span className="text-[#fbbf24]">Google AI.</span>
+                    AI Solutions by <span className="text-[#fbbf24]">Rishii Designs.</span>
                   </h2>
                   <p className="text-[#8bb8d4] text-xl mb-10 leading-relaxed max-w-2xl">
                     Our workflow is officially recognized and certified by Google. We integrate 
-                    advanced generative AI strategies to accelerate your brand's growth and 
-                    architect futuristic digital infrastructures.
+                    advanced generative AI solutions to accelerate your brand's growth and 
+                    architect futuristic digital infrastructures for global clients.
                   </p>
                   <div className="flex gap-6">
                     <button 
@@ -313,7 +369,7 @@ export default function Home() {
                       href="/about" 
                       className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/5 text-white border border-white/10 font-bold hover:bg-white/10 transition-all"
                     >
-                      View All Certs <ArrowRight className="w-4 h-4" />
+                      Rishabh Thakur, founder of Rishii Designs <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
@@ -324,35 +380,35 @@ export default function Home() {
               const displayImages = galleryImages.length > 0 ? galleryImages : [
                 {
                   src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200",
-                  alt: "Elysian Residence",
-                  category: "Architecture",
+                  alt: "Responsive web design project by Rishii Designs",
+                  category: "Web Design",
                 },
                 {
                   src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1200",
-                  alt: "Zenith Interior",
-                  category: "Interior Design",
+                  alt: "Custom logo design for global client by Rishii Designs",
+                  category: "Branding",
                 },
                 {
                   src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
-                  alt: "Obsidian Heights",
-                  category: "Commercial",
+                  alt: "AI-powered website design portfolio by Rishii Designs",
+                  category: "AI Solutions",
                 },
                 {
                   src: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1200",
-                  alt: "Lumina Pavillion",
-                  category: "Exhibition",
+                  alt: "Modern UI/UX design project from Rishii Designs",
+                  category: "UI/UX",
                 },
                 {
                   src: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&q=80&w=1200",
-                  alt: "Nova HQ",
-                  category: "Modern Office",
+                  alt: "Full-stack development showcase by Rishii Designs",
+                  category: "Development",
                 },
               ];
               return (
                 <CardCarousel
                   key={`carousel-${displayImages.length}-${galleryImages.length}`}
                   title="Design Mastery"
-                  subtitle="Explore our most prestigious projects, where architectural precision meets digital innovation."
+                  subtitle="Explore our web design and logo portfolio, where architectural precision meets digital innovation."
                   images={displayImages}
                 />
               );

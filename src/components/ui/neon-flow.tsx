@@ -94,8 +94,7 @@ export function TubesBackground({
     >
       <canvas 
         ref={canvasRef} 
-        className="absolute inset-0 w-full h-full block"
-        style={{ touchAction: 'none' }}
+        className="absolute inset-0 w-full h-full block touch-none"
       />
       
       {/* Content Overlay */}

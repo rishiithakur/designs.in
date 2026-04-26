@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Globe, Camera, Briefcase, Mail, ArrowUpRight } from "lucide-react";
+import { Globe, Camera, Briefcase, Mail, ArrowUpRight, Linkedin, Github, Instagram } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export default function Footer() {
@@ -31,27 +31,51 @@ export default function Footer() {
             
             <div className="flex items-center gap-4 mb-8 p-3 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:border-[#38bdf8]/30 transition-all group/avatar">
               <Avatar className="h-12 w-12 border-2 border-[#38bdf8]/20 group-hover/avatar:border-[#38bdf8]/50 transition-all">
-                <AvatarImage src="/selfie.jpg" alt="Rishabh Thakur" className="object-cover" />
+                <AvatarImage src="/selfie.jpg" alt="Rishabh Thakur, founder of Rishii Designs" className="object-cover" />
                 <AvatarFallback className="bg-[var(--bg2)] text-[#38bdf8]">RT</AvatarFallback>
               </Avatar>
               <div>
                 <p className="text-[var(--text)] font-bold text-sm">Rishabh Thakur</p>
-                <p className="text-[#38bdf8] text-[10px] uppercase tracking-widest font-medium">Founder & Architect</p>
+                <p className="text-[#38bdf8] text-[10px] uppercase tracking-widest font-medium">Founder & Web Designer</p>
               </div>
             </div>
 
             <p className="text-[var(--text2)] text-sm leading-relaxed mb-8 max-w-xs">
-              Architecting digital experiences that feel like they belong in 2026. 
-              Specializing in institutional-grade development and premium editorial design.
+              Rishii Designs is a web design, logo design, and AI solutions agency founded by Rishabh Thakur. Based in India, we provide premium web design services to global clients worldwide.
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               {[
-                { icon: Globe, href: "#" },
-                { icon: Camera, href: "#" },
-                { icon: Briefcase, href: "#" },
+                { 
+                  icon: Linkedin, 
+                  href: "https://www.linkedin.com/in/rishii-thakur", 
+                  label: "Rishii Designs on LinkedIn" 
+                },
+                { 
+                  icon: Github, 
+                  href: "https://github.com/rishiithakur", 
+                  label: "View GitHub Projects by Rishabh Thakur" 
+                },
+                { 
+                  icon: Instagram, 
+                  href: "https://www.instagram.com/rishiidesigns.ai", 
+                  label: "Instagram (Brand)" 
+                },
+                { 
+                  icon: Instagram, 
+                  href: "https://www.instagram.com/i.rishii.thakur", 
+                  label: "Instagram (Personal)" 
+                },
               ].map((Social, i) => (
-                <a key={i} href={Social.href} aria-label={Social.icon.displayName || 'Social link'} className="w-10 h-10 rounded-xl border border-[var(--acc-border)] bg-[var(--acc-dim)] flex items-center justify-center hover:bg-[#38bdf8]/10 hover:border-[#38bdf8]/50 hover:text-[#38bdf8] text-[var(--text)] transition-all hover:-translate-y-1">
+                <a 
+                  key={i} 
+                  href={Social.href} 
+                  target="_blank"
+                  rel="me nofollow noopener"
+                  aria-label={Social.label} 
+                  className="px-4 py-2 rounded-xl border border-[var(--acc-border)] bg-[var(--acc-dim)] flex items-center gap-2 hover:bg-[#38bdf8]/10 hover:border-[#38bdf8]/50 hover:text-[#38bdf8] text-[var(--text)] transition-all hover:-translate-y-1 text-xs font-bold"
+                >
                   <Social.icon className="w-4 h-4" />
+                  <span className="hidden sm:inline">{Social.label}</span>
                 </a>
               ))}
             </div>

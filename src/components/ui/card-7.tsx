@@ -67,16 +67,14 @@ export function InteractiveProductCard({
       <img
         src={imageUrl}
         alt={title}
-        className="absolute inset-0 h-full w-full object-cover rounded-3xl transition-transform duration-300 group-hover:scale-110"
-        style={{ transform: "translateZ(-20px) scale(1.1)" }}
+        className="absolute inset-0 h-full w-full object-cover rounded-3xl transition-transform duration-300 group-hover:scale-110 translate-z-neg-20 scale-110"
       />
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent rounded-3xl" />
 
       {/* Main Content with 3D effect */}
       <div
-        className="absolute inset-0 p-5 flex flex-col"
-        style={{ transform: "translateZ(40px)" }}
+        className="absolute inset-0 p-5 flex flex-col translate-z-40"
       >
         {/* Glassmorphism Header */}
         <div className="flex items-start justify-between rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">

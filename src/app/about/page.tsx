@@ -5,7 +5,8 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ShineBorder } from "@/components/ui/shine-border";
 import { GlowCard } from "@/components/ui/spotlight-card";
-import { Award, BookOpen, GraduationCap, Globe, Cpu, Database, MapPin, Briefcase } from "lucide-react";
+import Link from "next/link";
+import { Award, BookOpen, GraduationCap, Globe, Cpu, Database, MapPin, Briefcase, ArrowRight, Github, Linkedin, Instagram } from "lucide-react";
 
 import GradientBarsBackground from "@/components/ui/gradient-bars-background";
 import CertificateSection from "@/components/CertificateSection";
@@ -46,7 +47,8 @@ export default function AboutPage() {
                 . Currently working on World Bank & Government-funded projects
                 at SHINE Soft Pvt. Ltd., Hamirpur, Himachal Pradesh.
               </p>
-              <p className="text-[var(--text2)] text-lg leading-relaxed mb-12">
+              <p className="text-[var(--text2)] text-lg leading-relaxed mb-8">
+                Rishabh Thakur actively shares design, development, and AI work on professional platforms including LinkedIn and GitHub. 
                 From spearheading{" "}
                 <span className="text-[var(--acc)] font-bold">
                   World Bank DRIP-II
@@ -60,17 +62,18 @@ export default function AboutPage() {
                 digital solutions.
               </p>
               <div className="space-y-6">
+              <div className="space-y-6">
                 <div className="flex gap-4 items-start">
                   <div className="w-12 h-12 rounded-full bg-[var(--acc-dim)] flex items-center justify-center shrink-0">
                     <Cpu className="w-5 h-5 text-[var(--acc)]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-1 text-[var(--text)]">
-                      AI & Intelligent Systems
+                      AI Solutions & Intelligent Systems
                     </h3>
                     <p className="text-[var(--text2)]">
                       AI-powered chatbot solutions, Python automation, Power BI
-                      dashboards, and automated workflows.
+                      dashboards, and automated workflows for global clients.
                     </p>
                   </div>
                 </div>
@@ -80,11 +83,11 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-1 text-[var(--text)]">
-                      GIS & Spatial Data
+                      GIS & Spatial Data Worldwide
                     </h3>
                     <p className="text-[var(--text2)]">
                       ArcGIS Pro, Google Earth Engine — ET analysis, LULC
-                      classification, water budgeting, and raster generation.
+                      classification, and water budgeting on a global scale.
                     </p>
                   </div>
                 </div>
@@ -94,13 +97,20 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-1 text-[var(--text)]">
-                      Full-Stack & Gov-Tech
+                      Full-Stack Web Design
                     </h3>
                     <p className="text-[var(--text2)]">
-                      MySQL, PostgreSQL, MIS portals, DHARMA tool, GRM systems
-                      — built under World Bank compliance standards.
+                      MySQL, PostgreSQL, MIS portals — building high-performance web design services worldwide.
                     </p>
                   </div>
+                </div>
+                <div className="pt-6">
+                  <Link 
+                    href="/contact" 
+                    className="inline-flex items-center gap-2 text-[var(--acc)] font-bold hover:underline"
+                  >
+                    Work with Rishii Designs <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -120,7 +130,7 @@ export default function AboutPage() {
                 <div className="aspect-square rounded-[40px] overflow-hidden bg-[var(--bg-card)]">
                   <img
                     src="/selfie.jpg"
-                    alt="Rishabh Thakur"
+                    alt="Rishabh Thakur, founder and web designer at Rishii Designs"
                     className="w-full h-full object-cover brightness-90 hover:brightness-110 transition-all duration-700 hover:scale-105"
                   />
                 </div>
@@ -253,6 +263,58 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Links Section */}
+      <section className="py-24 bg-[var(--bg)]">
+        <div className="max-w-7xl mx-auto px-8 text-center">
+          <h2 className="text-4xl font-black mb-8 text-[var(--text)]">
+            Connect with <span className="text-gradient">Rishabh Thakur</span>
+          </h2>
+          <p className="text-[var(--text2)] text-xl max-w-2xl mx-auto mb-12">
+            I'm always open to discussing new projects, creative ideas or
+            opportunities to be part of your visions. Feel free to reach out
+            on any of my professional platforms.
+          </p>
+          <div className="flex flex-wrap justify-center gap-8">
+            <a
+              href="https://www.linkedin.com/in/rishii-thakur"
+              target="_blank"
+              rel="me nofollow noopener"
+              className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:bg-[var(--acc)] hover:text-[var(--bg)] transition-all group"
+            >
+              <Linkedin className="w-6 h-6 text-[var(--acc)] group-hover:text-[var(--bg)]" />
+              <span className="font-bold">Rishii Designs on LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/rishiithakur"
+              target="_blank"
+              rel="me nofollow noopener"
+              className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:bg-[var(--acc)] hover:text-[var(--bg)] transition-all group"
+            >
+              <Github className="w-6 h-6 text-[var(--acc)] group-hover:text-[var(--bg)]" />
+              <span className="font-bold">View GitHub Projects by Rishabh Thakur</span>
+            </a>
+            <a
+              href="https://www.instagram.com/rishiidesigns.ai"
+              target="_blank"
+              rel="me nofollow noopener"
+              className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:bg-[var(--acc)] hover:text-[var(--bg)] transition-all group"
+            >
+              <Instagram className="w-6 h-6 text-[var(--acc)] group-hover:text-[var(--bg)]" />
+              <span className="font-bold">Instagram (Brand)</span>
+            </a>
+            <a
+              href="https://www.instagram.com/i.rishii.thakur"
+              target="_blank"
+              rel="me nofollow noopener"
+              className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:bg-[var(--acc)] hover:text-[var(--bg)] transition-all group"
+            >
+              <Instagram className="w-6 h-6 text-[var(--acc)] group-hover:text-[var(--bg)]" />
+              <span className="font-bold">Instagram (Personal)</span>
+            </a>
           </div>
         </div>
       </section>

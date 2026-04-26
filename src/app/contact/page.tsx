@@ -44,7 +44,7 @@ export default function ContactPage() {
         badge="Contact Us"
         title1="Let's Build"
         title2="Something Amazing"
-        description="Have a project in mind? Reach out and we'll reply within a few hours. Whether it's a high-end corporate site or a custom AI solution, we're ready to help."
+        description="Hire Rishii Designs for your next project. Whether it's high-end web design services, custom logo design, or innovative AI solutions, our India-based studio is available remotely for global clients worldwide. Reach out to a freelance web designer today."
       >
         <div className="max-w-7xl mx-auto mt-12 md:mt-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
@@ -174,6 +174,7 @@ export default function ContactPage() {
                         </label>
                         <select
                           name="project_type"
+                          title="Select Project Type"
                           className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-4 focus:border-[var(--acc)] outline-none transition-colors text-[var(--text)] appearance-none"
                         >
                           <option>Premium Web Design</option>

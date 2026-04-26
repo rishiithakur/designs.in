@@ -24,14 +24,77 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Rishii Designs | Premium Web Design & AI Studio",
-  description: "Premium web design, logo design & AI editing by Rishii Designs. Built by Rishii Thakur — bringing luxury and futuristic web experiences to life.",
-  keywords: ["web design", "premium websites", "startup landing pages", "portfolio design", "logo design", "UI/UX", "AI image editing"],
+  title: "Rishii Designs – Web Design, Logo & AI Services Worldwide",
+  description: "Rishii Designs by Rishabh Thakur offers AI-powered web design, logo creation, branding, and full-stack development for clients worldwide. Based in India, working globally.",
+  keywords: ["Rishii Designs", "web design services", "logo design services", "AI web design", "freelance web designer", "UI UX design", "branding services", "full-stack developer", "chatbot development", "AI automation"],
+  metadataBase: new URL("https://rishiidesigns.in"),
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
   },
+  openGraph: {
+    title: "Rishii Designs – Web Design, Logo & AI Services Worldwide",
+    description: "Rishii Designs by Rishabh Thakur offers AI-powered web design, logo creation, branding, and full-stack development for clients worldwide.",
+    url: "https://rishiidesigns.in",
+    siteName: "Rishii Designs",
+    locale: "en_US",
+    type: "website",
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Rishii Designs",
+  "url": "https://rishiidesigns.in",
+  "logo": "https://rishiidesigns.in/logorishii.svg",
+  "founder": {
+    "@type": "Person",
+    "name": "Rishabh Thakur"
+  },
+  "areaServed": "Worldwide",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/rishii-thakur",
+    "https://github.com/rishiithakur",
+    "https://www.instagram.com/rishiidesigns.ai",
+    "https://www.instagram.com/i.rishii.thakur"
+  ]
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rishabh Thakur",
+  "jobTitle": "Freelance Web Designer & AI Developer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Rishii Designs"
+  },
+  "url": "https://rishiidesigns.in/about",
+  "sameAs": [
+    "https://www.linkedin.com/in/rishii-thakur",
+    "https://github.com/rishiithakur"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://rishiidesigns.in",
+  "name": "Rishii Designs",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://rishiidesigns.in/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 };
 
 import { ThemeProvider } from "@/components/providers";
@@ -44,6 +107,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${playfair.variable} ${cormorant.variable} antialiased`}
       >

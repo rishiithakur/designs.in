@@ -61,10 +61,10 @@ export default function ServicesPreview() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-[var(--text)] mb-6">
-            Our Top <span className="text-gradient">Services.</span>
+            Premium Web Design & <span className="text-gradient">Logo Services.</span>
           </h2>
           <p className="text-[var(--text2)] text-lg max-w-2xl mx-auto">
-            Premium quality at budget-friendly prices. Explore our most popular offerings.
+            Rishii Designs provides high-quality web design services and logo design at budget-friendly prices for global clients.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export default function ServicesPreview() {
             href="/services"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-[#bae6fd] to-[#38bdf8] text-[#060d18] font-bold text-lg hover:scale-105 transition-transform"
           >
-            View All Services & Pricing
+            Explore all web design services
             <Rocket className="w-5 h-5" />
           </Link>
         </div>

@@ -105,8 +105,7 @@ export default function TestimonialsPage() {
               CLIENT <span className="text-gradient">VOICES.</span>
             </h1>
             <p className="text-[#8bb8d4] text-xl max-w-2xl mx-auto">
-              Don't just take our word for it. Hear from the visionaries and 
-              founders we've partnered with to redefine their digital presence.
+              Read what our global clients say about Rishii Designs. Premium web design and AI solutions reviews from visionaries and founders we've partnered with worldwide.
             </p>
           </div>
           <VoiceTestimonial mode="dark" testimonials={testimonials.map(t => ({ ...t, image: undefined }))} />

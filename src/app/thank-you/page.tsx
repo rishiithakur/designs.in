@@ -16,7 +16,7 @@ export default function ThankYouPage() {
         badge="Success"
         title1="Message"
         title2="Received."
-        description="Thank you for reaching out to Rishii Designs. We've received your inquiry and our team will get back to you within 24 hours."
+        description="Thank you for reaching out to Rishii Designs. We've received your inquiry regarding our web design and AI services. Our team will get back to you shortly to discuss your project."
       >
         <div className="flex flex-col items-center gap-8 mt-12 relative z-10">
           <motion.div
@@ -44,13 +44,13 @@ export default function ThankYouPage() {
               className="flex items-center gap-2 px-8 py-4 rounded-full bg-white/10 border border-white/10 hover:bg-white/20 transition-all font-bold group"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-              Back to Home
+              Return to Homepage
             </Link>
             <Link
               href="/gallery"
               className="flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#38bdf8] to-[#818cf8] text-[#020617] font-bold shadow-[0_0_30px_rgba(56,189,248,0.3)] hover:scale-105 transition-all"
             >
-              Browse Gallery
+              View Web Design Portfolio
             </Link>
           </motion.div>
 

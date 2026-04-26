@@ -44,52 +44,9 @@ export function ServiceCard({
   iconBgClass,
   highlight,
 }: ServiceCardProps) {
-  const cardStyle: React.CSSProperties = {
-    backgroundColor: "var(--bg-card)",
-    backgroundImage:
-      "radial-gradient(at 88% 40%, var(--bg) 0px, transparent 85%)," +
-      " radial-gradient(at 49% 30%, var(--bg) 0px, transparent 85%)," +
-      " radial-gradient(at 14% 26%, var(--bg) 0px, transparent 85%)," +
-      " radial-gradient(at 0% 64%, rgba(56, 189, 248, 0.05) 0px, transparent 85%)," +
-      " radial-gradient(at 41% 94%, rgba(129, 140, 248, 0.05) 0px, transparent 85%)," +
-      " radial-gradient(at 100% 99%, rgba(192, 132, 252, 0.05) 0px, transparent 85%)",
-    boxShadow: "0px -16px 24px 0px rgba(255, 255, 255, 0.02) inset",
-  };
-
-  const borderContainerStyle: React.CSSProperties = {
-    overflow: "hidden",
-    pointerEvents: "none",
-    position: "absolute",
-    zIndex: -1,
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: "calc(100% + 2px)",
-    height: "calc(100% + 2px)",
-    backgroundImage:
-      "linear-gradient(0deg, rgba(255,255,255,0.05) -50%, rgba(255,255,255,0.1) 100%)",
-    borderRadius: "1rem",
-  };
-
-  const rotatingBorderStyle: React.CSSProperties = {
-    pointerEvents: "none",
-    position: "absolute",
-    zIndex: 200,
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%) rotate(0deg)",
-    transformOrigin: "left",
-    width: "200%",
-    height: "10rem",
-    backgroundImage:
-      "linear-gradient(0deg, transparent 0%, rgba(56, 189, 248, 0.6) 40%, rgba(56, 189, 248, 0.6) 60%, transparent 100%)",
-    animation: "card-rotate 8s linear infinite",
-  };
-
   return (
     <div
-      className="relative hover:bg-white/[0.02] transition-all duration-300 group rounded-2xl p-10 flex flex-col w-full h-full overflow-hidden border border-[var(--acc-border)]"
-      style={cardStyle}
+      className="relative hover:bg-white/[0.02] transition-all duration-300 group rounded-2xl p-10 flex flex-col w-full h-full overflow-hidden border border-[var(--acc-border)] service-card-main"
     >
       {highlight && (
         <div className="absolute top-0 left-1/2 -translate-x-1/2 z-[40] w-full flex justify-center">
@@ -105,8 +62,8 @@ export function ServiceCard({
       )}
 
       <div className="flex-grow relative z-10">
-        <div style={borderContainerStyle}>
-          <div style={rotatingBorderStyle}></div>
+        <div className="service-card-border-container">
+          <div className="service-card-rotating-border"></div>
         </div>
 
         <div className="flex items-center gap-4 mb-6">

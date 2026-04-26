@@ -61,8 +61,7 @@ function FlipCard({
             >
                 {/* Front Face */}
                 <div
-                    className="absolute inset-0 h-full w-full overflow-hidden rounded-xl border border-white/10 shadow-2xl bg-[#0a1628]"
-                    style={{ backfaceVisibility: "hidden" }}
+                    className="absolute inset-0 h-full w-full overflow-hidden rounded-xl border border-white/10 shadow-2xl bg-[#0a1628] [backface-visibility:hidden]"
                 >
                     <img
                         src={src}
@@ -74,8 +73,7 @@ function FlipCard({
 
                 {/* Back Face */}
                 <div
-                    className="absolute inset-0 h-full w-full overflow-hidden rounded-xl shadow-lg bg-[#0c1830] flex flex-col items-center justify-center p-4 border border-[#38bdf8]/30"
-                    style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+                    className="absolute inset-0 h-full w-full overflow-hidden rounded-xl shadow-lg bg-[#0c1830] flex flex-col items-center justify-center p-4 border border-[#38bdf8]/30 [backface-visibility:hidden] [transform:rotateY(180deg)]"
                 >
                     <div className="text-center">
                         <p className="text-[10px] font-bold text-[#38bdf8] uppercase tracking-widest mb-1">Rishii</p>

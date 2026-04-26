@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /staging
 
-Sitemap: https://www.rishiidesigns.in/sitemap.xml
+Sitemap: https://rishiidesigns.in/sitemap.xml

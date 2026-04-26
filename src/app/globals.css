@@ -148,6 +148,62 @@
   .bg-gradient-radial {
     background-image: radial-gradient(var(--tw-gradient-stops));
   }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .translate-z-10 {
+    transform: translateZ(10px);
+  }
+  .translate-z-20 {
+    transform: translateZ(20px);
+  }
+  .translate-z-40 {
+    transform: translateZ(40px);
+  }
+  .translate-z-neg-20 {
+    transform: translateZ(-20px);
+  }
+
+  .service-card-main {
+    background-color: var(--bg-card);
+    background-image:
+      radial-gradient(at 88% 40%, var(--bg) 0px, transparent 85%),
+      radial-gradient(at 49% 30%, var(--bg) 0px, transparent 85%),
+      radial-gradient(at 14% 26%, var(--bg) 0px, transparent 85%),
+      radial-gradient(at 0% 64%, rgba(56, 189, 248, 0.05) 0px, transparent 85%),
+      radial-gradient(at 41% 94%, rgba(129, 140, 248, 0.05) 0px, transparent 85%),
+      radial-gradient(at 100% 99%, rgba(192, 132, 252, 0.05) 0px, transparent 85%);
+    box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.02) inset;
+  }
+
+  .service-card-border-container {
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    background-image: linear-gradient(0deg, rgba(255,255,255,0.05) -50%, rgba(255,255,255,0.1) 100%);
+    border-radius: 1rem;
+  }
+
+  .service-card-rotating-border {
+    pointer-events: none;
+    position: absolute;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: left;
+    width: 200%;
+    height: 10rem;
+    background-image: linear-gradient(0deg, transparent 0%, rgba(56, 189, 248, 0.6) 40%, rgba(56, 189, 248, 0.6) 60%, transparent 100%);
+    animation: card-rotate 8s linear infinite;
+  }
 }
 @keyframes shine { 
   0% { background-position: 0% 0%; } 
@@ -225,8 +281,29 @@
 .swiper-slide-active { transform: scale(1.1); z-index: 10; }
 .swiper-pagination-bullet { background: #38bdf8 !important; width: 12px; height: 4px; border-radius: 2px; transition: all 0.3s ease; }
 .swiper-pagination-bullet-active { width: 32px; background: linear-gradient(to right, #38bdf8, #818cf8) !important; }
-.nav-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: var(--bg-nav); backdrop-filter: blur(10px); border: 1px solid var(--acc-border); display: flex; align-items: center; justify-content: center; color: var(--text); cursor: pointer; z-index: 20; transition: all 0.3s ease; }
+.nav-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: var(--bg-nav); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--acc-border); display: flex; align-items: center; justify-content: center; color: var(--text); cursor: pointer; z-index: 20; transition: all 0.3s ease; }
 .nav-btn:hover { background: rgba(56, 189, 248, 0.2); border-color: rgba(56, 189, 248, 0.5); color: #38bdf8; }
 .nav-prev { left: 0; }
 .nav-next { right: 0; }
 @media (max-width: 1024px) { .nav-btn { display: none; } }
+
+  /* Glow/Spotlight Card Variables */
+  [data-glow] {
+    --radius: 14;
+    --border: 2;
+    --backdrop: hsl(0 0% 60% / 0.08);
+    --backup-border: var(--backdrop);
+    --size: 200;
+    --outer: 1;
+    --border-size: calc(var(--border, 2) * 1px);
+    --spotlight-size: calc(var(--size, 150) * 1px);
+    --hue: calc(var(--base) + (var(--xp, 0) * var(--spread, 0)));
+    
+    background-color: var(--backdrop, transparent);
+    background-size: calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)));
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    border: var(--border-size) solid var(--backup-border);
+    position: relative;
+    touch-action: none;
+  }

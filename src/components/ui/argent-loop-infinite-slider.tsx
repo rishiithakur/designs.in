@@ -305,8 +305,7 @@ export function ArgentLoopSlider() {
               <img 
                 src={data.image} 
                 alt={data.title}
-                className="absolute top-0 left-0 w-full h-full object-cover will-change-transform"
-                style={{ transform: "scale(1.5)" }}
+                className="absolute top-0 left-0 w-full h-full object-cover will-change-transform scale-[1.5]"
               />
             </div>
           );
@@ -330,8 +329,7 @@ export function ArgentLoopSlider() {
                   <img 
                     src={data.image} 
                     alt={data.title}
-                    className="absolute top-0 left-0 w-full h-full object-cover will-change-transform"
-                    style={{ transform: "scale(1.5)" }}
+                    className="absolute top-0 left-0 w-full h-full object-cover will-change-transform scale-[1.5]"
                   />
                 </div>
               );
