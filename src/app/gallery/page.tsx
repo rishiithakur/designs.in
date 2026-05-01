@@ -31,8 +31,13 @@ export default function GalleryPage() {
         </motion.p>
       </div>
 
-      <div className="h-[80vh] w-full relative">
-        <ArgentLoopSlider />
+      <div className="max-w-7xl mx-auto px-8 mb-24">
+        <div className="relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-[#38bdf8] to-[#818cf8] rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+          <div className="h-[75vh] w-full relative bg-[#060d18] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
+            <ArgentLoopSlider />
+          </div>
+        </div>
       </div>
 
       <div className="py-24 px-8 max-w-7xl mx-auto">

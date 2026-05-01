@@ -34,6 +34,7 @@ const lerp = (start: number, end: number, factor: number) =>
 
 export function ArgentLoopSlider() {
   const [projectData, setProjectData] = React.useState<ProjectData[]>(FALLBACK_DATA);
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     const fetchImages = async () => {
@@ -81,7 +82,6 @@ export function ArgentLoopSlider() {
     max: CONFIG.BUFFER_SIZE,
   });
 
-  // Refs for state that changes frequently (animation loop)
   const state = React.useRef({
     currentY: 0,
     targetY: 0,
@@ -90,17 +90,15 @@ export function ArgentLoopSlider() {
     snapStart: { time: 0, y: 0, target: 0 },
     lastScrollTime: Date.now(),
     dragStart: { y: 0, scrollY: 0 },
-    projectHeight: 0, // Will be set on mount
-    minimapHeight: 250, // Fixed height from CSS
+    projectHeight: 0,
+    minimapHeight: 180, // Updated height
   });
 
-  // Refs to store DOM elements
   const projectsRef = React.useRef<Map<number, HTMLDivElement>>(new Map());
   const minimapRef = React.useRef<Map<number, HTMLDivElement>>(new Map());
   const infoRef = React.useRef<Map<number, HTMLDivElement>>(new Map());
   const requestRef = React.useRef<number>(0);
 
-  // Helper to update parallax for a single item
   const updateParallax = (
     img: HTMLImageElement | null,
     scroll: number,
@@ -117,7 +115,6 @@ export function ArgentLoopSlider() {
     const target = (-scroll - index * height) * 0.2;
     current = lerp(current, target, 0.1);
     
-    // Optimization: only update if changed significantly
     if (Math.abs(current - target) > 0.01) {
         img.style.transform = `translateY(${current}px) scale(1.5)`;
         img.dataset.parallaxCurrent = current.toString();
@@ -154,7 +151,6 @@ export function ArgentLoopSlider() {
     if (s.projectHeight === 0) return;
     const minimapY = (s.currentY * s.minimapHeight) / s.projectHeight;
 
-    // Update Projects
     projectsRef.current.forEach((el, index) => {
       const y = index * s.projectHeight + s.currentY;
       el.style.transform = `translateY(${y}px)`;
@@ -162,7 +158,6 @@ export function ArgentLoopSlider() {
       updateParallax(img, s.currentY, index, s.projectHeight);
     });
 
-    // Update Minimap Images
     minimapRef.current.forEach((el, index) => {
       const y = index * s.minimapHeight + minimapY;
       el.style.transform = `translateY(${y}px)`;
@@ -172,7 +167,6 @@ export function ArgentLoopSlider() {
       }
     });
 
-    // Update Info
     infoRef.current.forEach((el, index) => {
       const y = index * s.minimapHeight + minimapY;
       el.style.transform = `translateY(${y}px)`;
@@ -220,8 +214,13 @@ export function ArgentLoopSlider() {
   };
 
   React.useEffect(() => {
-    state.current.projectHeight = window.innerHeight;
-    
+    const container = containerRef.current;
+    if (!container) return;
+
+    const updateSizing = () => {
+      state.current.projectHeight = container.offsetHeight;
+    };
+
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
       const s = state.current;
@@ -255,30 +254,22 @@ export function ArgentLoopSlider() {
         state.current.isDragging = false;
     }
 
-    const onResize = () => {
-        state.current.projectHeight = window.innerHeight;
-        const container = document.querySelector('.parallax-container') as HTMLElement;
-        if (container) {
-            container.style.height = `${window.innerHeight}px`;
-        }
-    }
-
-    window.addEventListener("wheel", onWheel, { passive: false });
-    window.addEventListener("touchstart", onTouchStart);
-    window.addEventListener("touchmove", onTouchMove);
-    window.addEventListener("touchend", onTouchEnd);
-    window.addEventListener("resize", onResize);
+    updateSizing();
     
-    onResize();
+    container.addEventListener("wheel", onWheel, { passive: false });
+    container.addEventListener("touchstart", onTouchStart);
+    container.addEventListener("touchmove", onTouchMove);
+    container.addEventListener("touchend", onTouchEnd);
+    window.addEventListener("resize", updateSizing);
 
     requestRef.current = requestAnimationFrame(animationLoop);
 
     return () => {
-      window.removeEventListener("wheel", onWheel);
-      window.removeEventListener("touchstart", onTouchStart);
-      window.removeEventListener("touchmove", onTouchMove);
-      window.removeEventListener("touchend", onTouchEnd);
-      window.removeEventListener("resize", onResize);
+      container.removeEventListener("wheel", onWheel);
+      container.removeEventListener("touchstart", onTouchStart);
+      container.removeEventListener("touchmove", onTouchMove);
+      container.removeEventListener("touchend", onTouchEnd);
+      window.removeEventListener("resize", updateSizing);
       if (requestRef.current) cancelAnimationFrame(requestRef.current);
     };
   }, []);
@@ -289,7 +280,10 @@ export function ArgentLoopSlider() {
   }
 
   return (
-    <div className="parallax-container relative w-full h-screen overflow-hidden bg-[var(--bg)] cursor-grab active:cursor-grabbing">
+    <div 
+      ref={containerRef}
+      className="parallax-container relative w-full h-full overflow-hidden bg-[#060d18] cursor-grab active:cursor-grabbing rounded-3xl border border-white/10 shadow-2xl"
+    >
       <div className="project-list absolute inset-0 list-none p-0 m-0">
         {indices.map((i) => {
           const data = getProjectData(i);
@@ -312,7 +306,7 @@ export function ArgentLoopSlider() {
         })}
       </div>
 
-      <div className="minimap fixed right-10 top-1/2 -translate-y-1/2 z-50 w-80 h-[250px] pointer-events-none">
+      <div className="minimap absolute right-6 top-1/2 -translate-y-1/2 z-50 w-64 h-[180px] pointer-events-none scale-75 md:scale-100 origin-right">
         <div className="minimap-wrapper relative w-full h-full flex gap-4">
           <div className="minimap-img-preview relative w-1/2 h-full overflow-hidden rounded-lg border border-white/10 bg-black/20 backdrop-blur-sm">
             {indices.map((i) => {
@@ -366,9 +360,8 @@ export function ArgentLoopSlider() {
         </div>
       </div>
 
-      {/* Decorative Overlay */}
-      <div className="absolute inset-0 pointer-events-none border-[40px] border-[var(--bg)] z-40 md:border-[80px]" />
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[var(--bg)] via-transparent to-[var(--bg)] z-30" />
+      <div className="absolute inset-0 pointer-events-none border-[20px] border-[#060d18] z-40 md:border-[40px]" />
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#060d18] via-transparent to-[#060d18] z-30" />
     </div>
   );
 }
