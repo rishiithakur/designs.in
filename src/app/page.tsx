@@ -259,7 +259,7 @@ export default function Home() {
                             brands in the world.&quot;
                           </p>
                           <p className="text-[var(--text)] font-bold uppercase tracking-widest">
-                            — Rishabh Thakur, Founder of Rishii Designs
+                            &mdash; Rishabh Thakur, Founder of Rishii Designs
                           </p>
                         </div>
                       </div>

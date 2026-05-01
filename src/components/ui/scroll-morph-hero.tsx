@@ -97,10 +97,6 @@ export default function ScrollMorphHero() {
     const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
     const containerRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        fetchSupabaseImages();
-    }, []);
-
     const fetchSupabaseImages = async () => {
         try {
             const { data, error } = await supabase
@@ -124,6 +120,10 @@ export default function ScrollMorphHero() {
             setLoading(false);
         }
     };
+
+    useEffect(() => {
+        Promise.resolve().then(() => fetchSupabaseImages());
+    }, []);
 
     // --- Container Size ---
     useEffect(() => {
@@ -189,10 +189,14 @@ export default function ScrollMorphHero() {
     }, []);
 
     const scatterPositions = useMemo(() => {
-        return Array.from({ length: 20 }).map(() => ({
-            x: (Math.random() - 0.5) * 1500,
-            y: (Math.random() - 0.5) * 1000,
-            rotation: (Math.random() - 0.5) * 180,
+        const random = (seed: number) => {
+            const x = Math.sin(seed) * 10000;
+            return x - Math.floor(x);
+        };
+        return Array.from({ length: 20 }).map((_, i) => ({
+            x: (random(i * 123.45) - 0.5) * 1500,
+            y: (random(i * 678.90) - 0.5) * 1000,
+            rotation: (random(i * 345.67) - 0.5) * 180,
             scale: 0.6,
             opacity: 0,
         }));
@@ -265,7 +269,7 @@ export default function ScrollMorphHero() {
                         </span>
                     </h2>
                     <p className="text-[#8bb8d4] text-lg md:text-xl max-w-xl mx-auto leading-relaxed mb-8">
-                        Crafting high-end, production-ready digital experiences for the world's most ambitious brands.
+                        Crafting high-end, production-ready digital experiences for the world&apos;s most ambitious brands.
                     </p>
 
                     {/* Award Badges */}

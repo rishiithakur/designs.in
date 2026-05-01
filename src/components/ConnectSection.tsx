@@ -136,7 +136,7 @@ export default function ConnectSection() {
           Ready to <span className="text-gradient">Scale?</span>
         </h2>
         <p className="text-[var(--text2)] text-lg max-w-2xl mx-auto mb-16">
-          Let's integrate high-end design and AI into your workflow. Connect with me today to start your journey.
+          Let&apos;s integrate high-end design and AI into your workflow. Connect with me today to start your journey.
         </p>
 
         <PulseBeams

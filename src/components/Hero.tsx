@@ -8,7 +8,7 @@ import Link from "next/link";
 
 import { AwardBadge } from "./ui/award-badge";
 import AnimatedTextCycle from "./ui/animated-text-cycle";
-import { PulseBeams } from "./ui/PulseBeams";
+import { PulseButtonGlow } from "./ui/PulseButtonGlow";
 
 import { TubesBackground } from "./ui/neon-flow";
 
@@ -81,7 +81,7 @@ export default function Hero() {
 
         <div className="scatter-item flex flex-wrap items-center justify-center gap-6">
           <div className="relative">
-            <PulseBeams />
+            <PulseButtonGlow />
             <Link
               href="#book"
               className="relative overflow-hidden flex items-center gap-2 px-10 py-5 rounded-full bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-[#060d18] font-bold text-[15px] shadow-[0_8px_32px_rgba(56,189,248,0.4)] hover:scale-105 transition-transform z-10"

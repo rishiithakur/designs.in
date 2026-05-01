@@ -2,21 +2,15 @@
 import React from 'react';
 
 export function useScroll(threshold: number) {
-	const [scrolled, setScrolled] = React.useState(false);
+  // Use useSyncExternalStore for a clean, hydration-safe way to track window scroll
+  const isScrolled = React.useSyncExternalStore(
+    (callback) => {
+      window.addEventListener('scroll', callback);
+      return () => window.removeEventListener('scroll', callback);
+    },
+    () => window.scrollY > threshold,
+    () => false // Server-side value
+  );
 
-	const onScroll = React.useCallback(() => {
-		setScrolled(window.scrollY > threshold);
-	}, [threshold]);
-
-	React.useEffect(() => {
-		window.addEventListener('scroll', onScroll);
-		return () => window.removeEventListener('scroll', onScroll);
-	}, [onScroll]);
-
-	// also check on first load
-	React.useEffect(() => {
-		onScroll();
-	}, [onScroll]);
-
-	return scrolled;
+  return isScrolled;
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { RiTwitterXLine } from 'react-icons/ri';
 import { motion, Variants } from 'framer-motion';
 
@@ -49,7 +49,7 @@ const waveVariantsList = WaveVariants();
 
 export const VoiceTestimonial: React.FC<ComponentProps> = ({ mode, testimonials }) => {
   const [currentPlayingIndex, setCurrentPlayingIndex] = useState<number | null>(null);
-  const [audioElements, setAudioElements] = useState<(HTMLAudioElement | null)[]>([]);
+  const audioElements = useRef<(HTMLAudioElement | null)[]>([]);
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export const VoiceTestimonial: React.FC<ComponentProps> = ({ mode, testimonials 
         elements.push(null);
       }
     });
-    setAudioElements(elements);
+    audioElements.current = elements;
 
     return () => {
       elements.forEach((audio) => {
@@ -79,7 +79,7 @@ export const VoiceTestimonial: React.FC<ComponentProps> = ({ mode, testimonials 
       stopAudio(currentPlayingIndex);
     }
 
-    const audio = audioElements[index];
+    const audio = audioElements.current[index];
     if (audio) {
       audio.play().catch((error) => console.error('Audio playback error:', error));
       setCurrentPlayingIndex(index);
@@ -87,7 +87,7 @@ export const VoiceTestimonial: React.FC<ComponentProps> = ({ mode, testimonials 
   };
 
   const stopAudio = (index: number) => {
-    const audio = audioElements[index];
+    const audio = audioElements.current[index];
     if (audio) {
       audio.pause();
       audio.currentTime = 0;
@@ -167,7 +167,7 @@ export const VoiceTestimonial: React.FC<ComponentProps> = ({ mode, testimonials 
               </div>
               <div className="mt-6 mb-8">
                 <p className="text-[var(--text2)] text-base leading-relaxed">
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </p>
               </div>
               

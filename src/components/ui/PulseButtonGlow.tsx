@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export function PulseBeams() {
+export function PulseButtonGlow() {
   return (
     <div className="absolute -inset-4 pointer-events-none z-0">
       <motion.div

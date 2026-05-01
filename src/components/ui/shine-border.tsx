@@ -77,7 +77,7 @@ export function TimelineEvent({
 }: TimelineEventData & {
   isLast?: boolean;
 }) {
-  const Icon = (DIcons as any)[icon.name] || (() => <div className="h-4 w-4" />);
+  const Icon = (DIcons as any)[icon.name];
   return (
     <div className="group relative -m-2 flex gap-4 border border-transparent p-2">
       <div className="relative">
@@ -87,7 +87,11 @@ export function TimelineEvent({
             icon.borderColor
           )}
         >
-          <Icon className={cn("h-4 w-4", icon.textColor)} />
+          {Icon ? (
+            <Icon className={cn("h-4 w-4", icon.textColor)} />
+          ) : (
+            <div className="h-4 w-4" />
+          )}
         </div>
         {!isLast ? (
           <div className="absolute inset-x-0 mx-auto h-full w-[2px] bg-muted" />
