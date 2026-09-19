@@ -239,7 +239,7 @@ export default function Home() {
                             >
                               <div className="w-20 h-20 rounded-full border-2 border-[var(--acc)] p-1 bg-[var(--bg)] overflow-hidden">
                                 <img 
-                                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rishii" 
+                                  src="/selfie.jpg" 
                                   alt="Rishabh Thakur, founder and web designer at Rishii Designs" 
                                   className="w-full h-full object-cover"
                                 />
@@ -314,10 +314,10 @@ export default function Home() {
               </div>
             </section>
 
-            {/* SEO Paragraph Section */}
-            <section className="py-24 px-8 max-w-7xl mx-auto">
-              <div className="p-12 rounded-[40px] bg-[var(--bg2)] border border-[var(--acc-border)]">
-                <p className="text-[var(--text2)] text-lg leading-relaxed text-center italic">
+            {/* SEO Paragraph Section - visually hidden, preserved for search engines */}
+            <section className="absolute w-px h-px overflow-hidden opacity-0 pointer-events-none" aria-hidden="true">
+              <div>
+                <p>
                   Rishii Designs is a premium web design and AI solutions studio founded by Rishabh Thakur, dedicated to crafting futuristic digital experiences for global clients worldwide. Our expertise spans across high-end web design services, custom logo design, and innovative AI solutions tailored for startups and institutional brands worldwide. As an India-based freelance web designer and full-stack developer, I combine institutional precision with startup speed to deliver conversion-optimized websites and branding that stand out in the digital landscape. Whether you need a modern portfolio, a full-stack e-commerce platform, or AI-powered automation, Rishii Designs provides remote services to clients across the globe, ensuring your online identity is both stunning and technically rigorous. We architect digital legacies that prioritize performance, accessibility, and high-fidelity aesthetics, helping brands achieve digital excellence through cutting-edge technology and human-centric design.
                 </p>
               </div>
