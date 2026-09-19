@@ -21,53 +21,53 @@ import { supabase } from "@/lib/supabase";
 const expertiseCards = [
   {
     icon: <Globe className="w-6 h-6" />,
-    title: "World Bank Projects",
-    desc: "DRIP-II, NHP, STEP Integration",
+    title: "GIS & Geospatial",
+    desc: "ArcGIS Pro, Spatial Analysis, LULC",
     color: "blue" as const,
   },
   {
-    icon: <Cpu className="w-6 h-6" />,
-    title: "AI & Automation",
-    desc: "Chatbots, Python, Power BI",
-    color: "purple" as const,
-  },
-  {
     icon: <Database className="w-6 h-6" />,
-    title: "GIS & Spatial Data",
-    desc: "ArcGIS Pro, Google Earth Engine",
+    title: "Remote Sensing & GEE",
+    desc: "Earth Engine, ET, Water Bodies",
     color: "green" as const,
   },
   {
+    icon: <Cpu className="w-6 h-6" />,
+    title: "Python & Data",
+    desc: "Automation, PostgreSQL, Jupyter",
+    color: "purple" as const,
+  },
+  {
     icon: <Layers className="w-6 h-6" />,
-    title: "Full-Stack Dev",
-    desc: "React, Next.js, MySQL, PostgreSQL",
+    title: "AI & Automation",
+    desc: "AI workflows, API integration",
     color: "blue" as const,
   },
   {
     icon: <Palette className="w-6 h-6" />,
-    title: "UI/UX Design",
-    desc: "Glassmorphism, Premium Editorial",
+    title: "Web & Dashboards",
+    desc: "React, Next.js, Esri Web Apps",
     color: "purple" as const,
   },
   {
     icon: <Shield className="w-6 h-6" />,
-    title: "Gov-Tech Systems",
-    desc: "MIS, DHARMA, GRM Portals",
+    title: "MIS & Digital Systems",
+    desc: "DRIP-II, DHARMA, GRM Portals",
     color: "orange" as const,
   },
 ];
 
 const cycleWords = [
-  "premium digital experiences.",
-  "futuristic AI-powered websites.",
-  "brands that stand out.",
-  "high-converting landing pages.",
-  "modern UI/UX that feels alive.",
-  "stunning visuals with AI.",
-  "fast, responsive web solutions.",
-  "your online identity.",
-  "designs that sell.",
-  "next-gen web experiences.",
+  "GIS & geospatial solutions.",
+  "data-driven digital systems.",
+  "AI-powered automation workflows.",
+  "remote sensing & Earth Engine tools.",
+  "modern web & dashboard solutions.",
+  "institutional MIS platforms.",
+  "Python & data processing pipelines.",
+  "technical solutions that scale.",
+  "spatial data that tells a story.",
+  "precision from requirement to delivery.",
 ];
 
 export default function Home() {
@@ -120,16 +120,16 @@ export default function Home() {
         <TubesBackground className="fixed inset-0 z-0 !bg-transparent opacity-80 pointer-events-none" />
         <Navbar />
         <HeroGeometric
-          badge="Rishii Designs"
-          title1="Architecture for"
-          title2="Digital Excellence"
+          badge="Rishabh Thakur — GIS & Data Solutions"
+          title1="GIS & Data Solutions"
+          title2="Specialist & Designer"
         >
           <div className="max-w-4xl mx-auto text-center mb-6 px-4">
             <p className="text-[var(--acc)] font-bold mb-4 tracking-wider uppercase text-sm">
-              Rishii Designs is a web design, logo design, and AI solutions agency founded by Rishabh Thakur, based in India and serving clients worldwide.
+              Geospatial Data • Remote Sensing • Python Automation • AI-Assisted Solutions
             </p>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-[var(--text2)] relative">
-              We build{" "}
+              I work across{" "}
               <AnimatedTextCycle
                 words={cycleWords}
                 interval={3000}
@@ -143,13 +143,13 @@ export default function Home() {
               href="/gallery"
               className="px-8 py-4 rounded-full bg-[var(--acc-dim)] border border-[var(--acc-border)] text-[var(--text)] font-bold transition-all hover:bg-[var(--acc-glow)]"
             >
-              View web design portfolio
+              Explore My Work
             </Link>
             <Link
               href="/contact"
               className="px-8 py-4 rounded-full bg-[var(--acc)] text-white font-bold transition-all hover:scale-105 hover:shadow-[0_0_30px_var(--acc-glow)]"
             >
-              Hire a freelance web designer
+              Work With Me
             </Link>
           </div>
         </HeroGeometric>
@@ -159,10 +159,10 @@ export default function Home() {
             <section className="py-24 px-8 max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-black text-[var(--text)] mb-6">
-                  Rishii Designs <span className="text-gradient">Web Design Services.</span>
+                  GIS, Data & <span className="text-gradient">Digital Solutions.</span>
                 </h2>
                 <p className="text-[var(--text2)] text-lg max-w-2xl mx-auto">
-                  From World Bank institutional systems to cutting-edge AI solutions — here&apos;s what I bring to every project as a freelance web designer.
+                  From World Bank-funded geospatial programs to AI-assisted automation — here&apos;s what I bring to every project.
                 </p>
               </div>
 
@@ -194,30 +194,29 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                   <div>
                     <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight text-[var(--text)]">
-                      Institutional Precision. <br />
-                      <span className="text-gradient">Startup Speed Worldwide.</span>
+                      Requirement to Delivery. <br />
+                      <span className="text-gradient">Institutional to Technical.</span>
                     </h2>
                     <p className="text-[var(--text2)] text-xl mb-12 leading-relaxed">
-                      At Rishii Designs, we believe that high-end design should
-                      never come at the cost of technical performance. Our
-                      methodology combines the rigorous standards of global
-                      institutions with the agility of a boutique studio serving global clients.
+                      I work across GIS, geospatial data, remote sensing, Python automation,
+                      AI-assisted development and modern digital systems — turning project
+                      requirements into practical, scalable technical solutions.
                     </p>
                     <div className="grid grid-cols-2 gap-8">
                       <div>
                         <h4 className="text-5xl font-black text-[var(--acc)] mb-2">
-                          99.9%
+                          4+
                         </h4>
                         <p className="text-xs uppercase tracking-[0.2em] font-bold text-[var(--text)] opacity-40">
-                          Performance Score
+                          Years Experience
                         </p>
                       </div>
                       <div>
                         <h4 className="text-5xl font-black text-[#818cf8] mb-2">
-                          50+
+                          WB
                         </h4>
                         <p className="text-xs uppercase tracking-[0.2em] font-bold text-[var(--text)] opacity-40">
-                          Global Projects Delivered
+                          World Bank-funded Programs
                         </p>
                       </div>
                     </div>
@@ -254,12 +253,12 @@ export default function Home() {
                             </div>
                           </div>
                           <p className="text-[var(--text2)] italic text-2xl mb-8">
-                            &quot;We don&apos;t just build websites; we
-                            architect digital legacies for the most ambitious
-                            brands in the world.&quot;
+                            &quot;Good technical work starts with understanding
+                            the requirement and ends with a solution
+                            that actually works in the field.&quot;
                           </p>
                           <p className="text-[var(--text)] font-bold uppercase tracking-widest">
-                            &mdash; Rishabh Thakur, Founder of Rishii Designs
+                            &mdash; Rishabh Thakur, GIS & Data Solutions Specialist
                           </p>
                         </div>
                       </div>
@@ -351,25 +350,25 @@ export default function Home() {
                     Premium Accreditation
                   </Badge>
                   <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter">
-                    AI Solutions by <span className="text-[#fbbf24]">Rishii Designs.</span>
+                    Google AI Certified — <span className="text-[#fbbf24]">Rishabh Thakur.</span>
                   </h2>
                   <p className="text-[#8bb8d4] text-xl mb-10 leading-relaxed max-w-2xl">
-                    Our workflow is officially recognized and certified by Google. We integrate 
-                    advanced generative AI solutions to accelerate your brand's growth and 
-                    architect futuristic digital infrastructures for global clients.
+                    Google AI Essentials certified. I integrate AI-assisted workflows,
+                    automation and API-based solutions into GIS data pipelines,
+                    dashboards and web applications for institutional and technical projects.
                   </p>
                   <div className="flex gap-6">
                     <button 
                       disabled
                       className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#fbbf24]/20 text-[#fbbf24] border border-[#fbbf24]/30 font-bold cursor-not-allowed opacity-80"
                     >
-                      <ShieldCheck className="w-4 h-4" /> Secured Digital Credential
+                      <ShieldCheck className="w-4 h-4" /> Verified Certification
                     </button>
                     <Link 
                       href="/about" 
                       className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/5 text-white border border-white/10 font-bold hover:bg-white/10 transition-all"
                     >
-                      Rishabh Thakur, founder of Rishii Designs <ArrowRight className="w-4 h-4" />
+                      About Rishabh Thakur <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>

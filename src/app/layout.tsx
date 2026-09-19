@@ -24,9 +24,9 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Rishii Designs – Web Design, Logo & AI Services Worldwide",
-  description: "Rishii Designs by Rishabh Thakur offers AI-powered web design, logo creation, branding, and full-stack development for clients worldwide. Based in India, working globally.",
-  keywords: ["Rishii Designs", "web design services", "logo design services", "AI web design", "freelance web designer", "UI UX design", "branding services", "full-stack developer", "chatbot development", "AI automation"],
+  title: "Rishabh Thakur — GIS & Data Solutions Specialist | Rishii Designs",
+  description: "Rishabh Thakur is a GIS & Data Solutions Specialist with experience in geospatial data, remote sensing, Google Earth Engine, ArcGIS Pro, Python automation, AI-assisted development and digital systems on World Bank-funded programs. Founder of Rishii Designs.",
+  keywords: ["Rishabh Thakur", "GIS analyst", "geospatial data specialist", "remote sensing", "Google Earth Engine", "ArcGIS Pro", "Python automation", "AI solutions", "Rishii Designs", "web design", "data processing", "MIS systems", "World Bank projects"],
   metadataBase: new URL("https://rishiidesigns.in"),
   alternates: {
     canonical: "/",
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Rishii Designs – Web Design, Logo & AI Services Worldwide",
-    description: "Rishii Designs by Rishabh Thakur offers AI-powered web design, logo creation, branding, and full-stack development for clients worldwide.",
+    title: "Rishabh Thakur — GIS & Data Solutions Specialist | Rishii Designs",
+    description: "GIS & Data Solutions Specialist with experience in geospatial data, remote sensing, Python automation and AI-assisted development on World Bank-funded programs. Founder of Rishii Designs.",
     url: "https://rishiidesigns.in",
-    siteName: "Rishii Designs",
+    siteName: "Rishii Designs — Rishabh Thakur",
     locale: "en_US",
     type: "website",
   },

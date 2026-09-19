@@ -33,74 +33,73 @@ export default function AboutPage() {
                 Rishabh <span className="text-gradient">Thakur</span>
               </h1>
               <p className="text-[var(--text2)] text-xl leading-relaxed mb-8">
-                I am Rishabh Thakur, the founder of Rishii Designs. I am an{" "}
+                I am Rishabh Thakur, a{" "}
                 <span className="text-[var(--text)] font-bold">
-                  IT Solutions Specialist
+                  GIS & Data Solutions Specialist
                 </span>
-                ,{" "}
-                <span className="text-[var(--text)] font-bold">
-                  GIS Analyst
-                </span>
-                , and{" "}
-                <span className="text-[var(--text)] font-bold">
-                  Full-Stack Designer
-                </span>
-                . Currently working on World Bank & Government-funded projects
-                at SHINE Soft Pvt. Ltd., Hamirpur, Himachal Pradesh.
+                {" "}with nearly four years of experience across GIS, geospatial
+                data, remote sensing, Google Earth Engine, ArcGIS Pro, data
+                processing, dashboards, project systems and technical
+                implementation on World Bank-funded and government-funded water
+                and infrastructure programs. Founder of{" "}
+                <span className="text-[var(--acc)] font-bold">Rishii Designs</span>
+                {" "}— a digital solutions and web design studio.
               </p>
               <p className="text-[var(--text2)] text-lg leading-relaxed mb-8">
-                Rishabh Thakur actively shares design, development, and AI work on professional platforms including LinkedIn and GitHub. 
-                From spearheading{" "}
+                I work across requirement analysis, GIS workflows, data
+                processing, Python automation, AI-assisted development, API
+                integration, testing, documentation and technical implementation —
+                turning complex project requirements into practical, working solutions.
+                Currently working at{" "}
                 <span className="text-[var(--acc)] font-bold">
-                  World Bank DRIP-II
-                </span>{" "}
-                digital initiatives to developing{" "}
-                <span className="text-[var(--acc)] font-bold">
-                  National Hydrology Project
-                </span>{" "}
-                tools using Google Earth Engine, I specialize in translating
-                complex institutional requirements into elegant, high-performance
-                digital solutions.
+                  SHINE Soft Pvt. Ltd.
+                </span>
+                {" "}on{" "}
+                <span className="text-[var(--acc)] font-bold">World Bank DRIP-II</span>
+                {" "}and{" "}
+                <span className="text-[var(--acc)] font-bold">National Hydrology Project</span>
+                {" "}initiatives.
               </p>
               <div className="space-y-6">
                 <div className="flex gap-4 items-start">
                   <div className="w-12 h-12 rounded-full bg-[var(--acc-dim)] flex items-center justify-center shrink-0">
-                    <Cpu className="w-5 h-5 text-[var(--acc)]" />
+                    <Globe className="w-5 h-5 text-[var(--acc)]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-1 text-[var(--text)]">
-                      AI Solutions & Intelligent Systems
+                      GIS & Geospatial Solutions
                     </h3>
                     <p className="text-[var(--text2)]">
-                      AI-powered chatbot solutions, Python automation, Power BI
-                      dashboards, and automated workflows for global clients.
+                      ArcGIS Pro, spatial analysis, LULC classification, raster workflows
+                      and geospatial data processing for institutional programs.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">
                   <div className="w-12 h-12 rounded-full bg-[#10b981]/20 flex items-center justify-center shrink-0">
-                    <Globe className="w-5 h-5 text-[#10b981]" />
+                    <Database className="w-5 h-5 text-[#10b981]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-1 text-[var(--text)]">
-                      GIS & Spatial Data Worldwide
+                      Remote Sensing & Google Earth Engine
                     </h3>
                     <p className="text-[var(--text2)]">
-                      ArcGIS Pro, Google Earth Engine — ET analysis, LULC
-                      classification, and water budgeting on a global scale.
+                      GEE-based ET analysis, LULC classification, water body delineation,
+                      irrigation benchmarking and water budgeting workflows.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">
                   <div className="w-12 h-12 rounded-full bg-[#818cf8]/20 flex items-center justify-center shrink-0">
-                    <Database className="w-5 h-5 text-[#818cf8]" />
+                    <Cpu className="w-5 h-5 text-[#818cf8]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-1 text-[var(--text)]">
-                      Full-Stack Web Design
+                      Python, Data & AI Automation
                     </h3>
                     <p className="text-[var(--text2)]">
-                      MySQL, PostgreSQL, MIS portals — building high-performance web design services worldwide.
+                      Python/Jupyter, PostgreSQL, Excel data processing, AI-assisted
+                      development, API integration and workflow automation.
                     </p>
                   </div>
                 </div>
@@ -109,7 +108,7 @@ export default function AboutPage() {
                     href="/contact" 
                     className="inline-flex items-center gap-2 text-[var(--acc)] font-bold hover:underline"
                   >
-                    Work with Rishii Designs <ArrowRight className="w-4 h-4" />
+                    Work With Rishabh <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -137,9 +136,9 @@ export default function AboutPage() {
               </ShineBorder>
 
               <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[var(--bg-card)] backdrop-blur-xl border border-[var(--acc-border)] rounded-full flex flex-col items-center justify-center text-center p-4 transform -rotate-12 group hover:rotate-0 transition-transform duration-500">
-                <p className="text-2xl font-black text-[var(--text)]">ELITE</p>
+                <p className="text-2xl font-black text-[var(--text)]">GIS</p>
                 <p className="text-[10px] uppercase tracking-widest text-[var(--acc)]">
-                  Developer
+                  Analyst
                 </p>
               </div>
             </motion.div>
@@ -211,21 +210,52 @@ export default function AboutPage() {
               </p>
               <ul className="space-y-2 text-[var(--text2)]">
                 <li className="flex gap-2">
-                  <span className="text-[var(--acc)]">•</span> World Bank
-                  DRIP-II: STEP integration, MIS deployment, DHARMA tool
-                  enhancement
+                  <span className="text-[var(--acc)]">•</span> Supported integration of the World Bank
+                  procurement portal STEP with the project MIS under DRIP-II.
                 </li>
                 <li className="flex gap-2">
-                  <span className="text-[var(--acc)]">•</span> NHP: GEE-based
-                  tools for water budgeting, irrigation benchmarking
+                  <span className="text-[var(--acc)]">•</span> Supported system deployment, hosting and
+                  end-to-end testing of the integrated MIS.
                 </li>
                 <li className="flex gap-2">
-                  <span className="text-[var(--acc)]">•</span> AI chatbot
-                  solutions, Python automation, Power BI dashboards
+                  <span className="text-[var(--acc)]">•</span> Reviewed System Requirement Specifications
+                  and solution architecture.
                 </li>
                 <li className="flex gap-2">
-                  <span className="text-[var(--acc)]">•</span> ArcGIS Pro
-                  mapping, LULC analysis, MySQL/PostgreSQL databases
+                  <span className="text-[var(--acc)]">•</span> Contributed to enhancement of the MIS and
+                  DHARMA portal.
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[var(--acc)]">•</span> Worked on Rapid Risk Assessment Tool and
+                  STEP data integration within the project MIS.
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[var(--acc)]">•</span> Supported development of a Grievance
+                  Redressal Mechanism (GRM).
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[var(--acc)]">•</span> Worked on Google Earth Engine-based tools
+                  for irrigation benchmarking, water budgeting and water body delineation.
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[var(--acc)]">•</span> Processed and validated project datasets
+                  using Excel, Python/Jupyter Notebook and PostgreSQL.
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[var(--acc)]">•</span> Used ArcGIS Pro for mapping, raster generation,
+                  LULC analysis and spatial visualization.
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[var(--acc)]">•</span> Used Google Earth Engine for ET, LULC
+                  classification and TBP analysis.
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[var(--acc)]">•</span> Developed and tested AI-assisted Python and
+                  API-based automation workflows.
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-[var(--acc)]">•</span> Built dashboards and Esri-based web
+                  applications.
                 </li>
               </ul>
             </div>
@@ -238,28 +268,30 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-8">
           <div className="max-w-3xl">
             <h2 className="text-4xl font-black mb-12 text-[var(--text)]">
-              Institutional Precision. Startup Speed.
+              Requirement to Delivery. Technical to Practical.
             </h2>
             <div className="grid gap-12">
               <div className="border-l-4 border-[var(--acc)] pl-8">
                 <h3 className="text-2xl font-bold mb-4 italic text-[var(--text)]">
-                  &quot;Transforming government and institutional complexity
-                  into simple, stunning user experiences.&quot;
+                  &quot;Good technical work starts with understanding
+                  the requirement and ends with a solution
+                  that actually works in the field.&quot;
                 </h3>
                 <p className="text-[var(--text2)] text-lg">
-                  My work at the World Bank taught me the importance of
-                  reliability and accessibility. My personal passion for design
-                  pushes me to make that reliability look beautiful.
+                  My work on World Bank and government programs has shaped
+                  my understanding of reliability, documentation and delivering
+                  solutions that non-technical stakeholders can actually use.
                 </p>
               </div>
               <div className="border-l-4 border-[#818cf8] pl-8">
                 <h3 className="text-2xl font-bold mb-4 text-[var(--text)]">
-                  Architecture First
+                  Data & Systems First
                 </h3>
                 <p className="text-[var(--text2)] text-lg">
-                  Design is only as good as the system it sits on. I prioritize
-                  clean, performant codebases that can scale to millions of
-                  users without breaking a sweat.
+                  Whether it is a GIS workflow, a dashboard, a Python automation
+                  script or an MIS portal — I prioritize clean implementation,
+                  accurate data processing and solutions that can be maintained
+                  and extended over time.
                 </p>
               </div>
             </div>

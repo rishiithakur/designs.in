@@ -19,7 +19,7 @@ export default function GalleryPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-6xl md:text-8xl font-black tracking-tighter mb-4"
         >
-          DESIGN <span className="text-gradient">PORTFOLIO.</span>
+          WORK & <span className="text-gradient">PORTFOLIO.</span>
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export default function GalleryPage() {
           transition={{ delay: 0.1 }}
           className="text-[#8bb8d4] text-xl max-w-2xl mx-auto"
         >
-          Browse the web design and logo design portfolio of Rishii Designs — showcasing real client work for global brands and startups worldwide.
+          Selected work across GIS, geospatial data, remote sensing, dashboards, MIS systems, web applications and digital design.
         </motion.p>
       </div>
 
@@ -43,18 +43,23 @@ export default function GalleryPage() {
       <div className="py-24 px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold mb-6">Web Design & Logo Solutions</h2>
+            <h2 className="text-4xl font-bold mb-6">GIS, Data & Technical Solutions</h2>
             <p className="text-[#8bb8d4] leading-relaxed mb-6">
-              Our portfolio represents the pinnacle of freelance web design and branding services. At Rishii Designs, we architect digital legacies that blend architectural precision with futuristic AI solutions. Each project in our web design portfolio is built to convert and scale for global clients.
+              Selected work across GIS & geospatial analysis, remote sensing, Google Earth Engine,
+              Python data processing, dashboard development, MIS portals, AI automation and web design.
+              Work is presented at a high level due to project confidentiality.
+            </p>
+            <p className="text-[#8bb8d4]/60 text-sm italic mb-6">
+              Selected project information is presented at a high level due to project confidentiality.
             </p>
             <div className="flex gap-4">
                 <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                    <p className="text-3xl font-black text-[#38bdf8]">50+</p>
-                    <p className="text-xs uppercase tracking-widest text-[#8bb8d4]">Global Projects</p>
+                    <p className="text-3xl font-black text-[#38bdf8]">4+</p>
+                    <p className="text-xs uppercase tracking-widest text-[#8bb8d4]">Years Experience</p>
                 </div>
                 <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                    <p className="text-3xl font-black text-[#818cf8]">India</p>
-                    <p className="text-xs uppercase tracking-widest text-[#8bb8d4]">Based Origin</p>
+                    <p className="text-3xl font-black text-[#818cf8]">WB</p>
+                    <p className="text-xs uppercase tracking-widest text-[#8bb8d4]">World Bank Programs</p>
                 </div>
             </div>
           </div>

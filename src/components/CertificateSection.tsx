@@ -9,16 +9,16 @@ interface Certificate {
 
 const certificates: Certificate[] = [
   { 
-    name: "Microsoft Office Specialist", 
-    issuer: "Microsoft",
+    name: "Google AI Essentials", 
+    issuer: "Google",
+  },
+  { 
+    name: "Google AI: Research & Insights", 
+    issuer: "Google",
   },
   { 
     name: "AI for Content Creation", 
     issuer: "Coursera",
-  },
-  { 
-    name: "Google AI Essentials", 
-    issuer: "Google",
   },
   { 
     name: "AI Writing & Communication", 
@@ -29,12 +29,12 @@ const certificates: Certificate[] = [
     issuer: "Coursera",
   },
   { 
-    name: "Google AI: Research & Insights", 
-    issuer: "Google",
-  },
-  { 
     name: "AI & Brainstorming", 
     issuer: "Coursera",
+  },
+  { 
+    name: "Microsoft Office Specialist", 
+    issuer: "Microsoft",
   },
 ];
 
