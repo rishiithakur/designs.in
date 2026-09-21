@@ -90,9 +90,9 @@ export default function Home() {
         }
 
         if (data) {
-          const validItems = data
-            .filter(item => item.image_url)
-            .map(item => ({
+          const validItems = (data as any[])
+            .filter((item: any) => item.image_url)
+            .map((item: any) => ({
               src: item.image_url,
               alt: item.title || "Project Highlights",
               category: "Rishii Designs"

@@ -106,7 +106,7 @@ export default function ScrollMorphHero() {
             
             if (error) throw error;
             if (data) {
-                setImages(data.map(item => item.image_url).filter(Boolean));
+                setImages((data as any[]).map((item: any) => item.image_url).filter(Boolean));
             }
         } catch (err) {
             console.error("Supabase error:", err);
