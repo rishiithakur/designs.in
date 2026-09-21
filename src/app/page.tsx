@@ -159,18 +159,18 @@ export default function Home() {
                   <div className="absolute inset-0 bg-[var(--acc)]/20 blur-[100px] rounded-full" />
                   <ShineBorder
                     color="#38bdf8"
-                    borderRadius={40}
+                    borderRadius={32}
                     className="!bg-transparent border-none"
                   >
-                    <div className="aspect-video rounded-[40px] overflow-hidden bg-[var(--bg-card)] backdrop-blur-xl flex items-center justify-center p-10 md:p-12">
-                      <div className="text-center">
-                        <div className="flex flex-col items-center mb-6">
+                    <div className="w-full rounded-[32px] overflow-hidden bg-[var(--bg-card)] backdrop-blur-xl flex flex-col items-center justify-center p-8 sm:p-10 md:py-12 md:px-10">
+                      <div className="text-center max-w-xl mx-auto flex flex-col items-center">
+                        <div className="flex flex-col items-center mb-5">
                           <motion.div 
                             initial={{ scale: 0 }}
                             whileInView={{ scale: 1 }}
-                            className="relative mb-4"
+                            className="relative mb-3"
                           >
-                            <div className="w-20 h-20 rounded-full border-2 border-[var(--acc)] p-1 bg-[var(--bg)] overflow-hidden">
+                            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[var(--acc)] p-1 bg-[var(--bg)] overflow-hidden">
                               <img 
                                 src="/profile.png" 
                                 alt="Rishabh Thakur — GIS & Data Solutions Specialist" 
@@ -178,15 +178,15 @@ export default function Home() {
                               />
                             </div>
                             <div className="absolute -bottom-1 -right-1 bg-[var(--acc)] text-white p-1 rounded-full border-2 border-[var(--bg)]">
-                              <ShieldCheck className="w-4 h-4" />
+                              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                             </div>
                           </motion.div>
-                          <div className="flex items-center gap-2 px-3 py-1 bg-[var(--acc-dim)] border border-[var(--acc-border)] rounded-full mb-2">
+                          <div className="flex items-center gap-2 px-3.5 py-1 bg-[var(--acc-dim)] border border-[var(--acc-border)] rounded-full">
                             <div className="w-1.5 h-1.5 rounded-full bg-[var(--acc)] animate-pulse" />
                             <span className="text-xs font-medium text-[var(--acc)]">Verified Specialist</span>
                           </div>
                         </div>
-                        <p className="text-[var(--text2)] italic text-lg sm:text-xl md:text-2xl mb-4 leading-relaxed font-normal">
+                        <p className="text-[var(--text2)] italic text-base sm:text-lg md:text-xl mb-4 leading-relaxed font-normal">
                           &quot;Good technical work starts with understanding
                           the requirement and ends with a solution
                           that actually works in the field.&quot;

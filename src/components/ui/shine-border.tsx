@@ -23,14 +23,15 @@ const ShineBorder = ({
   duration = 3,
   gradient = "from-[#38bdf8] via-[#818cf8] to-[#c084fc]",
   color, // Ignored in new version but kept for types
+  borderRadius = 24,
 }: ShineBorderProps) => {
   return (
     <div
-      className={cn("relative rounded-2xl overflow-hidden", className)}
-      style={{ padding: borderWidth }}
+      className={cn("relative overflow-hidden", className)}
+      style={{ padding: borderWidth, borderRadius }}
     >
       {/* Animated Gradient Layer */}
-      <div className="absolute inset-0 rounded-2xl overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden" style={{ borderRadius }}>
         <div
           className={cn(
             "absolute -inset-[100%] blur-sm animate-spin bg-conic",
@@ -42,9 +43,9 @@ const ShineBorder = ({
 
       {/* Content Layer */}
       <div className={cn(
-        "relative rounded-xl h-full w-full overflow-hidden",
+        "relative h-full w-full overflow-hidden",
         className?.includes("!bg-transparent") ? "bg-transparent" : "bg-[var(--bg-card)]"
-      )}>
+      )} style={{ borderRadius: Math.max(0, borderRadius - borderWidth) }}>
         {children}
       </div>
     </div>
