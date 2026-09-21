@@ -37,12 +37,12 @@ export default function Footer() {
               </Avatar>
               <div>
                 <p className="text-[var(--text)] font-bold text-sm">Rishabh Thakur</p>
-                <p className="text-[#38bdf8] text-[10px] uppercase tracking-widest font-medium">Founder & Web Designer</p>
+                <p className="text-[#38bdf8] text-[10px] uppercase tracking-widest font-medium">Founder — GIS & Data Solutions</p>
               </div>
             </div>
 
             <p className="text-[var(--text2)] text-sm leading-relaxed mb-8 max-w-xs">
-              Rishii Designs is a web design, logo design, and AI solutions agency founded by Rishabh Thakur. Based in India, we provide premium web design services to global clients worldwide.
+              Rishii Designs is a digital solutions studio founded by Rishabh Thakur. Specialising in GIS & geospatial data, remote sensing, Python automation, AI-assisted development, dashboards and web solutions.
             </p>
             <div className="flex flex-wrap items-center gap-3">
               {[
@@ -127,7 +127,7 @@ export default function Footer() {
               Available Now
             </div>
             <p className="text-[var(--text2)] text-sm mb-6">
-              Currently accepting new projects for Q3 2026. Let's build something extraordinary.
+              Open to new projects and collaborations. Let&apos;s discuss what you need.
             </p>
             <a href="mailto:Rishu9882876884@gmail.com" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:border-[#38bdf8]/50 hover:bg-[#38bdf8]/10 text-[var(--text)] text-sm font-bold transition-all group">
               <Mail className="w-4 h-4 text-[#38bdf8]" />

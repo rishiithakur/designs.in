@@ -17,7 +17,7 @@ const tiles = [
       <div className="relative h-[120px] w-[200px] md:h-[200px] md:w-[300px]">
         <Image
           src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
-          alt="Portfolio 1"
+          alt="Data analytics and dashboard work"
           fill
           className="rounded-sm object-cover"
         />
@@ -29,8 +29,8 @@ const tiles = [
     icon: (
       <div className="relative h-[120px] w-[200px] md:h-[200px] md:w-[300px]">
         <Image
-          src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=800"
-          alt="Portfolio 2"
+          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800"
+          alt="GIS and geospatial data processing"
           fill
           className="rounded-sm object-cover"
         />
@@ -42,8 +42,8 @@ const tiles = [
     icon: (
       <div className="relative h-[120px] w-[200px] md:h-[200px] md:w-[300px]">
         <Image
-          src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800"
-          alt="Portfolio 3"
+          src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800"
+          alt="Python automation and data pipeline"
           fill
           className="rounded-sm object-cover"
         />
@@ -56,7 +56,7 @@ const tiles = [
       <div className="relative h-[120px] w-[200px] md:h-[200px] md:w-[300px]">
         <Image
           src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
-          alt="Portfolio 4"
+          alt="MIS portal and digital systems"
           fill
           className="rounded-sm object-cover"
         />
@@ -69,7 +69,7 @@ const tiles = [
       <div className="relative h-[120px] w-[200px] md:h-[200px] md:w-[300px]">
         <Image
           src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800"
-          alt="Portfolio 5"
+          alt="Web application and AI development"
           fill
           className="rounded-sm object-cover"
         />
@@ -82,7 +82,7 @@ const tiles = [
       <div className="relative h-[120px] w-[200px] md:h-[200px] md:w-[300px]">
         <Image
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
-          alt="Portfolio 6"
+          alt="Team collaboration and project delivery"
           fill
           className="rounded-sm object-cover"
         />
@@ -189,10 +189,10 @@ export default function CTASection() {
           </div>
           <div className="z-10 flex flex-col items-center text-center">
             <h1 className="text-3xl font-bold md:text-5xl text-[var(--text)] tracking-tight">
-              Design anything you <span className="text-gradient">need</span>
+              Let&apos;s build something <span className="text-gradient">that works.</span>
             </h1>
             <p className="mt-4 text-[var(--text2)] text-lg max-w-md">
-              Elite design solutions delivered with precision. No friction, just results.
+              GIS, data processing, automation, dashboards, web applications — practical solutions delivered end-to-end.
             </p>
             <div className="mb-8 mt-10 flex flex-col md:flex-row gap-4">
               <Link

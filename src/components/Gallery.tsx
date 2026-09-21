@@ -19,9 +19,10 @@ import Image from "next/image";
 
 const categories = [
   { id: "all", label: "All Projects" },
-  { id: "startup", label: "Startups" },
-  { id: "portfolio", label: "Portfolios" },
-  { id: "surprise", label: "Experiences" },
+  { id: "gis", label: "GIS & Spatial" },
+  { id: "dashboard", label: "Dashboards & MIS" },
+  { id: "web", label: "Web & Digital" },
+  { id: "ai", label: "AI & Automation" },
 ];
 
 export default function Gallery() {
@@ -91,7 +92,7 @@ export default function Gallery() {
                         {item.title}
                       </h3>
                       <p className="text-[#38bdf8] text-xs font-bold uppercase tracking-widest mt-1">
-                        Elite Project
+                        Work Highlight
                       </p>
                     </div>
                   </div>
@@ -109,7 +110,7 @@ export default function Gallery() {
               Selected <span className="text-gradient">Works.</span>
             </h2>
             <p className="text-[var(--text2)] text-lg max-w-md">
-              A glimpse into the premium digital experiences I've crafted for forward-thinking brands.
+              A high-level view of work across GIS, remote sensing, data processing, MIS portals, web applications and digital systems.
             </p>
           </div>
           
@@ -133,7 +134,7 @@ export default function Gallery() {
         {loading ? (
           <div className="flex flex-col items-center justify-center py-32 space-y-4">
             <Loader2 className="w-10 h-10 text-[#38bdf8] animate-spin" />
-            <p className="text-[var(--text2)] font-semibold tracking-widest uppercase text-sm">Loading Masterpieces</p>
+            <p className="text-[var(--text2)] font-semibold tracking-widest uppercase text-sm">Loading Portfolio</p>
           </div>
         ) : (
           <motion.div 
@@ -178,7 +179,7 @@ export default function Gallery() {
                       {/* Hover Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)]/90 via-[var(--bg)]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
                         <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                          <span className="text-xs font-bold text-[#38bdf8] uppercase tracking-wider mb-2 block">Premium Experience</span>
+                          <span className="text-xs font-bold text-[#38bdf8] uppercase tracking-wider mb-2 block">Project Highlight</span>
                           <h3 className="text-xl font-bold text-[var(--text)] flex items-center justify-between">
                             {item.title}
                             <ExternalLink className="w-5 h-5 text-[var(--text)]/50" />
@@ -232,7 +233,7 @@ export default function Gallery() {
               )}
               
               <div className="mt-8 text-center">
-                <span className="text-sm font-bold text-[#38bdf8] uppercase tracking-widest">Rishii Elite Design</span>
+                <span className="text-sm font-bold text-[#38bdf8] uppercase tracking-widest">Rishii Designs</span>
                 <h3 className="text-3xl font-black text-[var(--text)] mt-2 font-['Space_Grotesk']">{selectedImage.title}</h3>
               </div>
             </motion.div>

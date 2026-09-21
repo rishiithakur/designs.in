@@ -73,7 +73,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Rishabh Thakur",
-  "jobTitle": "Freelance Web Designer & AI Developer",
+  "jobTitle": "GIS & Data Solutions Specialist",
   "worksFor": {
     "@type": "Organization",
     "name": "Rishii Designs"

@@ -317,7 +317,7 @@ export default function Home() {
             <section className="absolute w-px h-px overflow-hidden opacity-0 pointer-events-none" aria-hidden="true">
               <div>
                 <p>
-                  Rishii Designs is a premium web design and AI solutions studio founded by Rishabh Thakur, dedicated to crafting futuristic digital experiences for global clients worldwide. Our expertise spans across high-end web design services, custom logo design, and innovative AI solutions tailored for startups and institutional brands worldwide. As an India-based freelance web designer and full-stack developer, I combine institutional precision with startup speed to deliver conversion-optimized websites and branding that stand out in the digital landscape. Whether you need a modern portfolio, a full-stack e-commerce platform, or AI-powered automation, Rishii Designs provides remote services to clients across the globe, ensuring your online identity is both stunning and technically rigorous. We architect digital legacies that prioritize performance, accessibility, and high-fidelity aesthetics, helping brands achieve digital excellence through cutting-edge technology and human-centric design.
+                  Rishii Designs is a digital solutions studio founded by Rishabh Thakur — a GIS & Data Solutions Specialist with experience across GIS, geospatial data, remote sensing, Google Earth Engine, ArcGIS Pro, Python automation, AI-assisted development and digital systems. Based in India, Rishabh has worked on World Bank-funded and government programs including DRIP-II, National Hydrology Project and DHARMA, delivering MIS portals, GIS workflows, dashboards, data processing pipelines and web applications. Rishii Designs provides GIS & geospatial solutions, remote sensing & GEE tools, data processing & Python automation, AI-assisted applications, web & dashboard solutions and digital/MIS systems for institutional, government and private projects.
                 </p>
               </div>
             </section>
@@ -378,36 +378,36 @@ export default function Home() {
             {(() => {
               const displayImages = galleryImages.length > 0 ? galleryImages : [
                 {
-                  src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200",
-                  alt: "Responsive web design project by Rishii Designs",
-                  category: "Web Design",
+                  src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+                  alt: "GIS dashboard and data analytics workflow — Rishii Designs",
+                  category: "Dashboards & MIS",
                 },
                 {
-                  src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1200",
-                  alt: "Custom logo design for global client by Rishii Designs",
-                  category: "Branding",
+                  src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200",
+                  alt: "Google Earth Engine remote sensing workflow — Rishii Designs",
+                  category: "GIS & Remote Sensing",
                 },
                 {
-                  src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
-                  alt: "AI-powered website design portfolio by Rishii Designs",
-                  category: "AI Solutions",
+                  src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200",
+                  alt: "Python data processing and automation — Rishii Designs",
+                  category: "Python & Data",
                 },
                 {
-                  src: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1200",
-                  alt: "Modern UI/UX design project from Rishii Designs",
-                  category: "UI/UX",
+                  src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+                  alt: "MIS portal and institutional digital system — Rishii Designs",
+                  category: "MIS Systems",
                 },
                 {
-                  src: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&q=80&w=1200",
-                  alt: "Full-stack development showcase by Rishii Designs",
-                  category: "Development",
+                  src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
+                  alt: "AI-assisted automation and web application — Rishii Designs",
+                  category: "AI & Automation",
                 },
               ];
               return (
                 <CardCarousel
                   key={`carousel-${displayImages.length}-${galleryImages.length}`}
-                  title="Design Mastery"
-                  subtitle="Explore our web design and logo portfolio, where architectural precision meets digital innovation."
+                  title="Project Highlights"
+                  subtitle="A look across GIS & geospatial, remote sensing, data processing, dashboards, MIS systems and digital solutions."
                   images={displayImages}
                 />
               );
