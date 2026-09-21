@@ -239,7 +239,7 @@ export default function Home() {
                               <div className="w-20 h-20 rounded-full border-2 border-[var(--acc)] p-1 bg-[var(--bg)] overflow-hidden">
                                 <img 
                                   src="/selfie.jpg" 
-                                  alt="Rishabh Thakur, founder and web designer at Rishii Designs" 
+                                  alt="Rishabh Thakur, founder and GIS & Data Solutions Specialist at Rishii Designs" 
                                   className="w-full h-full object-cover"
                                 />
                               </div>
