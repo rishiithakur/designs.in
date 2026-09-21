@@ -55,13 +55,13 @@ export default function Navbar() {
           }
         )}
       >
-        <Link href="/" className="flex items-center gap-2.5 group z-50" onClick={() => setOpen(false)}>
+        <Link href="/" className="flex items-center gap-3 group z-50" onClick={() => setOpen(false)}>
           <img
-            src="/logo.png"
+            src="/logo-emblem.png"
             alt="Rishii Designs Logo"
             className={cn(
-              "h-9 w-9 md:h-10 md:w-10 rounded-xl object-contain shadow-sm border border-white/10 group-hover:scale-105 transition-transform",
-              { "md:h-8 md:w-8": scrolled }
+              "h-10 w-10 md:h-11 md:w-11 object-contain drop-shadow-sm group-hover:scale-110 transition-transform",
+              { "md:h-9 md:w-9": scrolled }
             )}
           />
           <span className="font-black text-lg md:text-xl tracking-tight text-[var(--text)] group-hover:text-[var(--acc)] transition-colors">

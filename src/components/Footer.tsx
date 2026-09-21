@@ -26,11 +26,8 @@ export default function Footer() {
               <img 
                 src="/logo.png" 
                 alt="Rishii Designs Logo" 
-                className="h-10 w-10 rounded-xl object-contain shadow-sm border border-white/10 group-hover:scale-105 transition-transform" 
+                className="h-12 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform" 
               />
-              <span className="font-black text-xl tracking-tight text-[var(--text)] group-hover:text-[var(--acc)] transition-colors">
-                Rishii<span className="text-gradient"> Designs</span>
-              </span>
             </Link>
             
             <div className="flex items-center gap-4 mb-8 p-3 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:border-[#38bdf8]/30 transition-all group/avatar">

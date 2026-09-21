@@ -244,10 +244,18 @@ export default function Home() {
 
               <GlowCard 
                 glowColor="orange" 
-                className="!p-10 flex flex-col items-center justify-center text-center"
+                className="!p-8 md:!p-10 flex flex-col items-center justify-center text-center border border-amber-500/20 bg-[var(--bg-card)]/90 backdrop-blur-xl group"
               >
-                <div className="relative z-10">
-                  <h3 className="text-[var(--text)] text-3xl font-black tracking-widest uppercase mb-4">
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="relative w-40 h-28 sm:w-44 sm:h-32 mb-4 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-amber-500/15 blur-2xl rounded-full" />
+                    <img
+                      src="/logo-emblem.png"
+                      alt="Rishii Designs Divine Emblem — Sita Ram & Hanuman"
+                      className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_24px_rgba(245,158,11,0.4)] group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <h3 className="text-[var(--text)] text-2xl sm:text-3xl font-black tracking-widest uppercase mb-3">
                     Jai Shree Ram
                   </h3>
                   <p className="text-[var(--text3)] text-xs uppercase tracking-[0.3em] font-bold">
@@ -282,7 +290,7 @@ export default function Home() {
                     <h4 className="text-2xl font-black text-white mb-2 relative z-10 uppercase tracking-tighter">Google AI</h4>
                     <p className="text-[10px] font-bold text-[#fbbf24] tracking-[0.3em] uppercase mb-8 relative z-10">Essentials Certified</p>
                     <div className="w-full h-[1px] bg-white/10 mb-8" />
-                    <img src="/logo.png" className="h-10 w-auto opacity-70" alt="Rishii Designs Certification" />
+                    <img src="/logo.png" className="h-12 w-auto object-contain opacity-90 drop-shadow-md" alt="Rishii Designs Certification" />
                   </div>
                 </ShineBorder>
               </div>
