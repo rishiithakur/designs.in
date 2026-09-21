@@ -24,10 +24,15 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
   },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Rishabh Thakur — GIS & Data Solutions Specialist | Rishii Designs",
     description: "GIS & Data Solutions Specialist with experience in geospatial data, remote sensing, Python automation and AI-assisted development on World Bank-funded programs. Founder of Rishii Designs.",

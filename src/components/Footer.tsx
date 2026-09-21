@@ -22,11 +22,13 @@ export default function Footer() {
           
           {/* Brand Col */}
           <div className="lg:col-span-1">
-            <Link href="/" className="mb-8 group inline-flex items-center gap-3">
+            <Link href="/" className="mb-8 group inline-flex items-center gap-3 shrink-0">
               <img 
                 src="/logo.png" 
                 alt="Rishii Designs Logo" 
-                className="h-12 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform" 
+                width={240}
+                height={175}
+                className="h-14 sm:h-16 w-auto max-w-[240px] sm:max-w-[260px] object-contain drop-shadow-sm group-hover:scale-105 transition-transform shrink-0" 
               />
             </Link>
             

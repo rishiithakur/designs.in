@@ -246,13 +246,15 @@ export default function Home() {
                 glowColor="orange" 
                 className="!p-8 md:!p-10 flex flex-col items-center justify-center text-center border border-amber-500/20 bg-[var(--bg-card)]/90 backdrop-blur-xl group"
               >
-                <div className="relative z-10 flex flex-col items-center">
-                  <div className="relative w-40 h-28 sm:w-44 sm:h-32 mb-4 flex items-center justify-center">
+                <div className="relative z-10 flex flex-col items-center w-full">
+                  <div className="relative w-full max-w-[280px] sm:max-w-[340px] aspect-[2/1] mb-6 flex items-center justify-center shrink-0">
                     <div className="absolute inset-0 bg-amber-500/15 blur-2xl rounded-full" />
                     <img
-                      src="/logo-emblem.png"
+                      src="/divine-emblem.png"
                       alt="Rishii Designs Divine Emblem — Sita Ram & Hanuman"
-                      className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_24px_rgba(245,158,11,0.4)] group-hover:scale-105 transition-transform duration-500"
+                      width={340}
+                      height={170}
+                      className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_24px_rgba(245,158,11,0.4)] group-hover:scale-105 transition-transform duration-500 shrink-0"
                     />
                   </div>
                   <h3 className="text-[var(--text)] text-xl sm:text-2xl font-bold tracking-wide mb-2">
@@ -290,7 +292,7 @@ export default function Home() {
                     <h4 className="text-2xl font-bold text-white mb-1.5 relative z-10 tracking-tight">Google AI</h4>
                     <p className="text-xs font-medium text-[#fbbf24] tracking-wide mb-8 relative z-10">Essentials Certified</p>
                     <div className="w-full h-[1px] bg-white/10 mb-8" />
-                    <img src="/logo.png" className="h-12 w-auto object-contain opacity-90 drop-shadow-md" alt="Rishii Designs Certification" />
+                    <img src="/logo.png" className="h-14 sm:h-16 w-auto max-w-[200px] object-contain opacity-95 drop-shadow-md shrink-0" alt="Rishii Designs Certification" />
                   </div>
                 </ShineBorder>
               </div>
