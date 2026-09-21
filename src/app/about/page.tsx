@@ -128,7 +128,7 @@ export default function AboutPage() {
               >
                 <div className="aspect-square rounded-[40px] overflow-hidden bg-[var(--bg-card)]">
                   <img
-                    src="/selfie.jpg"
+                    src="/profile.png"
                     alt="Rishabh Thakur, founder and GIS & Data Solutions Specialist at Rishii Designs"
                     className="w-full h-full object-cover brightness-90 hover:brightness-110 transition-all duration-700 hover:scale-105"
                   />

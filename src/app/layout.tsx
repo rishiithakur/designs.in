@@ -41,6 +41,14 @@ export const metadata: Metadata = {
     description: "GIS & Data Solutions Specialist with experience in geospatial data, remote sensing, Python automation and AI-assisted development on World Bank-funded programs. Founder of Rishii Designs.",
     url: "https://rishiidesigns.in",
     siteName: "Rishii Designs — Rishabh Thakur",
+    images: [
+      {
+        url: "https://rishiidesigns.in/profile.png",
+        width: 1200,
+        height: 1200,
+        alt: "Rishabh Thakur — Founder of Rishii Designs",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -54,7 +62,8 @@ const organizationSchema = {
   "logo": "https://rishiidesigns.in/logorishii.svg",
   "founder": {
     "@type": "Person",
-    "name": "Rishabh Thakur"
+    "name": "Rishabh Thakur",
+    "image": "https://rishiidesigns.in/profile.png"
   },
   "areaServed": "Worldwide",
   "address": {
@@ -74,6 +83,7 @@ const personSchema = {
   "@type": "Person",
   "name": "Rishabh Thakur",
   "jobTitle": "GIS & Data Solutions Specialist",
+  "image": "https://rishiidesigns.in/profile.png",
   "worksFor": {
     "@type": "Organization",
     "name": "Rishii Designs"

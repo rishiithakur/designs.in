@@ -32,7 +32,7 @@ export default function Footer() {
             
             <div className="flex items-center gap-4 mb-8 p-3 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:border-[#38bdf8]/30 transition-all group/avatar">
               <Avatar className="h-12 w-12 border-2 border-[#38bdf8]/20 group-hover/avatar:border-[#38bdf8]/50 transition-all">
-                <AvatarImage src="/selfie.jpg" alt="Rishabh Thakur, founder of Rishii Designs" className="object-cover" />
+                <AvatarImage src="/profile.png" alt="Rishabh Thakur, founder of Rishii Designs" className="object-cover" />
                 <AvatarFallback className="bg-[var(--bg2)] text-[#38bdf8]">RT</AvatarFallback>
               </Avatar>
               <div>
