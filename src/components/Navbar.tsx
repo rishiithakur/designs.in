@@ -76,7 +76,7 @@ export default function Navbar() {
               key={i}
               className={cn(
                 buttonVariants({ variant: "ghost" }),
-                "text-sm font-bold text-[var(--text2)] hover:text-[var(--text)] hover:bg-white/5 transition-colors"
+                "text-sm font-medium text-[var(--text2)] hover:text-[var(--text)] hover:bg-white/5 transition-colors"
               )}
               href={link.href}
             >
@@ -90,7 +90,7 @@ export default function Navbar() {
           <CinematicThemeSwitcher />
           <Link
             href="/contact"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-[#060d18] font-bold text-sm shadow-[0_4px_20px_rgba(56,189,248,0.3)] hover:scale-105 hover:shadow-[0_8px_32px_rgba(56,189,248,0.5)] transition-all ml-2"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-[#060d18] font-semibold text-sm shadow-[0_4px_20px_rgba(56,189,248,0.3)] hover:scale-105 hover:shadow-[0_8px_32px_rgba(56,189,248,0.5)] transition-all ml-2"
           >
             <Sparkles className="w-4 h-4" />
             Get in Touch
@@ -129,7 +129,7 @@ export default function Navbar() {
             {links.map((link) => (
               <Link
                 key={link.label}
-                className="text-3xl font-black text-[var(--text)] hover:text-[var(--acc)] tracking-tight py-2 transition-colors border-b border-white/5"
+                className="text-2xl sm:text-3xl font-bold text-[var(--text)] hover:text-[var(--acc)] tracking-tight py-2 transition-colors border-b border-white/5"
                 href={link.href}
                 onClick={() => setOpen(false)}
               >
@@ -141,7 +141,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="flex justify-center items-center gap-2 w-full py-4 rounded-full bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-[#060d18] font-bold text-lg shadow-[0_4px_20px_rgba(56,189,248,0.3)] active:scale-95 transition-all"
+              className="flex justify-center items-center gap-2 w-full py-3.5 rounded-full bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-[#060d18] font-semibold text-base shadow-[0_4px_20px_rgba(56,189,248,0.3)] active:scale-95 transition-all"
             >
               <Sparkles className="w-5 h-5" />
               Get in Touch

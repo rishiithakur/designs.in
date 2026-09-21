@@ -1,10 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-h: var(--font-h);
-  --font-serif: var(--font-serif);
-  --font-b: var(--font-b);
-  --font-lux: var(--font-lux);
+  --font-sans: var(--font-sans), 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-serif), serif;
   --background-image-conic: conic-gradient(from 0deg, var(--tw-gradient-stops));
 }
 
@@ -89,14 +87,34 @@
     line-height: 1.6;
     overflow-x: hidden;
     min-height: 100vh;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans), 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 900;
-    letter-spacing: -0.02em;
+    font-family: var(--font-sans), 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.025em;
     color: var(--text);
+    line-height: 1.15;
+  }
+
+  h1 {
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    font-weight: 650;
+    letter-spacing: -0.015em;
+  }
+
+  button, a {
+    font-family: var(--font-sans), 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   }
 
   ::-webkit-scrollbar {

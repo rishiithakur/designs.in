@@ -183,15 +183,15 @@ export default function CTASection() {
         color={["#38bdf8", "#818cf8", "#c084fc"]}
       >
         <div className="w-full flex flex-col items-center">
-          <h2 className="mb-12 text-4xl md:text-5xl font-black text-[var(--text)] text-center">How I <span className="text-gradient">Work.</span></h2>
+          <h2 className="mb-12 text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text)] text-center tracking-tight leading-[1.15]">How I <span className="text-gradient">Work.</span></h2>
           <div className="w-full flex justify-center mb-16">
             <Timeline />
           </div>
           <div className="z-10 flex flex-col items-center text-center">
-            <h1 className="text-3xl font-bold md:text-5xl text-[var(--text)] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text)] tracking-tight leading-[1.15]">
               Let&apos;s build something <span className="text-gradient">that works.</span>
-            </h1>
-            <p className="mt-4 text-[var(--text2)] text-lg max-w-md">
+            </h2>
+            <p className="mt-4 text-[var(--text2)] text-base md:text-lg max-w-lg font-normal leading-[1.6]">
               GIS, data processing, automation, dashboards, web applications — practical solutions delivered end-to-end.
             </p>
             <div className="mb-8 mt-10 flex flex-col md:flex-row gap-4">
@@ -202,7 +202,7 @@ export default function CTASection() {
                     size: "lg",
                     variant: "default",
                   }),
-                  "group rounded-full px-8 py-6 text-lg font-bold bg-gradient-to-r from-[#38bdf8] to-[#818cf8] text-[var(--bg)] hover:shadow-[0_0_30px_rgba(56,189,248,0.4)] transition-all"
+                  "group rounded-full px-7 py-5 text-base font-semibold bg-gradient-to-r from-[#38bdf8] to-[#818cf8] text-[var(--bg)] hover:shadow-[0_0_30px_rgba(56,189,248,0.4)] transition-all"
                 )}
               >
                 Discuss a Project
@@ -215,7 +215,7 @@ export default function CTASection() {
                     size: "lg",
                     variant: "outline",
                   }),
-                  "group rounded-full px-8 py-6 text-lg font-bold border-[var(--acc-border)] text-[var(--text)] hover:bg-[var(--acc-dim)] transition-all"
+                  "group rounded-full px-7 py-5 text-base font-semibold border-[var(--acc-border)] text-[var(--text)] hover:bg-[var(--acc-dim)] transition-all"
                 )}
               >
                 View Capabilities

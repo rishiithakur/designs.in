@@ -36,12 +36,12 @@ export default function Footer() {
                 <AvatarFallback className="bg-[var(--bg2)] text-[#38bdf8]">RT</AvatarFallback>
               </Avatar>
               <div>
-                <p className="text-[var(--text)] font-bold text-sm">Rishabh Thakur</p>
-                <p className="text-[#38bdf8] text-[10px] uppercase tracking-widest font-medium">GIS & Data Solutions Specialist</p>
+                <p className="text-[var(--text)] font-semibold text-sm">Rishabh Thakur</p>
+                <p className="text-[#38bdf8] text-xs font-medium">GIS &amp; Data Solutions Specialist</p>
               </div>
             </div>
 
-            <p className="text-[var(--text2)] text-sm leading-relaxed mb-8 max-w-xs">
+            <p className="text-[var(--text2)] text-sm leading-[1.6] mb-8 max-w-xs font-normal">
               Rishii Designs is the professional technical portfolio of Rishabh Thakur — GIS &amp; Data Solutions Specialist specializing in geospatial data, remote sensing, Python automation, dashboards and digital systems.
             </p>
             <div className="flex flex-wrap items-center gap-3">
@@ -68,7 +68,7 @@ export default function Footer() {
                   target="_blank"
                   rel="me nofollow noopener"
                   aria-label={Social.label} 
-                  className="px-4 py-2 rounded-xl border border-[var(--acc-border)] bg-[var(--acc-dim)] flex items-center gap-2 hover:bg-[#38bdf8]/10 hover:border-[#38bdf8]/50 hover:text-[#38bdf8] text-[var(--text)] transition-all hover:-translate-y-1 text-xs font-bold"
+                  className="px-4 py-2 rounded-xl border border-[var(--acc-border)] bg-[var(--acc-dim)] flex items-center gap-2 hover:bg-[#38bdf8]/10 hover:border-[#38bdf8]/50 hover:text-[#38bdf8] text-[var(--text)] transition-all hover:-translate-y-1 text-xs font-medium"
                 >
                   <Social.icon className="w-4 h-4" />
                   <span>{Social.label}</span>
@@ -79,7 +79,7 @@ export default function Footer() {
 
           {/* Navigation Col */}
           <div>
-            <h4 className="text-xs font-bold text-[var(--text)] opacity-40 tracking-widest uppercase mb-6 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-gradient-to-r after:from-[#38bdf8] after:to-transparent">
+            <h4 className="text-xs font-semibold text-[var(--text)] opacity-70 tracking-wide mb-6 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-gradient-to-r after:from-[#38bdf8] after:to-transparent">
               Portfolio
             </h4>
             <ul className="space-y-4">
@@ -101,7 +101,7 @@ export default function Footer() {
 
           {/* Legal / Policies */}
           <div>
-            <h4 className="text-xs font-bold text-[var(--text)] opacity-40 tracking-widest uppercase mb-6 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-gradient-to-r after:from-[#38bdf8] after:to-transparent">
+            <h4 className="text-xs font-semibold text-[var(--text)] opacity-70 tracking-wide mb-6 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-gradient-to-r after:from-[#38bdf8] after:to-transparent">
               Information
             </h4>
             <ul className="space-y-4">
@@ -117,14 +117,14 @@ export default function Footer() {
 
           {/* CTA Col */}
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/30 text-xs font-bold text-green-400 uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/30 text-xs font-medium text-green-400 mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-              Available Now
+              Available for Opportunities
             </div>
-            <p className="text-[var(--text2)] text-sm mb-6">
+            <p className="text-[var(--text2)] text-sm mb-6 leading-[1.6] font-normal">
               Open to new projects and collaborations. Let&apos;s discuss what you need.
             </p>
-            <a href="mailto:Rishu9882876884@gmail.com" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:border-[#38bdf8]/50 hover:bg-[#38bdf8]/10 text-[var(--text)] text-sm font-bold transition-all group">
+            <a href="mailto:Rishu9882876884@gmail.com" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:border-[#38bdf8]/50 hover:bg-[#38bdf8]/10 text-[var(--text)] text-sm font-semibold transition-all group">
               <Mail className="w-4 h-4 text-[#38bdf8]" />
               Rishu9882876884@gmail.com
               <ArrowUpRight className="w-4 h-4 ml-2 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
@@ -135,11 +135,11 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-[var(--acc-border)] flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm text-[var(--text2)]">
-            © {new Date().getFullYear()} <strong className="text-[var(--text)]">Rishii Designs</strong>. All rights reserved.
+          <div className="text-sm text-[var(--text2)] font-normal">
+            © {new Date().getFullYear()} <strong className="text-[var(--text)] font-medium">Rishii Designs</strong>. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
-            <span className="text-xs font-bold text-[#38bdf8]/50 tracking-widest uppercase border border-[#38bdf8]/20 bg-[#38bdf8]/5 px-3 py-1 rounded-full">
+            <span className="text-xs font-medium text-[#38bdf8] border border-[#38bdf8]/20 bg-[#38bdf8]/5 px-3 py-1 rounded-full">
               Built in India 🇮🇳
             </span>
             <button onClick={scrollToTop} className="text-[var(--text2)] hover:text-[var(--text)] text-sm font-medium transition-colors">

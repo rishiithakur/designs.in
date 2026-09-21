@@ -202,14 +202,14 @@ export default function WorkPage() {
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="text-[#38bdf8] font-bold uppercase tracking-[0.3em] text-xs mb-3 block"
+          className="text-[#38bdf8] font-medium text-xs mb-3 block tracking-wide"
         >
           Technical Portfolio
         </motion.span>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6 uppercase"
+          className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-[-0.03em] mb-6 leading-[1.08]"
         >
           Selected <span className="text-gradient">Work.</span>
         </motion.h1>
@@ -217,7 +217,7 @@ export default function WorkPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-[var(--text2)] text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed mb-8"
+          className="text-[var(--text2)] text-base md:text-lg max-w-3xl mx-auto font-normal leading-[1.65] mb-8"
         >
           A curated selection of technical work across GIS, remote sensing, Google Earth Engine, Python data processing, dashboards, MIS platforms and digital systems.
         </motion.p>
@@ -227,7 +227,7 @@ export default function WorkPage() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
-          className="inline-flex items-center gap-3 p-4 px-6 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] text-xs md:text-sm text-[var(--text2)] max-w-2xl text-left"
+          className="inline-flex items-center gap-3 p-4 px-6 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] text-xs md:text-sm text-[var(--text2)] max-w-2xl text-left font-normal"
         >
           <Lock className="w-5 h-5 text-[var(--acc)] shrink-0" />
           <span>
@@ -244,7 +244,7 @@ export default function WorkPage() {
             <button
               key={cat}
               onClick={() => setActiveFilter(cat)}
-              className={`px-5 py-2 rounded-full text-xs md:text-sm font-bold transition-all ${
+              className={`px-5 py-2 rounded-full text-xs md:text-sm font-semibold transition-all ${
                 activeFilter === cat
                   ? "bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-[#060d18] shadow-md"
                   : "text-[var(--text2)] hover:text-[var(--text)] hover:bg-white/5"
@@ -272,39 +272,39 @@ export default function WorkPage() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-[var(--acc-dim)] text-[var(--acc)] border border-[var(--acc-border)]">
+                    <span className="text-xs font-medium px-3 py-1 rounded-full bg-[var(--acc-dim)] text-[var(--acc)] border border-[var(--acc-border)]">
                       {project.category}
                     </span>
                     {project.confidential && (
-                      <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-[var(--text2)] opacity-70">
+                      <span className="inline-flex items-center gap-1 text-xs font-medium text-[var(--text2)] opacity-80">
                         <Lock className="w-3 h-3 text-[var(--acc)]" /> Institutional
                       </span>
                     )}
                   </div>
 
-                  <h3 className="text-xl font-bold text-[var(--text)] mb-2 group-hover:text-[var(--acc)] transition-colors leading-snug">
+                  <h3 className="text-xl font-semibold text-[var(--text)] mb-2 group-hover:text-[var(--acc)] transition-colors leading-snug">
                     {project.title}
                   </h3>
 
                   <div className="mb-4">
-                    <p className="text-xs font-semibold text-[#38bdf8] tracking-wide">
+                    <p className="text-xs font-medium text-[#38bdf8]">
                       {project.program}
                     </p>
-                    <p className="text-[11px] text-[var(--text2)] opacity-70">
+                    <p className="text-xs text-[var(--text2)] opacity-75 font-normal">
                       {project.role} • {project.period}
                     </p>
                   </div>
 
-                  <p className="text-xs md:text-sm text-[var(--text2)] leading-relaxed font-light mb-6">
+                  <p className="text-sm text-[var(--text2)] leading-[1.6] font-normal mb-6">
                     {project.summary}
                   </p>
 
                   <div className="mb-6 space-y-2 border-t border-white/5 pt-4">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--text)] opacity-40">
+                    <p className="text-xs font-medium text-[var(--text)] opacity-60">
                       Key Deliverables
                     </p>
                     {project.keyDeliverables.map((d, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs text-[var(--text2)]">
+                      <div key={i} className="flex items-start gap-2 text-xs text-[var(--text2)] font-normal leading-relaxed">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#38bdf8] shrink-0 mt-0.5" />
                         <span>{d}</span>
                       </div>
@@ -317,7 +317,7 @@ export default function WorkPage() {
                     {project.technologies.map((t, i) => (
                       <span
                         key={i}
-                        className="text-[10px] px-2.5 py-1 rounded-md bg-white/5 text-[var(--text2)] border border-white/5"
+                        className="text-xs px-2.5 py-1 rounded-md bg-white/5 text-[var(--text2)] border border-white/5 font-normal"
                       >
                         {t}
                       </span>
@@ -331,15 +331,15 @@ export default function WorkPage() {
 
         {/* Bottom Contact Callout */}
         <div className="mt-20 text-center p-12 rounded-3xl bg-[var(--acc-dim)] border border-[var(--acc-border)] max-w-4xl mx-auto">
-          <h3 className="text-2xl md:text-3xl font-black text-[var(--text)] mb-3">
+          <h3 className="text-2xl md:text-3xl font-bold text-[var(--text)] mb-3 leading-snug">
             Need specialized technical expertise?
           </h3>
-          <p className="text-[var(--text2)] text-sm md:text-base max-w-xl mx-auto mb-6 font-light">
+          <p className="text-[var(--text2)] text-base max-w-xl mx-auto mb-6 font-normal leading-[1.6]">
             I am available for project consultations, technical workflows, GIS &amp; data analysis, and institutional digital systems.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-[#060d18] font-bold text-sm shadow-[0_4px_20px_rgba(56,189,248,0.3)] hover:scale-105 transition-all"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-[#060d18] font-semibold text-sm shadow-[0_4px_20px_rgba(56,189,248,0.3)] hover:scale-105 transition-all"
           >
             Discuss a Project <ArrowRight className="w-4 h-4" />
           </Link>

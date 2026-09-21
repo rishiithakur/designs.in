@@ -36,14 +36,14 @@ export default function CapabilitiesPage() {
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-[#38bdf8] font-bold uppercase tracking-[0.3em] text-xs mb-3 block"
+              className="text-[#38bdf8] font-medium text-xs mb-3 block tracking-wide"
             >
               Technical Core
             </motion.span>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6 uppercase"
+              className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-[-0.03em] mb-6 leading-[1.08]"
             >
               Capabilities &amp; <span className="text-gradient">Focus.</span>
             </motion.h1>
@@ -51,7 +51,7 @@ export default function CapabilitiesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-[var(--text2)] text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed"
+              className="text-[var(--text2)] text-base md:text-lg max-w-3xl mx-auto font-normal leading-[1.65]"
             >
               Nearly 4 years of practical expertise across GIS workflows, remote sensing, automated data pipelines, dashboards and institutional digital systems.
             </motion.p>
@@ -64,10 +64,10 @@ export default function CapabilitiesPage() {
         {/* Tools & Technologies */}
         <section className="py-20 px-6 max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-12">
-            <span className="text-[var(--acc)] font-bold uppercase tracking-[0.3em] text-xs mb-2 block">
+            <span className="text-[var(--acc)] font-medium text-xs mb-2 block tracking-wide">
               Stack &amp; Environment
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--text)] tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--text)] tracking-tight leading-[1.15]">
               Tools &amp; Technologies
             </h2>
           </div>
@@ -78,10 +78,10 @@ export default function CapabilitiesPage() {
                 key={index}
                 className="p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--acc-border)] hover:border-[#38bdf8]/40 transition-all text-center group"
               >
-                <p className="font-bold text-sm text-[var(--text)] group-hover:text-[var(--acc)] transition-colors mb-1">
+                <p className="font-semibold text-sm text-[var(--text)] group-hover:text-[var(--acc)] transition-colors mb-1">
                   {tech.name}
                 </p>
-                <p className="text-[10px] uppercase tracking-wider text-[var(--text2)] opacity-70">
+                <p className="text-xs text-[var(--text2)] opacity-80 font-normal">
                   {tech.category}
                 </p>
               </div>
@@ -95,7 +95,7 @@ export default function CapabilitiesPage() {
         <div className="text-center py-16 px-6">
           <Link
             href="/work"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:border-[#38bdf8]/40 text-[var(--text)] font-bold text-sm transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:border-[#38bdf8]/40 text-[var(--text)] font-semibold text-sm transition-all hover:scale-105"
           >
             Explore Selected Projects <ArrowRight className="w-4 h-4 text-[#38bdf8]" />
           </Link>
@@ -112,7 +112,7 @@ export default function CapabilitiesPage() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="mt-8 bg-gradient-to-br from-white via-[#bae6fd] to-[#38bdf8] py-4 bg-clip-text text-center text-4xl font-black tracking-tighter text-transparent md:text-7xl uppercase"
+          className="mt-8 bg-gradient-to-br from-white via-[#bae6fd] to-[#38bdf8] py-4 bg-clip-text text-center text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-transparent leading-[1.15]"
         >
           Have a Project or <br /> Technical Problem?
         </motion.h2>
@@ -120,7 +120,7 @@ export default function CapabilitiesPage() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-[#8bb8d4] text-base md:text-lg max-w-xl text-center mx-auto mt-4 px-4 font-light"
+          className="text-[#8bb8d4] text-base md:text-lg max-w-xl text-center mx-auto mt-4 px-4 font-normal leading-[1.6]"
         >
           Open to technical discussions, specialized GIS &amp; data problem solving, and institutional digital collaboration.
         </motion.p>
@@ -132,7 +132,7 @@ export default function CapabilitiesPage() {
         >
           <Link
             href="/contact"
-            className="px-10 py-5 rounded-full bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-[#060d18] font-bold text-base shadow-[0_4px_30px_rgba(56,189,248,0.4)] hover:scale-105 hover:shadow-[0_8px_40px_rgba(56,189,248,0.6)] transition-all inline-flex items-center gap-2"
+            className="px-8 py-4 rounded-full bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-[#060d18] font-semibold text-base shadow-[0_4px_30px_rgba(56,189,248,0.4)] hover:scale-105 hover:shadow-[0_8px_40px_rgba(56,189,248,0.6)] transition-all inline-flex items-center gap-2"
           >
             Discuss a Project <ArrowRight className="w-4 h-4" />
           </Link>

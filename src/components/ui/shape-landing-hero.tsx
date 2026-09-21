@@ -160,7 +160,7 @@ function HeroGeometric({
                         initial="hidden"
                         animate="visible"
                     >
-                        <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
+                        <h1 className="text-[38px] sm:text-[56px] md:text-[68px] lg:text-[76px] font-extrabold mb-6 md:mb-8 tracking-[-0.03em] leading-[1.08]">
                             <span className="text-[var(--text)]">
                                 {title1}
                             </span>
@@ -181,7 +181,7 @@ function HeroGeometric({
                         initial="hidden"
                         animate="visible"
                     >
-                        <p className="text-base sm:text-lg md:text-xl text-[var(--text2)] mb-8 leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4">
+                        <p className="text-base sm:text-[17px] md:text-lg text-[var(--text2)] mb-8 leading-[1.65] font-normal max-w-2xl mx-auto px-4">
                             {description}
                         </p>
                     </motion.div>

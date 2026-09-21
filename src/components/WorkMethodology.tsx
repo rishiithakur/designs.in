@@ -36,13 +36,13 @@ export default function WorkMethodology({ className = "" }: { className?: string
     <section className={`py-24 bg-[var(--acc-dim)]/50 border-y border-[var(--acc-border)] relative overflow-hidden ${className}`}>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-[var(--acc)] font-bold uppercase tracking-[0.3em] text-xs mb-3 block">
-            How I Work
+          <span className="text-[var(--acc)] font-medium text-xs mb-2.5 block tracking-wide">
+            Structured Workflow
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-[var(--text)] mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text)] mb-4 tracking-tight leading-[1.15]">
             Work <span className="text-gradient">Methodology.</span>
           </h2>
-          <p className="text-[var(--text2)] text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-[var(--text2)] text-base md:text-lg max-w-2xl mx-auto font-normal leading-[1.6]">
             A structured, engineering-first approach from requirement analysis to operational delivery.
           </p>
         </div>
@@ -59,15 +59,15 @@ export default function WorkMethodology({ className = "" }: { className?: string
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-3xl md:text-4xl font-black text-[#38bdf8]/30 group-hover:text-[#38bdf8]/70 transition-colors font-mono">
+                  <span className="text-3xl md:text-4xl font-bold text-[#38bdf8]/35 group-hover:text-[#38bdf8]/80 transition-colors font-mono">
                     {item.number}
                   </span>
                   <CheckCircle2 className="w-5 h-5 text-[var(--acc)]/40 group-hover:text-[var(--acc)] transition-colors" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-[var(--text)] group-hover:text-[var(--acc)] transition-colors">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2.5 text-[var(--text)] group-hover:text-[var(--acc)] transition-colors leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-xs md:text-sm text-[var(--text2)] leading-relaxed font-light">
+                <p className="text-sm text-[var(--text2)] leading-[1.6] font-normal">
                   {item.desc}
                 </p>
               </div>

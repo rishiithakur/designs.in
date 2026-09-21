@@ -60,13 +60,13 @@ export default function CapabilitiesSection({ className = "" }: { className?: st
   return (
     <section className={`py-20 px-6 max-w-7xl mx-auto ${className}`}>
       <div className="text-center mb-14">
-        <span className="text-[var(--acc)] font-bold uppercase tracking-[0.3em] text-xs mb-3 block">
-          What I Work With
+        <span className="text-[var(--acc)] font-medium text-xs mb-2.5 block tracking-wide">
+          Capabilities &amp; Core Focus
         </span>
-        <h2 className="text-4xl md:text-5xl font-black text-[var(--text)] mb-4 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text)] mb-4 tracking-tight leading-[1.15]">
           Capabilities &amp; <span className="text-gradient">Technical Focus.</span>
         </h2>
-        <p className="text-[var(--text2)] text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+        <p className="text-[var(--text2)] text-base md:text-lg max-w-2xl mx-auto font-normal leading-[1.6]">
           Focused technical skill areas across GIS, remote sensing, data processing, automation, and institutional systems.
         </p>
       </div>
@@ -84,14 +84,14 @@ export default function CapabilitiesSection({ className = "" }: { className?: st
                 <div className="w-12 h-12 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] flex items-center justify-center text-[var(--acc)] group-hover:scale-110 transition-transform">
                   {item.icon}
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[var(--text2)]">
+                <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[var(--text2)]">
                   {item.tag}
                 </span>
               </div>
-              <h3 className="text-lg font-bold text-[var(--text)] mb-2 group-hover:text-[var(--acc)] transition-colors">
+              <h3 className="text-lg sm:text-xl font-semibold text-[var(--text)] mb-2 group-hover:text-[var(--acc)] transition-colors leading-snug">
                 {item.title}
               </h3>
-              <p className="text-sm text-[var(--text2)] leading-relaxed font-light">
+              <p className="text-sm text-[var(--text2)] leading-[1.6] font-normal">
                 {item.desc}
               </p>
             </div>

@@ -54,7 +54,7 @@ export default function ContactPage() {
               transition={{ delay: 0.8 }}
               className="text-left"
             >
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-12 uppercase text-[var(--text)]">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-10 text-[var(--text)] leading-[1.15]">
                 Get in <span className="text-[var(--acc)]">Touch.</span>
               </h2>
 
@@ -64,10 +64,10 @@ export default function ContactPage() {
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--text3)] mb-1">
+                    <p className="text-xs font-medium text-[var(--text3)] mb-0.5">
                       Email
                     </p>
-                    <p className="text-lg font-bold text-[var(--text)]">
+                    <p className="text-base sm:text-lg font-semibold text-[var(--text)]">
                       Rishu9882876884@gmail.com
                     </p>
                   </div>
@@ -78,10 +78,10 @@ export default function ContactPage() {
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--text3)] mb-1">
+                    <p className="text-xs font-medium text-[var(--text3)] mb-0.5">
                       WhatsApp / Call
                     </p>
-                    <p className="text-lg font-bold text-[var(--text)]">
+                    <p className="text-base sm:text-lg font-semibold text-[var(--text)]">
                       +91 9882876884
                     </p>
                   </div>
@@ -92,13 +92,13 @@ export default function ContactPage() {
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--text3)] mb-1">
+                    <p className="text-xs font-medium text-[var(--text3)] mb-0.5">
                       Location
                     </p>
-                    <p className="text-lg font-bold text-[var(--text)]">
+                    <p className="text-base sm:text-lg font-semibold text-[var(--text)]">
                       Hamirpur, Himachal Pradesh
                     </p>
-                    <p className="text-sm text-[var(--text2)]">
+                    <p className="text-sm text-[var(--text2)] font-normal">
                       Available Remotely / Worldwide
                     </p>
                   </div>
@@ -123,12 +123,12 @@ export default function ContactPage() {
                       <CheckCircle2 className="w-10 h-10" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
-                    <p className="text-[var(--text2)] max-w-sm">
+                    <p className="text-[var(--text2)] max-w-sm font-normal text-sm leading-[1.6]">
                       Thank you for reaching out. We have received your message and will get back to you shortly.
                     </p>
                     <button 
                       onClick={() => setIsSubmitted(false)}
-                      className="mt-8 text-sm font-bold text-[#38bdf8] hover:underline"
+                      className="mt-8 text-sm font-semibold text-[#38bdf8] hover:underline"
                     >
                       Send another message
                     </button>
@@ -142,26 +142,26 @@ export default function ContactPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-[10px] font-bold uppercase tracking-widest text-[var(--text3)]">
+                        <label className="text-xs font-medium text-[var(--text3)]">
                           Full Name
                         </label>
                         <input
                           required
                           name="name"
                           type="text"
-                          className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-4 focus:border-[var(--acc)] outline-none transition-colors text-[var(--text)]"
+                          className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-3.5 focus:border-[var(--acc)] outline-none transition-colors text-[var(--text)] text-sm font-normal"
                           placeholder="Rishabh Thakur"
                         />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-[10px] font-bold uppercase tracking-widest text-[var(--text3)]">
+                        <label className="text-xs font-medium text-[var(--text3)]">
                           Email
                         </label>
                         <input
                           required
                           name="email"
                           type="email"
-                          className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-4 focus:border-[var(--acc)] outline-none transition-colors text-[var(--text)]"
+                          className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-3.5 focus:border-[var(--acc)] outline-none transition-colors text-[var(--text)] text-sm font-normal"
                           placeholder="your@email.com"
                         />
                       </div>
@@ -169,44 +169,44 @@ export default function ContactPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-[10px] font-bold uppercase tracking-widest text-[var(--text3)]">
+                        <label className="text-xs font-medium text-[var(--text3)]">
                           Domain / Focus Area
                         </label>
                         <select
                           name="domain_focus"
                           title="Select Domain Focus"
-                          className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-4 focus:border-[var(--acc)] outline-none transition-colors text-[var(--text)] appearance-none"
+                          className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-3.5 focus:border-[var(--acc)] outline-none transition-colors text-[var(--text)] text-sm font-normal appearance-none"
                         >
-                          <option>GIS & Geospatial Analysis</option>
-                          <option>Remote Sensing & GEE</option>
-                          <option>Python Data Processing & Automation</option>
-                          <option>Dashboards & MIS Systems</option>
-                          <option>AI-Assisted Workflows & APIs</option>
-                          <option>Web & Digital Solutions</option>
+                          <option>GIS &amp; Geospatial Analysis</option>
+                          <option>Remote Sensing &amp; GEE</option>
+                          <option>Python Data Processing &amp; Automation</option>
+                          <option>Dashboards &amp; MIS Systems</option>
+                          <option>AI-Assisted Workflows &amp; APIs</option>
+                          <option>Web &amp; Digital Solutions</option>
                           <option>Technical Consultation / Other</option>
                         </select>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-[10px] font-bold uppercase tracking-widest text-[var(--text3)]">
+                        <label className="text-xs font-medium text-[var(--text3)]">
                           Organization / Institution
                         </label>
                         <input
                           name="organization"
                           type="text"
-                          className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-4 focus:border-[var(--acc)] outline-none transition-colors text-[var(--text)]"
+                          className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-3.5 focus:border-[var(--acc)] outline-none transition-colors text-[var(--text)] text-sm font-normal"
                           placeholder="e.g. Agency, Firm, or Department"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-[10px] font-bold uppercase tracking-widest text-[var(--text3)]">
+                      <label className="text-xs font-medium text-[var(--text3)]">
                         Message
                       </label>
                       <textarea
                         required
                         name="message"
-                        className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-4 focus:border-[var(--acc)] outline-none transition-colors min-h-[120px] text-[var(--text)]"
+                        className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-3.5 focus:border-[var(--acc)] outline-none transition-colors min-h-[120px] text-[var(--text)] text-sm font-normal leading-[1.6]"
                         placeholder="Tell us about your project requirements..."
                       ></textarea>
                     </div>
@@ -214,10 +214,10 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-5 rounded-xl bg-[var(--acc)] text-white font-bold text-lg flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-95 transition-all shadow-[0_0_20px_var(--acc-glow)] disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full py-4 rounded-xl bg-[var(--acc)] text-white font-semibold text-base flex items-center justify-center gap-3 hover:scale-[1.01] active:scale-95 transition-all shadow-[0_0_20px_var(--acc-glow)] disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? "Sending..." : "Send Message"}
-                      <Send className="w-5 h-5" />
+                      <Send className="w-4 h-4" />
                     </button>
                   </form>
                 )}

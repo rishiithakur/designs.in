@@ -86,15 +86,15 @@ export default function Home() {
           description="I work across geospatial data, remote sensing, Python, AI, automation, dashboards and digital systems to turn technical requirements into practical solutions."
         >
           <div className="max-w-4xl mx-auto text-center mb-6 px-4">
-            <p className="text-[var(--acc)] font-bold mb-4 tracking-wider uppercase text-xs sm:text-sm">
+            <p className="text-[var(--acc)] font-medium mb-4 tracking-[0.06em] text-xs sm:text-[13px]">
               Geospatial Data • Remote Sensing • Python • Data • AI • Automation • Digital Systems
             </p>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-light text-[var(--text2)] relative">
+            <h2 className="text-base sm:text-lg md:text-xl font-normal text-[var(--text2)] relative">
               Specialized in{" "}
               <AnimatedTextCycle
                 words={cycleWords}
                 interval={3000}
-                className="text-[var(--text)] font-bold"
+                className="text-[var(--text)] font-semibold"
               />
             </h2>
           </div>
@@ -102,13 +102,13 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-4 mt-6">
             <Link
               href="/work"
-              className="px-8 py-4 rounded-full bg-[var(--acc-dim)] border border-[var(--acc-border)] text-[var(--text)] font-bold transition-all hover:bg-[var(--acc-glow)] hover:border-[var(--acc)]"
+              className="px-8 py-4 rounded-full bg-[var(--acc-dim)] border border-[var(--acc-border)] text-[var(--text)] font-semibold text-sm md:text-base transition-all hover:bg-[var(--acc-glow)] hover:border-[var(--acc)]"
             >
               Explore My Work
             </Link>
             <Link
               href="/contact"
-              className="px-8 py-4 rounded-full bg-[var(--acc)] text-white font-bold transition-all hover:scale-105 hover:shadow-[0_0_30px_var(--acc-glow)]"
+              className="px-8 py-4 rounded-full bg-[var(--acc)] text-white font-semibold text-sm md:text-base transition-all hover:scale-105 hover:shadow-[0_0_30px_var(--acc-glow)]"
             >
               Contact Me
             </Link>
@@ -124,32 +124,32 @@ export default function Home() {
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <div>
-                  <span className="text-[var(--acc)] font-bold uppercase tracking-[0.3em] text-xs mb-3 block">
+                  <span className="text-[var(--acc)] font-medium uppercase tracking-[0.12em] text-[11px] mb-3 block">
                     Institutional &amp; Technical Foundation
                   </span>
-                  <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight text-[var(--text)]">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-[1.12] tracking-tight text-[var(--text)]">
                     Requirement to Delivery. <br />
                     <span className="text-gradient">Technical to Practical.</span>
                   </h2>
-                  <p className="text-[var(--text2)] text-xl mb-12 leading-relaxed">
+                  <p className="text-base sm:text-lg text-[var(--text2)] mb-10 leading-[1.65] font-normal">
                     Nearly 4 years of experience across GIS, geospatial data, remote sensing,
                     Google Earth Engine, ArcGIS Pro, Python automation, dashboards and digital systems
                     supporting World Bank-funded and government water infrastructure initiatives.
                   </p>
                   <div className="grid grid-cols-2 gap-8">
                     <div>
-                      <h4 className="text-5xl font-black text-[var(--acc)] mb-2">
+                      <h4 className="text-4xl sm:text-5xl font-bold text-[var(--acc)] mb-1 tracking-tight">
                         4+
                       </h4>
-                      <p className="text-xs uppercase tracking-[0.2em] font-bold text-[var(--text)] opacity-60">
+                      <p className="text-xs tracking-[0.06em] font-medium text-[var(--text)] opacity-70">
                         Years Experience
                       </p>
                     </div>
                     <div>
-                      <h4 className="text-5xl font-black text-[#818cf8] mb-2">
+                      <h4 className="text-4xl sm:text-5xl font-bold text-[#818cf8] mb-1 tracking-tight">
                         WB
                       </h4>
-                      <p className="text-xs uppercase tracking-[0.2em] font-bold text-[var(--text)] opacity-60">
+                      <p className="text-xs tracking-[0.06em] font-medium text-[var(--text)] opacity-70">
                         World Bank Programs (DRIP-II / NHP)
                       </p>
                     </div>
@@ -183,15 +183,15 @@ export default function Home() {
                           </motion.div>
                           <div className="flex items-center gap-2 px-3 py-1 bg-[var(--acc-dim)] border border-[var(--acc-border)] rounded-full mb-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-[var(--acc)] animate-pulse" />
-                            <span className="text-[10px] font-bold text-[var(--acc)] uppercase tracking-widest">Verified Specialist</span>
+                            <span className="text-xs font-medium text-[var(--acc)]">Verified Specialist</span>
                           </div>
                         </div>
-                        <p className="text-[var(--text2)] italic text-xl md:text-2xl mb-6 leading-relaxed">
+                        <p className="text-[var(--text2)] italic text-lg sm:text-xl md:text-2xl mb-4 leading-relaxed font-normal">
                           &quot;Good technical work starts with understanding
                           the requirement and ends with a solution
                           that actually works in the field.&quot;
                         </p>
-                        <p className="text-[var(--text)] font-bold uppercase tracking-widest text-sm">
+                        <p className="text-[var(--text)] font-semibold text-xs sm:text-sm tracking-wide">
                           &mdash; Rishabh Thakur, GIS &amp; Data Solutions Specialist
                         </p>
                       </div>
@@ -255,10 +255,10 @@ export default function Home() {
                       className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_24px_rgba(245,158,11,0.4)] group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <h3 className="text-[var(--text)] text-2xl sm:text-3xl font-black tracking-widest uppercase mb-3">
+                  <h3 className="text-[var(--text)] text-xl sm:text-2xl font-bold tracking-wide mb-2">
                     Jai Shree Ram
                   </h3>
-                  <p className="text-[var(--text3)] text-xs uppercase tracking-[0.3em] font-bold">
+                  <p className="text-[var(--text3)] text-xs tracking-wide font-medium">
                     Rooted in values.<br />Focused on excellence.
                   </p>
                 </div>
@@ -266,7 +266,7 @@ export default function Home() {
             </div>
             
             <div className="mt-12 text-center relative z-10">
-              <p className="text-[var(--text2)] text-lg opacity-60 max-w-2xl mx-auto italic">
+              <p className="text-[var(--text2)] text-base sm:text-lg opacity-70 max-w-2xl mx-auto italic font-normal">
                 &quot;At Rishii Designs, we believe in clarity, purpose, and building solutions that truly solve problems.&quot;
               </p>
             </div>
@@ -287,8 +287,8 @@ export default function Home() {
                   <div className="aspect-[4/5] rounded-[32px] bg-[#020617] flex flex-col items-center justify-center p-8 text-center relative overflow-hidden">
                     <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
                     <Award className="w-16 h-16 text-[#fbbf24] mb-6 relative z-10 animate-bounce" />
-                    <h4 className="text-2xl font-black text-white mb-2 relative z-10 uppercase tracking-tighter">Google AI</h4>
-                    <p className="text-[10px] font-bold text-[#fbbf24] tracking-[0.3em] uppercase mb-8 relative z-10">Essentials Certified</p>
+                    <h4 className="text-2xl font-bold text-white mb-1.5 relative z-10 tracking-tight">Google AI</h4>
+                    <p className="text-xs font-medium text-[#fbbf24] tracking-wide mb-8 relative z-10">Essentials Certified</p>
                     <div className="w-full h-[1px] bg-white/10 mb-8" />
                     <img src="/logo.png" className="h-12 w-auto object-contain opacity-90 drop-shadow-md" alt="Rishii Designs Certification" />
                   </div>
@@ -296,24 +296,24 @@ export default function Home() {
               </div>
 
               <div className="lg:w-2/3">
-                <Badge variant="outline" className="mb-6 rounded-full border-[#fbbf24]/30 text-[#fbbf24] px-4 py-1 font-bold tracking-[0.2em] uppercase text-[10px] bg-[#fbbf24]/10">
+                <Badge variant="outline" className="mb-4 rounded-full border-[#fbbf24]/30 text-[#fbbf24] px-3.5 py-1 font-medium tracking-wide text-xs bg-[#fbbf24]/10">
                   Google Certified
                 </Badge>
-                <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight leading-[1.15]">
                   Google AI Certified — <span className="text-[#fbbf24]">Rishabh Thakur.</span>
                 </h2>
-                <p className="text-[#8bb8d4] text-xl mb-10 leading-relaxed max-w-2xl">
+                <p className="text-[#8bb8d4] text-base sm:text-lg mb-8 leading-[1.6] max-w-2xl font-normal">
                   Google AI Essentials certified. I integrate AI-assisted workflows,
                   automation and API-based solutions into GIS data pipelines,
                   dashboards and web applications for institutional and technical projects.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <span className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#fbbf24]/20 text-[#fbbf24] border border-[#fbbf24]/30 font-bold text-sm">
+                  <span className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-[#fbbf24]/20 text-[#fbbf24] border border-[#fbbf24]/30 font-semibold text-sm">
                     <ShieldCheck className="w-4 h-4" /> Verified Google AI Credential
                   </span>
                   <Link 
                     href="/about" 
-                    className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/5 text-white border border-white/10 font-bold hover:bg-white/10 transition-all text-sm"
+                    className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-white/5 text-white border border-white/10 font-semibold hover:bg-white/10 transition-all text-sm"
                   >
                     About Rishabh Thakur <ArrowRight className="w-4 h-4" />
                   </Link>

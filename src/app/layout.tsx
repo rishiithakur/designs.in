@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, Playfair_Display, Cormorant_Garamond } from "next/font/google";
+import { Plus_Jakarta_Sans, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-h",
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
-});
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-b",
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-lux",
-  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 const cormorant = Cormorant_Garamond({
@@ -132,7 +124,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} ${playfair.variable} ${cormorant.variable} antialiased`}
+        className={`${plusJakartaSans.variable} ${cormorant.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

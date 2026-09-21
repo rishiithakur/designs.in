@@ -48,16 +48,16 @@ export const CardCarousel: React.FC<CarouselProps> = ({
         <div className="flex flex-col md:items-center text-center mb-16">
           <Badge
             variant="outline"
-            className="mb-6 rounded-full border-[#38bdf8]/30 text-[#38bdf8] px-4 py-1 font-bold tracking-[0.2em] uppercase text-[10px] bg-[#38bdf8]/10"
+            className="mb-4 rounded-full border-[#38bdf8]/30 text-[#38bdf8] px-3.5 py-1 font-medium tracking-wide text-xs bg-[#38bdf8]/10"
           >
             <SparklesIcon className="w-3 h-3 mr-2 fill-[#38bdf8]" />
             Project Spotlight
           </Badge>
           
-          <h2 className="text-4xl md:text-6xl font-black text-[var(--text)] tracking-tighter mb-6 leading-[1.1]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text)] tracking-tight mb-4 leading-[1.15]">
             {title}
           </h2>
-          <p className="text-[var(--text2)] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[var(--text2)] text-base sm:text-lg max-w-2xl mx-auto font-normal leading-[1.6]">
             {subtitle}
           </p>
         </div>
@@ -125,10 +125,10 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                       
                       {/* Premium Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span className="text-[10px] font-bold text-[#38bdf8] uppercase tracking-[0.2em] mb-2 block">
+                        <span className="text-xs font-medium text-[#38bdf8] tracking-wide mb-1.5 block">
                           {image.category || "Featured Project"}
                         </span>
-                        <h3 className="text-lg font-bold text-white">
+                        <h3 className="text-lg font-semibold text-white leading-snug">
                           {image.alt}
                         </h3>
                       </div>
