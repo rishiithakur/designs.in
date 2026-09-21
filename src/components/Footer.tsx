@@ -22,12 +22,15 @@ export default function Footer() {
           
           {/* Brand Col */}
           <div className="lg:col-span-1">
-            <Link href="/" className="mb-8 group inline-flex">
+            <Link href="/" className="mb-8 group inline-flex items-center gap-3">
               <img 
-                src="/logorishii.svg" 
+                src="/logo.png" 
                 alt="Rishii Designs Logo" 
-                className="h-10 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform" 
+                className="h-10 w-10 rounded-xl object-contain shadow-sm border border-white/10 group-hover:scale-105 transition-transform" 
               />
+              <span className="font-black text-xl tracking-tight text-[var(--text)] group-hover:text-[var(--acc)] transition-colors">
+                Rishii<span className="text-gradient"> Designs</span>
+              </span>
             </Link>
             
             <div className="flex items-center gap-4 mb-8 p-3 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] hover:border-[#38bdf8]/30 transition-all group/avatar">
@@ -37,34 +40,29 @@ export default function Footer() {
               </Avatar>
               <div>
                 <p className="text-[var(--text)] font-bold text-sm">Rishabh Thakur</p>
-                <p className="text-[#38bdf8] text-[10px] uppercase tracking-widest font-medium">Founder — GIS & Data Solutions</p>
+                <p className="text-[#38bdf8] text-[10px] uppercase tracking-widest font-medium">GIS & Data Solutions Specialist</p>
               </div>
             </div>
 
             <p className="text-[var(--text2)] text-sm leading-relaxed mb-8 max-w-xs">
-              Rishii Designs is a digital solutions studio founded by Rishabh Thakur. Specialising in GIS & geospatial data, remote sensing, Python automation, AI-assisted development, dashboards and web solutions.
+              Rishii Designs is the professional technical portfolio of Rishabh Thakur — GIS &amp; Data Solutions Specialist specializing in geospatial data, remote sensing, Python automation, dashboards and digital systems.
             </p>
             <div className="flex flex-wrap items-center gap-3">
               {[
                 { 
                   icon: FaLinkedin, 
                   href: "https://www.linkedin.com/in/rishii-thakur", 
-                  label: "Rishii Designs on LinkedIn" 
+                  label: "LinkedIn" 
                 },
                 { 
                   icon: FaGithub, 
                   href: "https://github.com/rishiithakur", 
-                  label: "View GitHub Projects by Rishabh Thakur" 
+                  label: "GitHub" 
                 },
                 { 
                   icon: FaInstagram, 
                   href: "https://www.instagram.com/rishiidesigns.ai", 
-                  label: "Instagram (Brand)" 
-                },
-                { 
-                  icon: FaInstagram, 
-                  href: "https://www.instagram.com/i.rishii.thakur", 
-                  label: "Instagram (Personal)" 
+                  label: "Instagram" 
                 },
               ].map((Social, i) => (
                 <a 
@@ -76,7 +74,7 @@ export default function Footer() {
                   className="px-4 py-2 rounded-xl border border-[var(--acc-border)] bg-[var(--acc-dim)] flex items-center gap-2 hover:bg-[#38bdf8]/10 hover:border-[#38bdf8]/50 hover:text-[#38bdf8] text-[var(--text)] transition-all hover:-translate-y-1 text-xs font-bold"
                 >
                   <Social.icon className="w-4 h-4" />
-                  <span className="hidden sm:inline">{Social.label}</span>
+                  <span>{Social.label}</span>
                 </a>
               ))}
             </div>
@@ -85,14 +83,14 @@ export default function Footer() {
           {/* Navigation Col */}
           <div>
             <h4 className="text-xs font-bold text-[var(--text)] opacity-40 tracking-widest uppercase mb-6 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-gradient-to-r after:from-[#38bdf8] after:to-transparent">
-              Navigation
+              Portfolio
             </h4>
             <ul className="space-y-4">
               {[
-                { name: 'About', href: '/about' },
-                { name: 'Services', href: '/services' },
-                { name: 'Gallery', href: '/gallery' },
-                { name: 'Contact', href: '/contact' }
+                { name: 'Selected Work', href: '/work' },
+                { name: 'About Rishabh', href: '/about' },
+                { name: 'Capabilities', href: '/capabilities' },
+                { name: 'Contact & Collaboration', href: '/contact' }
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-[var(--text2)] hover:text-[var(--text)] hover:pl-2 text-sm font-medium transition-all inline-flex items-center group">

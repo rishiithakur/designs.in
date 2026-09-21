@@ -1,0 +1,80 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { CheckCircle2 } from "lucide-react";
+
+export const methodologySteps = [
+  {
+    number: "01",
+    title: "Understand",
+    desc: "Understand project requirements, real-world context and the core technical problem to be solved.",
+  },
+  {
+    number: "02",
+    title: "Analyse",
+    desc: "Analyse available data, workflows, system architectures and technical feasibility.",
+  },
+  {
+    number: "03",
+    title: "Build",
+    desc: "Develop the required GIS workflow, data pipeline, automation script, dashboard or web application.",
+  },
+  {
+    number: "04",
+    title: "Test & Refine",
+    desc: "Validate, perform end-to-end testing, verify outputs against criteria and optimize performance.",
+  },
+  {
+    number: "05",
+    title: "Deliver",
+    desc: "Provide structured technical documentation, manuals, deployment support and clean handover.",
+  },
+];
+
+export default function WorkMethodology({ className = "" }: { className?: string }) {
+  return (
+    <section className={`py-24 bg-[var(--acc-dim)]/50 border-y border-[var(--acc-border)] relative overflow-hidden ${className}`}>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="text-center mb-16">
+          <span className="text-[var(--acc)] font-bold uppercase tracking-[0.3em] text-xs mb-3 block">
+            How I Work
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black text-[var(--text)] mb-4 tracking-tight">
+            Work <span className="text-gradient">Methodology.</span>
+          </h2>
+          <p className="text-[var(--text2)] text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+            A structured, engineering-first approach from requirement analysis to operational delivery.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {methodologySteps.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.08, duration: 0.5 }}
+              viewport={{ once: true }}
+              className="relative p-6 rounded-3xl bg-[var(--bg-card)] border border-[var(--acc-border)] hover:border-[var(--acc)]/40 transition-all flex flex-col justify-between group"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-3xl md:text-4xl font-black text-[#38bdf8]/30 group-hover:text-[#38bdf8]/70 transition-colors font-mono">
+                    {item.number}
+                  </span>
+                  <CheckCircle2 className="w-5 h-5 text-[var(--acc)]/40 group-hover:text-[var(--acc)] transition-colors" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-[var(--text)] group-hover:text-[var(--acc)] transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-xs md:text-sm text-[var(--text2)] leading-relaxed font-light">
+                  {item.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

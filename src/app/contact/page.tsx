@@ -41,10 +41,10 @@ export default function ContactPage() {
       <Navbar />
 
       <HeroGeometric
-        badge="Contact Us"
-        title1="Let's Build"
-        title2="Something Amazing"
-        description="Get in touch with Rishii Designs — a digital solutions studio by Rishabh Thakur. Available for GIS & geospatial work, data processing, dashboards, MIS systems, web applications, AI-assisted development and API integration. Based in India, available remotely."
+        badge="Contact & Collaboration"
+        title1="Interested in"
+        title2="Working Together?"
+        description="Have a project, idea or technical problem? Reach out directly to discuss geospatial data, remote sensing, Google Earth Engine, Python pipelines, dashboards, MIS platforms or digital solutions."
       >
         <div className="max-w-7xl mx-auto mt-12 md:mt-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
@@ -170,33 +170,31 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-[10px] font-bold uppercase tracking-widest text-[var(--text3)]">
-                          Project Type
+                          Domain / Focus Area
                         </label>
                         <select
-                          name="project_type"
-                          title="Select Project Type"
+                          name="domain_focus"
+                          title="Select Domain Focus"
                           className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-4 focus:border-[var(--acc)] outline-none transition-colors text-[var(--text)] appearance-none"
                         >
-                          <option>Website</option>
-                          <option>GIS & Geospatial</option>
-                          <option>Dashboard / MIS</option>
-                          <option>Data Processing</option>
-                          <option>Python Automation</option>
-                          <option>AI Integration</option>
-                          <option>API Integration</option>
-                          <option>UI/UX Design</option>
-                          <option>Other</option>
+                          <option>GIS & Geospatial Analysis</option>
+                          <option>Remote Sensing & GEE</option>
+                          <option>Python Data Processing & Automation</option>
+                          <option>Dashboards & MIS Systems</option>
+                          <option>AI-Assisted Workflows & APIs</option>
+                          <option>Web & Digital Solutions</option>
+                          <option>Technical Consultation / Other</option>
                         </select>
                       </div>
                       <div className="space-y-2">
                         <label className="text-[10px] font-bold uppercase tracking-widest text-[var(--text3)]">
-                          Estimated Budget
+                          Organization / Institution
                         </label>
                         <input
-                          name="budget"
+                          name="organization"
                           type="text"
                           className="w-full bg-[var(--bg)] border border-[var(--acc-border)] rounded-xl px-4 py-4 focus:border-[var(--acc)] outline-none transition-colors text-[var(--text)]"
-                          placeholder="e.g. ₹50k - ₹1L"
+                          placeholder="e.g. Agency, Firm, or Department"
                         />
                       </div>
                     </div>

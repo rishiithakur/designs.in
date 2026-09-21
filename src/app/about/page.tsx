@@ -37,13 +37,13 @@ export default function AboutPage() {
                 <span className="text-[var(--text)] font-bold">
                   GIS & Data Solutions Specialist
                 </span>
-                {" "}with nearly four years of experience across GIS, geospatial
+                {" "}with nearly four years of professional experience across GIS, geospatial
                 data, remote sensing, Google Earth Engine, ArcGIS Pro, data
                 processing, dashboards, project systems and technical
                 implementation on World Bank-funded and government-funded water
-                and infrastructure programs. Founder of{" "}
+                and infrastructure programs.{" "}
                 <span className="text-[var(--acc)] font-bold">Rishii Designs</span>
-                {" "}— a digital solutions and web design studio.
+                {" "}represents my personal technical portfolio and digital work identity.
               </p>
               <p className="text-[var(--text2)] text-lg leading-relaxed mb-8">
                 I work across requirement analysis, GIS workflows, data
@@ -57,7 +57,7 @@ export default function AboutPage() {
                 {" "}on{" "}
                 <span className="text-[var(--acc)] font-bold">World Bank DRIP-II</span>
                 {" "}and{" "}
-                <span className="text-[var(--acc)] font-bold">National Hydrology Project</span>
+                <span className="text-[var(--acc)] font-bold">National Hydrology Project (NHP)</span>
                 {" "}initiatives.
               </p>
               <div className="space-y-6">
@@ -108,7 +108,7 @@ export default function AboutPage() {
                     href="/contact" 
                     className="inline-flex items-center gap-2 text-[var(--acc)] font-bold hover:underline"
                   >
-                    Work With Rishabh <ArrowRight className="w-4 h-4" />
+                    Discuss a Project <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>

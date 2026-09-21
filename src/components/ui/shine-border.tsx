@@ -125,27 +125,27 @@ export function Timeline() {
 
 const timeline: TimelineEventData[] = [
   {
-    label: "Choose Your Design",
+    label: "01 Understand",
     message:
-      "Browse and select a design that fits your needs, then access your personalized dashboard.",
+      "Understand project requirements, real-world context and the core technical problem.",
     icon: {
       name: "Shapes",
-      textColor: "text-orange-500",
-      borderColor: "border-orange-500/40",
+      textColor: "text-sky-500",
+      borderColor: "border-sky-500/40",
     },
   },
   {
-    label: "Provide Your Brief",
-    message: "Share your design preferences and requirements with us.",
+    label: "02 Analyse",
+    message: "Analyse data, workflows, systems, data sources and technical requirements.",
     icon: {
       name: "Send",
-      textColor: "text-amber-500",
-      borderColor: "border-amber-500/40",
+      textColor: "text-indigo-500",
+      borderColor: "border-indigo-500/40",
     },
   },
   {
-    label: "Receive Your Designs",
-    message: "Get your initial designs within 48 hours.",
+    label: "03 Build",
+    message: "Develop the required GIS, data processing, automation, AI or web solution.",
     icon: {
       name: "Check",
       textColor: "text-blue-500",
@@ -153,22 +153,22 @@ const timeline: TimelineEventData[] = [
     },
   },
   {
-    label: "Request Revisions",
+    label: "04 Test & Refine",
     message:
-      "We’re committed to perfection—request as many revisions as needed until you’re satisfied.",
+      "Validate outputs, test end-to-end functionality and continuously optimize performance.",
     icon: {
       name: "Repeat",
-      textColor: "text-green-500",
-      borderColor: "border-green-500/40",
+      textColor: "text-amber-500",
+      borderColor: "border-amber-500/40",
     },
   },
   {
-    label: "Get Final Files",
-    message: "Once approved, we’ll deliver the final files to you.",
+    label: "05 Deliver",
+    message: "Document, deploy, provide operational technical manuals and hand over the final solution.",
     icon: {
       name: "Download",
-      textColor: "text-green-500",
-      borderColor: "border-green-500/40",
+      textColor: "text-emerald-500",
+      borderColor: "border-emerald-500/40",
     },
   },
 ];

@@ -14,11 +14,9 @@ export default function Navbar() {
   const scrolled = useScroll(20);
 
   const links = [
-    { label: "Home", href: "/" },
+    { label: "Work", href: "/work" },
     { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Gallery", href: "/gallery" },
-    { label: "Reviews", href: "/testimonials" },
+    { label: "Capabilities", href: "/capabilities" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -57,15 +55,18 @@ export default function Navbar() {
           }
         )}
       >
-        <Link href="/" className="flex items-center gap-2 group z-50" onClick={() => setOpen(false)}>
+        <Link href="/" className="flex items-center gap-2.5 group z-50" onClick={() => setOpen(false)}>
           <img
-            src="/logorishii.svg"
+            src="/logo.png"
             alt="Rishii Designs Logo"
             className={cn(
-              "h-10 md:h-12 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform",
-              { "md:h-8": scrolled }
+              "h-9 w-9 md:h-10 md:w-10 rounded-xl object-contain shadow-sm border border-white/10 group-hover:scale-105 transition-transform",
+              { "md:h-8 md:w-8": scrolled }
             )}
           />
+          <span className="font-black text-lg md:text-xl tracking-tight text-[var(--text)] group-hover:text-[var(--acc)] transition-colors">
+            Rishii<span className="text-gradient"> Designs</span>
+          </span>
         </Link>
         
         {/* Desktop Links */}
@@ -92,7 +93,7 @@ export default function Navbar() {
             className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-[#060d18] font-bold text-sm shadow-[0_4px_20px_rgba(56,189,248,0.3)] hover:scale-105 hover:shadow-[0_8px_32px_rgba(56,189,248,0.5)] transition-all ml-2"
           >
             <Sparkles className="w-4 h-4" />
-            Book Now
+            Get in Touch
           </Link>
         </div>
 
@@ -143,7 +144,7 @@ export default function Navbar() {
               className="flex justify-center items-center gap-2 w-full py-4 rounded-full bg-gradient-to-r from-[#bae6fd] via-[#7dd3fc] to-[#38bdf8] text-[#060d18] font-bold text-lg shadow-[0_4px_20px_rgba(56,189,248,0.3)] active:scale-95 transition-all"
             >
               <Sparkles className="w-5 h-5" />
-              Book Your Project
+              Get in Touch
             </Link>
           </div>
         </div>
