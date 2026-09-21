@@ -207,19 +207,36 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
               <GlowCard 
                 glowColor="purple" 
-                className="lg:col-span-2 !p-10 flex flex-col justify-center"
+                className="lg:col-span-2 !p-8 md:!p-12 flex flex-col justify-center border border-[var(--acc-border)]/60 bg-[var(--bg-card)]/90 backdrop-blur-xl"
               >
-                <div className="relative z-10 text-center lg:text-left">
-                  <p className="text-[var(--text)] text-2xl md:text-3xl font-black mb-6 leading-relaxed font-serif">
-                    कृष्णाय वासुदेवाय हरये परमात्मने।<br className="hidden md:block" />
-                    प्रणतः क्लेशनाशाय गोविन्दाय नमो नमः॥
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-[var(--text2)] leading-relaxed">
-                    <p className="italic border-l-2 border-[var(--acc)] pl-4">
-                      &quot;Salutations to Lord Krishna, the supreme soul, who removes the suffering of those who surrender. I bow again and again.&quot;
+                <div className="relative z-10 text-left">
+                  <div className="font-serif text-lg sm:text-xl md:text-2xl text-[var(--text)]/90 leading-[1.75] md:leading-[1.85] tracking-[0.015em] space-y-5 font-light">
+                    <p>
+                      With <span className="text-[#fde68a] font-normal tracking-wide">Sita-Ram</span> in my soul,<br />
+                      I walk the path of <span className="font-medium text-white tracking-widest uppercase text-[0.82em] border-b border-[#38bdf8]/30 pb-0.5">truth</span> without fear.
                     </p>
-                    <p className="border-l-2 border-[var(--acc)] pl-4 font-hindi">
-                      &quot;वसुदेव के पुत्र भगवान श्री कृष्ण को प्रणाम है, जो शरण लेने वालों के सभी दुखों का नाश करते हैं। ऐसे गोविन्द को बार-बार नमन।&quot;
+
+                    <p className="text-[var(--text2)]">
+                      I turn <span className="font-medium text-white tracking-wider uppercase text-[0.80em]">discipline</span> into strength,<br />
+                      knowledge into power,<br />
+                      vision into <span className="font-medium text-white tracking-wider uppercase text-[0.80em]">creation</span>,<br />
+                      and creation into{" "}
+                      <span className="font-semibold tracking-wider uppercase text-[0.92em] bg-gradient-to-r from-[#fef08a] via-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent drop-shadow-[0_0_14px_rgba(251,191,36,0.35)]">
+                        wealth
+                      </span>.
+                    </p>
+
+                    <p className="text-[var(--text2)] text-base sm:text-lg md:text-xl italic font-normal text-[var(--text2)]/85">
+                      I seek not wealth alone, but the freedom, influence and identity it can build.
+                    </p>
+
+                    <p className="text-[var(--text)]/90 pt-1">
+                      I will build with courage, earn with integrity,<br />
+                      rise through <span className="font-medium text-white tracking-wider uppercase text-[0.80em]">discipline</span>, and leave behind a name<br />
+                      that{" "}
+                      <span className="font-semibold tracking-wide bg-gradient-to-r from-white via-[#fde68a] to-[#fbbf24] bg-clip-text text-transparent drop-shadow-[0_0_16px_rgba(251,191,36,0.25)]">
+                        outlives the work that created it
+                      </span>.
                     </p>
                   </div>
                 </div>
