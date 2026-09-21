@@ -5,9 +5,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { TubesBackground } from "@/components/ui/neon-flow";
-import { Badge } from "@/components/ui/badge";
-import { ShieldCheck, ArrowRight, Database, Globe, Cpu, Layers, ExternalLink, Lock, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, ArrowRight, Database, Globe, Cpu, Layers, ExternalLink, Lock, CheckCircle2, Monitor } from "lucide-react";
 import Link from "next/link";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
 interface Project {
   id: string;
@@ -21,6 +21,32 @@ interface Project {
   technologies: string[];
   confidential?: boolean;
 }
+
+const getCategoryIcon = (category: Project["category"]) => {
+  switch (category) {
+    case "GIS & Remote Sensing":
+      return <Globe className="w-6 h-6" />;
+    case "MIS & Governance":
+      return <Monitor className="w-6 h-6" />;
+    case "Data & Python":
+      return <Cpu className="w-6 h-6" />;
+    case "AI & Web":
+      return <Layers className="w-6 h-6" />;
+  }
+};
+
+const getCategoryColor = (category: Project["category"]): "blue" | "purple" | "green" | "orange" => {
+  switch (category) {
+    case "GIS & Remote Sensing":
+      return "green";
+    case "MIS & Governance":
+      return "orange";
+    case "Data & Python":
+      return "purple";
+    case "AI & Web":
+      return "blue";
+  }
+};
 
 const projects: Project[] = [
   {
@@ -268,62 +294,75 @@ export default function WorkPage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.35, delay: index * 0.05 }}
-                className="rounded-3xl p-7 bg-[var(--bg-card)] border border-[var(--acc-border)] hover:border-[#38bdf8]/40 transition-all flex flex-col justify-between group shadow-xl"
+                className="h-full flex flex-col"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-medium px-3 py-1 rounded-full bg-[var(--acc-dim)] text-[var(--acc)] border border-[var(--acc-border)]">
-                      {project.category}
-                    </span>
-                    {project.confidential && (
-                      <span className="inline-flex items-center gap-1 text-xs font-medium text-[var(--text2)] opacity-80">
-                        <Lock className="w-3 h-3 text-[var(--acc)]" /> Institutional
-                      </span>
-                    )}
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-[var(--text)] mb-2 group-hover:text-[var(--acc)] transition-colors leading-snug">
-                    {project.title}
-                  </h3>
-
-                  <div className="mb-4">
-                    <p className="text-xs font-medium text-[#38bdf8]">
-                      {project.program}
-                    </p>
-                    <p className="text-xs text-[var(--text2)] opacity-75 font-normal">
-                      {project.role} • {project.period}
-                    </p>
-                  </div>
-
-                  <p className="text-sm text-[var(--text2)] leading-[1.6] font-normal mb-6">
-                    {project.summary}
-                  </p>
-
-                  <div className="mb-6 space-y-2 border-t border-white/5 pt-4">
-                    <p className="text-xs font-medium text-[var(--text)] opacity-60">
-                      Key Deliverables
-                    </p>
-                    {project.keyDeliverables.map((d, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs text-[var(--text2)] font-normal leading-relaxed">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#38bdf8] shrink-0 mt-0.5" />
-                        <span>{d}</span>
+                <GlowCard
+                  glowColor={getCategoryColor(project.category)}
+                  customSize
+                  className="!p-7 flex flex-col justify-between h-full rounded-3xl border border-[var(--acc-border)] bg-[var(--bg-card)]/80 backdrop-blur-xl hover:border-[var(--acc)]/40 transition-all group shadow-xl"
+                >
+                  <div className="relative z-10 flex flex-col h-full justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-5">
+                        <div className="w-12 h-12 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] flex items-center justify-center text-[var(--acc)] group-hover:scale-110 transition-transform">
+                          {getCategoryIcon(project.category)}
+                        </div>
+                        <div className="flex items-center gap-2 flex-wrap justify-end">
+                          <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[var(--text2)]">
+                            {project.category}
+                          </span>
+                          {project.confidential && (
+                            <span className="inline-flex items-center gap-1 text-xs font-medium text-[var(--text2)] opacity-80 px-2.5 py-1 rounded-full bg-white/5 border border-white/10">
+                              <Lock className="w-3 h-3 text-[var(--acc)]" /> Institutional
+                            </span>
+                          )}
+                        </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
 
-                <div className="border-t border-white/5 pt-4">
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.technologies.map((t, i) => (
-                      <span
-                        key={i}
-                        className="text-xs px-2.5 py-1 rounded-md bg-white/5 text-[var(--text2)] border border-white/5 font-normal"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                      <h3 className="text-xl font-semibold text-[var(--text)] mb-2 group-hover:text-[var(--acc)] transition-colors leading-snug">
+                        {project.title}
+                      </h3>
+
+                      <div className="mb-4">
+                        <p className="text-xs font-medium text-[#38bdf8]">
+                          {project.program}
+                        </p>
+                        <p className="text-xs text-[var(--text2)] opacity-75 font-normal">
+                          {project.role} • {project.period}
+                        </p>
+                      </div>
+
+                      <p className="text-sm text-[var(--text2)] leading-[1.6] font-normal mb-6">
+                        {project.summary}
+                      </p>
+
+                      <div className="mb-6 space-y-2 border-t border-white/5 pt-4">
+                        <p className="text-xs font-medium text-[var(--text)] opacity-60">
+                          Key Deliverables
+                        </p>
+                        {project.keyDeliverables.map((d, i) => (
+                          <div key={i} className="flex items-start gap-2 text-xs text-[var(--text2)] font-normal leading-relaxed">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#38bdf8] shrink-0 mt-0.5" />
+                            <span>{d}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="border-t border-white/5 pt-4 mt-auto">
+                      <div className="flex flex-wrap gap-1.5">
+                        {project.technologies.map((t, i) => (
+                          <span
+                            key={i}
+                            className="text-xs px-2.5 py-1 rounded-md bg-white/5 text-[var(--text2)] border border-white/5 font-normal"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </GlowCard>
               </motion.div>
             ))}
           </AnimatePresence>

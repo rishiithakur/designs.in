@@ -2,32 +2,38 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
 export const methodologySteps = [
   {
     number: "01",
     title: "Understand",
     desc: "Understand project requirements, real-world context and the core technical problem to be solved.",
+    color: "blue" as const,
   },
   {
     number: "02",
     title: "Analyse",
     desc: "Analyse available data, workflows, system architectures and technical feasibility.",
+    color: "purple" as const,
   },
   {
     number: "03",
     title: "Build",
     desc: "Develop the required GIS workflow, data pipeline, automation script, dashboard or web application.",
+    color: "green" as const,
   },
   {
     number: "04",
     title: "Test & Refine",
     desc: "Validate, perform end-to-end testing, verify outputs against criteria and optimize performance.",
+    color: "orange" as const,
   },
   {
     number: "05",
     title: "Deliver",
     desc: "Provide structured technical documentation, manuals, deployment support and clean handover.",
+    color: "blue" as const,
   },
 ];
 
@@ -55,22 +61,31 @@ export default function WorkMethodology({ className = "" }: { className?: string
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.08, duration: 0.5 }}
               viewport={{ once: true }}
-              className="relative p-6 rounded-3xl bg-[var(--bg-card)] border border-[var(--acc-border)] hover:border-[var(--acc)]/40 transition-all flex flex-col justify-between group"
+              className="h-full flex flex-col"
             >
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-3xl md:text-4xl font-bold text-[#38bdf8]/35 group-hover:text-[#38bdf8]/80 transition-colors font-mono">
-                    {item.number}
-                  </span>
-                  <CheckCircle2 className="w-5 h-5 text-[var(--acc)]/40 group-hover:text-[var(--acc)] transition-colors" />
+              <GlowCard
+                glowColor={item.color}
+                customSize
+                className="!p-6 flex flex-col justify-between h-full rounded-3xl border border-[var(--acc-border)] bg-[var(--bg-card)]/80 backdrop-blur-xl hover:border-[var(--acc)]/40 transition-all group"
+              >
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-11 h-11 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] flex items-center justify-center font-mono font-bold text-sm text-[var(--acc)] group-hover:scale-110 transition-transform">
+                      {item.number}
+                    </div>
+                    <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[var(--text2)] flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#38bdf8]" />
+                      Phase
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-[var(--text)] group-hover:text-[var(--acc)] transition-colors leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text2)] leading-[1.6] font-normal">
+                    {item.desc}
+                  </p>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-2.5 text-[var(--text)] group-hover:text-[var(--acc)] transition-colors leading-snug">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-[var(--text2)] leading-[1.6] font-normal">
-                  {item.desc}
-                </p>
-              </div>
+              </GlowCard>
             </motion.div>
           ))}
         </div>

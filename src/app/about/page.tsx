@@ -154,32 +154,51 @@ export default function AboutPage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="flex gap-5 items-start p-6 rounded-3xl bg-[var(--bg-card)] border border-[var(--acc-border)]">
-              <div className="w-14 h-14 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] flex items-center justify-center shrink-0">
-                <GraduationCap className="w-7 h-7 text-[var(--acc)]" />
-              </div>
-              <div>
-                <h3 className="text-lg sm:text-xl font-semibold text-[var(--text)] leading-snug">
+            <GlowCard
+              glowColor="blue"
+              customSize
+              className="!p-6 flex flex-col justify-between rounded-3xl border border-[var(--acc-border)] bg-[var(--bg-card)]/80 backdrop-blur-xl hover:border-[var(--acc)]/40 transition-all group"
+            >
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] flex items-center justify-center text-[var(--acc)] group-hover:scale-110 transition-transform">
+                    <GraduationCap className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[var(--text2)]">
+                    2025 – Present
+                  </span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-[var(--text)] mb-2 group-hover:text-[var(--acc)] transition-colors leading-snug">
                   Master of Computer Applications (MCA)
                 </h3>
-                <p className="text-[var(--text2)] text-sm font-normal mt-1">IGNOU, India</p>
-                <p className="text-xs text-[var(--text3)] mt-0.5 font-normal">
-                  Currently Pursuing — 2025-Present
+                <p className="text-sm text-[var(--text2)] font-normal leading-[1.6]">
+                  IGNOU, India • Advanced computing systems, database architectures &amp; software engineering.
                 </p>
               </div>
-            </div>
-            <div className="flex gap-5 items-start p-6 rounded-3xl bg-[var(--bg-card)] border border-[var(--acc-border)]">
-              <div className="w-14 h-14 rounded-2xl bg-[#818cf8]/10 border border-[#818cf8]/20 flex items-center justify-center shrink-0">
-                <BookOpen className="w-7 h-7 text-[#818cf8]" />
-              </div>
-              <div>
-                <h3 className="text-lg sm:text-xl font-semibold text-[var(--text)] leading-snug">
+            </GlowCard>
+
+            <GlowCard
+              glowColor="purple"
+              customSize
+              className="!p-6 flex flex-col justify-between rounded-3xl border border-[var(--acc-border)] bg-[var(--bg-card)]/80 backdrop-blur-xl hover:border-[var(--acc)]/40 transition-all group"
+            >
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-[#818cf8]/10 border border-[#818cf8]/20 flex items-center justify-center text-[#818cf8] group-hover:scale-110 transition-transform">
+                    <BookOpen className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[var(--text2)]">
+                    Graduated 2021
+                  </span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-[var(--text)] mb-2 group-hover:text-[var(--acc)] transition-colors leading-snug">
                   BA — Journalism &amp; Mass Communication
                 </h3>
-                <p className="text-[var(--text2)] text-sm font-normal mt-1">HPU Shimla, India</p>
-                <p className="text-xs text-[var(--text3)] mt-0.5 font-normal">Graduated 2021</p>
+                <p className="text-sm text-[var(--text2)] font-normal leading-[1.6]">
+                  HPU Shimla, India • Technical documentation, media communication &amp; stakeholder reporting.
+                </p>
               </div>
-            </div>
+            </GlowCard>
           </div>
 
           <CertificateSection />

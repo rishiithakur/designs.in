@@ -8,21 +8,116 @@ import { motion } from "framer-motion";
 import { BeamsBackground } from "@/components/ui/beams-background";
 import { LampContainer } from "@/components/ui/lamp";
 import Link from "next/link";
-import { ArrowRight, Code, Database, Globe, Cpu, Layers, ShieldCheck, Terminal } from "lucide-react";
+import { 
+  ArrowRight, 
+  Globe, 
+  Layers, 
+  MapPin, 
+  Code2, 
+  Database, 
+  Server, 
+  Terminal, 
+  BarChart3, 
+  AppWindow, 
+  Monitor, 
+  Webhook, 
+  Sparkles 
+} from "lucide-react";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
-const techStack = [
-  { name: "ArcGIS Pro", category: "GIS & Spatial" },
-  { name: "Google Earth Engine", category: "Remote Sensing" },
-  { name: "QGIS", category: "Spatial Analysis" },
-  { name: "Python", category: "Automation & Data" },
-  { name: "PostgreSQL / PostGIS", category: "Database" },
-  { name: "SQL & MySQL", category: "Data Management" },
-  { name: "Jupyter Notebooks", category: "Analysis & Pipelines" },
-  { name: "Power BI", category: "Dashboards" },
-  { name: "Esri Web Apps", category: "Spatial Portals" },
-  { name: "Next.js & React", category: "Digital Applications" },
-  { name: "REST APIs", category: "Integration" },
-  { name: "AI Automation", category: "Workflow Acceleration" },
+interface TechItem {
+  icon: React.ReactNode;
+  name: string;
+  category: string;
+  desc: string;
+  color: "blue" | "purple" | "green" | "orange";
+}
+
+const techStack: TechItem[] = [
+  { 
+    icon: <Globe className="w-5 h-5" />,
+    name: "ArcGIS Pro", 
+    category: "GIS & Spatial",
+    desc: "Spatial modeling, cartography, geoprocessing and raster classification.",
+    color: "blue"
+  },
+  { 
+    icon: <Layers className="w-5 h-5" />,
+    name: "Google Earth Engine", 
+    category: "Remote Sensing",
+    desc: "Satellite analytics, ET estimation, water persistence & cloud workflows.",
+    color: "green"
+  },
+  { 
+    icon: <MapPin className="w-5 h-5" />,
+    name: "QGIS", 
+    category: "Spatial Analysis",
+    desc: "Open-source geospatial workflows, vector processing and custom plugins.",
+    color: "purple"
+  },
+  { 
+    icon: <Code2 className="w-5 h-5" />,
+    name: "Python", 
+    category: "Automation & Data",
+    desc: "Automated data ETL, GeoPandas, NumPy and spatial pipeline scripts.",
+    color: "blue"
+  },
+  { 
+    icon: <Database className="w-5 h-5" />,
+    name: "PostgreSQL / PostGIS", 
+    category: "Spatial Database",
+    desc: "Spatial SQL queries, geometry indexing and relational datasets.",
+    color: "purple"
+  },
+  { 
+    icon: <Server className="w-5 h-5" />,
+    name: "SQL & MySQL", 
+    category: "Data Management",
+    desc: "Structured query pipelines and institutional database schemas.",
+    color: "blue"
+  },
+  { 
+    icon: <Terminal className="w-5 h-5" />,
+    name: "Jupyter Notebooks", 
+    category: "Analysis & Pipelines",
+    desc: "Interactive analysis, reproducible data notebooks and technical reporting.",
+    color: "orange"
+  },
+  { 
+    icon: <BarChart3 className="w-5 h-5" />,
+    name: "Power BI", 
+    category: "Dashboards",
+    desc: "Telemetry monitoring, business intelligence metrics and executive visual reports.",
+    color: "orange"
+  },
+  { 
+    icon: <AppWindow className="w-5 h-5" />,
+    name: "Esri Web Apps", 
+    category: "Spatial Portals",
+    desc: "Experience Builder, Web AppBuilder and stakeholder interactive portals.",
+    color: "blue"
+  },
+  { 
+    icon: <Monitor className="w-5 h-5" />,
+    name: "Next.js & React", 
+    category: "Digital Systems",
+    desc: "High-performance web applications, modern UI and responsive dashboards.",
+    color: "purple"
+  },
+  { 
+    icon: <Webhook className="w-5 h-5" />,
+    name: "REST APIs", 
+    category: "Integration",
+    desc: "Multi-system synchronization, endpoint connectors and webhooks.",
+    color: "green"
+  },
+  { 
+    icon: <Sparkles className="w-5 h-5" />,
+    name: "AI Automation", 
+    category: "Workflow Automation",
+    desc: "AI-assisted scripting, prompt engineering and rapid technical prototyping.",
+    color: "blue"
+  },
 ];
 
 export default function CapabilitiesPage() {
@@ -63,28 +158,43 @@ export default function CapabilitiesPage() {
 
         {/* Tools & Technologies */}
         <section className="py-20 px-6 max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-12">
+          <div className="text-center mb-14">
             <span className="text-[var(--acc)] font-medium text-xs mb-2 block tracking-wide">
               Stack &amp; Environment
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--text)] tracking-tight leading-[1.15]">
               Tools &amp; Technologies
             </h2>
+            <p className="text-[var(--text2)] text-sm sm:text-base max-w-xl mx-auto mt-3 font-normal leading-[1.6]">
+              Core software platforms, analytical libraries, databases and development frameworks utilized in production workflows.
+            </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {techStack.map((tech, index) => (
-              <div
+              <GlowCard
                 key={index}
-                className="p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--acc-border)] hover:border-[#38bdf8]/40 transition-all text-center group"
+                glowColor={tech.color}
+                customSize
+                className="!p-5 flex flex-col justify-between rounded-3xl border border-[var(--acc-border)] bg-[var(--bg-card)]/80 backdrop-blur-xl hover:border-[var(--acc)]/40 transition-all group"
               >
-                <p className="font-semibold text-sm text-[var(--text)] group-hover:text-[var(--acc)] transition-colors mb-1">
-                  {tech.name}
-                </p>
-                <p className="text-xs text-[var(--text2)] opacity-80 font-normal">
-                  {tech.category}
-                </p>
-              </div>
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-11 h-11 rounded-2xl bg-[var(--acc-dim)] border border-[var(--acc-border)] flex items-center justify-center text-[var(--acc)] group-hover:scale-110 transition-transform">
+                      {tech.icon}
+                    </div>
+                    <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[var(--text2)]">
+                      {tech.category}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[var(--text)] mb-2 group-hover:text-[var(--acc)] transition-colors leading-snug">
+                    {tech.name}
+                  </h3>
+                  <p className="text-sm text-[var(--text2)] leading-[1.6] font-normal">
+                    {tech.desc}
+                  </p>
+                </div>
+              </GlowCard>
             ))}
           </div>
         </section>
